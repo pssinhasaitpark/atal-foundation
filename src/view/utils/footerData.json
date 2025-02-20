@@ -1,0 +1,39 @@
+{
+    "sections": [
+      {
+        "title": "About",
+        "type": "text",
+        "col": 3,
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, doloremque."
+      },
+      {
+        "title": "Focus Areas",
+        "type": "links",
+        "col": 3,
+        "links": [
+          { "text": "Home", "url": "/" },
+          { "text": "About", "url": "/" },
+          { "text": "Blog", "url": "/" },
+          { "text": "Archived", "url": "/" },
+          { "text": "Author", "url": "/" },
+          { "text": "Contact", "url": "/" }
+        ]
+      },
+      {
+        "title": "Contact",
+        "type": "text",
+        "col": 3,
+        "details": [
+          { "label": "Email", "value": "info@atalfoundation.net" },
+          { "label": "Phone", "value": "99885-99885" }
+        ]
+      },
+      {
+        "title": "Sign Up For Update",
+        "type": "text",
+        "col": 3,
+        "content":"To keep yourself updated on latest news and programs at Reliance Foundation, drop in your E-mail ID"
+      }
+    ]
+  }
+  

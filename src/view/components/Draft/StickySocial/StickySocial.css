@@ -1,0 +1,25 @@
+.sticky-social {
+  position: fixed;
+  top: 30%;
+}
+.social {
+  list-style: none;
+}
+.social li {
+  font-size: 25px;
+}
+.twitter {
+  background-color: black;
+}
+.fb {
+  background-color: #3b5999;
+}
+.youtube {
+  background-color: #e3442a;
+}
+.insta {
+  background-color: #d9395e;
+}
+.linkedin{
+  background-color: #2a6ca8;
+}

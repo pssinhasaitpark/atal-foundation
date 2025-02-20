@@ -1,0 +1,46 @@
+.quick-links-container {
+  margin-right: 22%;
+  border-left: 1px solid rgba(255, 255, 255, 0.082);
+  border-right: 1px solid rgba(255, 255, 255, 0.082);
+  padding: 0 0px;
+  height: 76%;
+}
+.social-icon img {
+  width: 40px;
+  height: 40px;
+}
+.quick-links {
+  margin-left: 20%;
+}
+.social-icons-container {
+  margin-top: 8%;
+}
+.newsletter-email {
+  height: 57px;
+  width: 591px;
+}
+.newsletter-email {
+  border-radius: 50px 0 0 50px;
+}
+.footer-icons {
+  width: 54px;
+  height: 51px;
+}
+.footer-middle {
+  width: 33% !important;
+  margin-left: -1.2%;
+}
+@media (max-width: 768px) {
+  .quick-links-container {
+    border: none;
+    padding: 0;
+  }
+  .footer-section {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .newsletter-email {
+    height: 57px;
+    width: 100%;
+  }
+}

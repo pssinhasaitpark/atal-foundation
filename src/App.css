@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+input:focus {
+  box-shadow: none !important;
+  border-color: inherit !important;
+  outline: none !important;
+}
+button:focus {
+  box-shadow: none !important;
+  border-color: inherit !important;
+  outline: none !important;
+}
+.btn-primary {
+  background-color: #f68633 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.heading-font{
+  font-family: "Frank Ruhl Libre", serif;
+}
