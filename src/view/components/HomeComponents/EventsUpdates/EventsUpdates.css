@@ -1,0 +1,15 @@
+.event-title:after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 2px;
+    bottom: 0;
+    left:45%;
+    top: 40px;
+    background-color: #3ebd88;
+    visibility: visible;
+}
+.accordion-button::after{
+    content: "" ;
+    width: 0 !important;
+}

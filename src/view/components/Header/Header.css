@@ -1,0 +1,21 @@
+/* .header-navbar ,.search-bar{
+  position: relative;
+}
+.button-all,.test-info,.landing-text-white,.search-bar  {
+  z-index: 200;
+}
+.navbar-expand-lg .navbar-collapse {
+    top: 1rem;
+}
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0
+}
+@media (max-width: 800px) {
+  .navbar-collapse {
+    top: 4rem !important;
+    background-color: rgb(253, 255, 240);
+  }
+} */
