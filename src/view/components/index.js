@@ -6,11 +6,17 @@ import PeopleBehind from "./HomeComponents/PeopleBehind/PeopleBehind";
 import EventGallery from "./HomeComponents/EventGallery/EventGallery";
 import PhotoGallery from "./HomeComponents/PhotoGallery/PhotoGallery";
 import PhotoGallery2 from "./HomeComponents/PhotoGallery2/PhotoGallery2";
-import VisionSection from "./HomeComponents/VisionSection/VisionSection"
+import VisionSection from "./HomeComponents/VisionSection/VisionSection";
 import EventsUpdates from "./HomeComponents/EventsUpdates/EventsUpdates";
 import MissionSection from "./HomeComponents/MissionSection/MissionSection";
 import FoundationFacts from "./HomeComponents/FoundationFacts/FoundationFacts";
 import MoreAboutFoundation from "./HomeComponents/MoreAboutFoundation/MoreAboutFoundation";
+import AboutUsComponent from "./AboutUsComponents/AboutUsComponent";
+import OpEducation from "./OurProgrammesCompoents/OpEducation";
+import OpHealthcare from "./OurProgrammesCompoents/OpHealthcare";
+import OpLivelihood from "./OurProgrammesCompoents/OpLivelihood";
+import OpGirlChild from "./OurProgrammesCompoents/OpGirlChild";
+
 export {
   Header,
   Footer,
@@ -25,5 +31,9 @@ export {
   EventsUpdates,
   FoundationFacts,
   MoreAboutFoundation,
-
+  AboutUsComponent,
+  OpEducation,
+  OpHealthcare,
+  OpLivelihood,
+  OpGirlChild,
 };
