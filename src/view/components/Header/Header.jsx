@@ -33,9 +33,9 @@ const Header = () => {
                 About
               </a>
               <ul className="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdownAbout">
-                <li><a className="dropdown-item custom-dropdown-item" href="#our-soul">Our Soul</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#our-presence">Our Presence</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#people-behind">People Behind</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/about">Our Soul</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/about">Our Presence</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/about">People Behind</a></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
@@ -43,16 +43,15 @@ const Header = () => {
                 Our Programmes
               </a>
               <ul className="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdownPrograms">
-                <li><a className="dropdown-item custom-dropdown-item" href="#our-programs">Our Programs</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#education">Education</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#healthcare">Healthcare</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#livelihood">Livelihood</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#empowerment">Girl Child & Women Empowerment</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#children">Privileged Children</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#civic-change">Civic Driven Change</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#entrepreneurship">Social Entrepreneurship</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#support-programme">Social Support Programme</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#special-interaction">Special Interaction</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpEducation">Education</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpHealthcare">Healthcare</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpLivelihood">Livelihood</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpGirlChild">Girl Child & Women Empowerment</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpPrivileged">Privileged Children</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpCivicDriven">Civic Driven Change</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpSocial">Social Entrepreneurship</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpSocialSupport">Social Support Programme</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpSpecial">Special Interaction</a></li>
               </ul>
             </li>
 

@@ -1,5 +1,13 @@
 import "./App.css";
-import { HomePage } from "./view/pages/index";
+import {
+  HomePage,
+  AboutUsPage,
+  OpEducationPage,
+  OpHealthcarePage,
+  OpLivelihoodPage,
+  OpGirlChildPage,
+} from "./view/pages/index";
+import { Route, Routes } from "react-router";
 function App() {
   // const [showPopup, setShowPopup] = useState(true);
   // useEffect(() => {
@@ -11,7 +19,16 @@ function App() {
   return (
     <>
       {/* {showPopup && <Popup onClose={closePopup} />} */}
-      <HomePage />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/OpEducation" element={<OpEducationPage />} />
+          <Route path="/OpHealthcare" element={<OpHealthcarePage />} />
+          <Route path="/OpLivelihood" element={<OpLivelihoodPage />} />
+          <Route path="/OpGirlChild" element={<OpGirlChildPage />} />
+        </Routes>
+      </div>
     </>
   );
 }
