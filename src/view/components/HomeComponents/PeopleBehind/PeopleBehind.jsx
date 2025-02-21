@@ -18,7 +18,7 @@ const PeopleBehind = () => {
   ];
 
   return (
-    <div className="container py-5">
+    <div className="container py-lg-5">
       <div className="row">
 
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center flex-column">
@@ -60,7 +60,7 @@ const PeopleBehind = () => {
         <div className="col-lg-6 col-md-6 d-flex flex-column justify-content-center">
           <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center px-2">
             <Card.Body className="card-style">
-              <h5 className="home-badge badge border text-dark rounded-0 fs-6 fw-normal mb-3 text-uppercase">
+              <h5 className="custom-badge badge rounded-0 border mb-3">
                 {topProgrammes.badge}
               </h5>
               <h3 className="fw-bold fs-1 mb-3 heading-font">
@@ -84,7 +84,7 @@ const PeopleBehind = () => {
                   <p className="mb-2">livelihood & empowerment - creating sustainable employment and entrepreneurship</p>
                 </div>
               </div>
-              <button className="btn btn-primary fs-3 px-4">Learn About</button>
+              <button className="btn btn-primary ">Learn About</button>
             </Card.Body>
           </Card>
         </div>

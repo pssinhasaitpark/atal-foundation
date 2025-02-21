@@ -3,7 +3,7 @@ import "./EventsUpdates.css"
 import Accordion from 'react-bootstrap/Accordion';
 const EventsUpdates = () => {
     return (
-        <div className='container my-4'>
+        <div className='container py-lg-4'>
             <h3 className="event-title text-center position-relative mb-5">
                 Events And Updates
             </h3>

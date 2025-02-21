@@ -1,52 +1,90 @@
-import React from "react";
-import "./Header.css";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { IoIosSearch } from "../../../assets/logos/index"
+import React, { useState } from "react";
 import { AtalLogo1 } from "../../../assets/images/index";
+import { IoIosSearch } from "../../../assets/logos/index"
+import "./Header.css"
 const Header = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
   return (
-
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <Navbar.Brand href="#" className="fw-bold text-primary fs-4 fw-bolder test-info">
-          <img src={AtalLogo1} alt="" className="" />
-        </Navbar.Brand>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-lg-5 py-lg-2">
+      <div className="container-fluid">
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleNav}
+          aria-controls="navbarNav"
+          aria-expanded={isNavOpen ? 'true' : 'false'}
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="About" id="navbar-About-dropdown" className="fs-6 landing-text-white">
-              <NavDropdown.Item href="#about-us">About Us</NavDropdown.Item>
-              <NavDropdown.Item href="#vision">Vision</NavDropdown.Item>
-              <NavDropdown.Item href="#mission">Mission</NavDropdown.Item>
-            </NavDropdown>
+        <a className="navbar-brand fw-bold text-primary fs-3 d-flex align-items-center" href="/">
+          <img src={AtalLogo1} alt="Atal Logo" className="me-2" height="70" />
+        </a>
+        <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item">
+              <a className="nav-link" href="#home">Home</a>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="/" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul className="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                <li><a className="dropdown-item custom-dropdown-item" href="#our-soul">Our Soul</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#our-presence">Our Presence</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#people-behind">People Behind</a></li>
+              </ul>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="/" id="navbarDropdownPrograms" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Our Programmes
+              </a>
+              <ul className="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdownPrograms">
+                <li><a className="dropdown-item custom-dropdown-item" href="#our-programs">Our Programs</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#education">Education</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#healthcare">Healthcare</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#livelihood">Livelihood</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#empowerment">Girl Child & Women Empowerment</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#children">Privileged Children</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#civic-change">Civic Driven Change</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#entrepreneurship">Social Entrepreneurship</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#support-programme">Social Support Programme</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#special-interaction">Special Interaction</a></li>
+              </ul>
+            </li>
 
-            <NavDropdown title="Our Programmes" id="navbar-our-programmes-dropdown" className="fs-6 landing-text-white">
-              <NavDropdown.Item href="#our-programs">Our Programs</NavDropdown.Item>
-              <NavDropdown.Item href="#feature-2">Feature 2</NavDropdown.Item>
-              <NavDropdown.Item href="#feature-3">Feature 3</NavDropdown.Item>
-            </NavDropdown>
-
-            <NavDropdown title="Get Involved" id="navbar-get-involved-dropdown" className="fs-6 landing-text-white">
-              <NavDropdown.Item href="#gallery">Gallery</NavDropdown.Item>
-              <NavDropdown.Item href="#messages">Messages</NavDropdown.Item>
-              <NavDropdown.Item href="#events">Events</NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link href="#Gallery">Gallery</Nav.Link>
-            <Nav.Link href="#Message">Message</Nav.Link>
-            <Nav.Link href="#Events">Events</Nav.Link>
-            <Nav.Link href="#Contacts">Contacts</Nav.Link>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="/" id="navbarDropdownInvolved" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Get Involved
+              </a>
+              <ul className="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdownInvolved">
+                <li><a className="dropdown-item custom-dropdown-item" href="#registration">Registration</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#members">Members</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="#support">Support Speaks</a></li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#message">Message</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#events">Events</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#contacts">Contacts</a>
+            </li>
           </ul>
-          <form class="d-flex" role="search">
-            <div class="input-group border ">
-              <input type="search" class="form-control outline-0 border-0" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-              <span class="input-group-text border-0 bg-transparent" id="search-addon">
+          <form className="d-flex border ms-auto">
+            <div className="input-group">
+              <input type="search" className="form-control border-0 outline-0 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+              <button className="input-group-text bg-transparent border-0" id="search-addon">
                 <IoIosSearch className="fs-4" />
-              </span>
+              </button>
             </div>
           </form>
         </div>

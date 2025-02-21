@@ -3,7 +3,7 @@ import { VisionSection as VisionSecImg } from "../../../../assets/images/index";
 import { Card } from "react-bootstrap";
 const MissionSection = () => {
     return (
-        <div className="container my-5">
+        <div className="container py-lg-5">
             <div className="row align-items-center">
                 <div className="col-md-6">
                     <div className="">
@@ -18,7 +18,7 @@ const MissionSection = () => {
                 <div className="col-md-6">
                     <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                         <Card.Body className="card-style p-lg-5">
-                            <h5 className="home-badge badge border text-dark rounded-0 fs-6 fw-normal mb-3 text-uppercase">
+                            <h5 className="custom-badge badge rounded-0 border mb-3">
                                 Our Mission
                             </h5>
                             <h3 className="fw-bold fs-1 heading-font">
