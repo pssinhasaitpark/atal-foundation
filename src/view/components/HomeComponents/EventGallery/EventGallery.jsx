@@ -6,7 +6,7 @@ const EventGallery = () => {
     return (
         <div className="container my-5 bg-dark">
             <div className="row p-5">
-                <h2 className="fw-bold heading-font  text-light">Events</h2>
+                <h3 className="fw-bold heading-font  text-light">Events</h3>
                 <p className="heading-font  text-light">
                     At Atal Foundation, our events serve as platforms for awareness,
                     empowerment, and community engagement.
@@ -19,7 +19,7 @@ const EventGallery = () => {
                                     src={eventimg}
                                     alt="August 15 - Indian Independence Day"
                                     className="img-fluid w-100"
-                                    style={{ height: "253px" }}
+                                    style={{ height: "308px" }}
                                 />
                                 <div className="position-absolute bottom-0 text-white w-100 text-center bg-dark bg-opacity-50 py-2">
                                     August 15 - Indian Independence Day
@@ -87,10 +87,10 @@ const EventGallery = () => {
                             Subscribe to The Optimist to get weekly updates on global health,
                             gender equality, education, and more.
                         </p>
-                        <form class="d-flex border mb-3" role="search">
-                            <div class="input-group">
-                                <input type="search" class="form-control border-0 outline-0 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                                <button class="input-group-text border-0" id="search-addon">
+                        <form className="d-flex border mb-3" role="search">
+                            <div className="input-group">
+                                <input type="search" className="form-control border-0 outline-0 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                <button className="input-group-text border-0" id="search-addon">
                                     <IoIosSearch className="fs-4" />
                                 </button>
                             </div>

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -19,11 +20,27 @@ button:focus {
   outline: none !important;
 }
 .btn-primary {
+  font-family: "Inter", serif;
+  font-weight: 400;
   background-color: #f68633 !important;
   border: 0 !important;
   border-radius: 0 !important;
+  padding-right:2rem !important; 
+  padding-left:2rem !important; 
+  padding-top:0.5rem !important; 
+  padding-bottom:0.5rem !important; 
 }
-
+.container{
+  max-width: 85% !important;
+}
 .heading-font{
   font-family: "Frank Ruhl Libre", serif;
+}
+.custom-badge{
+  font-family: "Inter", serif;
+  font-weight: 400 !important;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: black !important;
+  font-size: 0.9rem !important;
 }

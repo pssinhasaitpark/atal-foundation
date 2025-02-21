@@ -23,7 +23,7 @@ const MoreAboutFoundation = () => {
     ];
 
     return (
-        <div className="container my-5">
+        <div className="container py-lg-5">
             <h3 className="fw-bold heading-font">More About Foundation</h3>
             <div className="row mt-4">
                 {foundationInfo.map((info, index) => (
