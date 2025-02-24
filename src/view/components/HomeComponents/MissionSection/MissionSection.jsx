@@ -3,7 +3,7 @@ import { VisionSection as VisionSecImg } from "../../../../assets/images/index";
 import { Card } from "react-bootstrap";
 const MissionSection = () => {
     return (
-        <div className="container py-lg-5">
+        <div className="container py-lg-5 py-4">
             <div className="row align-items-center">
                 <div className="col-md-6">
                     <div className="">

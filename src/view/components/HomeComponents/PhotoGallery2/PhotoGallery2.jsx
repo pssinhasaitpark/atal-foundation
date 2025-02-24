@@ -14,7 +14,7 @@ const PhotoGallery2 = () => {
 
     return (
         <div style={{ backgroundColor: "#FBFBFB" }}>
-            <Container className="py-lg-4">
+            <Container className="py-lg-4 py-3">
                 <div className="">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                         <div>

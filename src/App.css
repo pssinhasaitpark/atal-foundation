@@ -47,3 +47,11 @@ button:focus {
 .custom-breadcrumb-item:not(.active)::after {
   content: " /";
 }
+.pages-banner-img {
+  height: 25rem;
+}
+@media (max-width: 768px) {
+  .pages-banner-img {
+    height: 10rem;
+  }
+}

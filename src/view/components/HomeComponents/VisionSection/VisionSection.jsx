@@ -3,7 +3,7 @@ import { VisionSection as VisionSecImg } from "../../../../assets/images/index"
 import { Card } from "react-bootstrap"
 const VisionSection = () => {
   return (
-    <div className="container py-lg-5">
+    <div className="container py-lg-5 py-4">
       <div className="row align-items-center">
         {/* Left Text Section */}
         <div className="col-md-6">

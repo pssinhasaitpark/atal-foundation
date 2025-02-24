@@ -1,11 +1,11 @@
-import React from 'react'
-import { OPBanner4, AboutUsImgs2 } from "../../../assets/images/index";
+import React from "react";
+import { GirlChildBanner, AboutUsImgs2 } from "../../../assets/images/index";
 import { Card } from "react-bootstrap";
 const OpGirlChild = () => {
     return (
         <div className="container py-5">
-            <div className="bannerImg overflow-hidden" style={{ height: "30rem" }}>
-                <img src={OPBanner4} alt="" className=" object-fit-contain w-100 " />
+            <div className="pages-banner-img">
+                <img src={GirlChildBanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
             </div>
             <nav aria-label="custom-breadcrumb" className="pt-5">
                 <ol className="custom-breadcrumb list-unstyled d-flex align-items-end">
@@ -35,27 +35,53 @@ const OpGirlChild = () => {
                         <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                             <Card.Body className="card-style p-0 ps-5">
                                 <h3 className="fw-bold fs-1 heading-font">
-                                    Empowering Lives Through Quality Healthcare
+                                    girl child & women empowerment: <br />
+                                    building a stronger future
                                 </h3>
 
-                                <p className='fw-light fs-6 lh-lg m-0'>
-                                    Street and Working Children live and work in extremely unhygienic conditions making them prone to severe skin conditions like scabies.
-                                    At the same time, as these children live and work on the streets they are susceptible to physical injuries, which often left untreated
-                                    leads to impairment of body parts. One can see a high incidence of substance use among the children and they are also susceptible to
-                                    sexually transmitted infections thereby making them fall in the high-risk category of people who could be exposed to HIV.
-                                    Thus to reduce the problems faced by children and at the same time also create awareness amongst them about hygiene and nutrition,
-                                    the health care programme was started by Atal Foundation in 2011.
+                                <p className="fw-light fs-6 lh-lg m-0">
+                                    At ATAL FOUNDATION, we believe that empowering girls and women
+                                    is the key to a stronger, more progressive society. When women
+                                    and young girls are given the right opportunities, education,
+                                    and resources, they can uplift families, strengthen
+                                    communities, and drive economic growth. Our mission is to
+                                    break barriers, create opportunities, and ensure that every
+                                    girl and woman has the power to lead, decide, and thrive.
                                 </p>
-                                <p class="fw-bold">Objectives</p>
-                                <ul class="fw-light lh-lg list">
-                                    <li class="list--item">To provide both curative and preventive treatment accessible to the children directly on the street</li>
-                                    <li class="list--item">To form health cooperative of the children and to empower them to have ownership of the health project</li>
-                                    <li class="list--item">To increase the awareness level of the children in terms of their health needs</li>
-                                    <li class="list--item">To establish a cadre of child health educators</li>
-                                    <li class="list--item">Propagating the concept of health cooperative at community and grass root level for collective action in the field of health</li>
-                                    <li class="list--item">To network with the health professionals in the city as well as the government health care institutions</li>
-                                    <li class="list--item">Advocate for change in policies on health issues at central, state and local levels, which has direct bearing on children's lives</li>
-                                </ul>
+                                <p class="fw-bold m-0">
+                                    Our Initiatives for Women & Girl Child Empowerment
+                                </p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Skill Development & Vocational Training</strong>
+                                    <br />
+                                    To help women become financially independent, we offer
+                                    training in tailoring, digital literacy, handicrafts,
+                                    healthcare, and entrepreneurship, enabling them to secure
+                                    employment or start their own businesses.
+                                </p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Education for the Girl Child</strong>
+                                    <br />
+                                    We provide access to quality education, scholarships, and
+                                    learning resources to ensure that every girl gets a chance to
+                                    learn and shape her future. Education is the foundation for
+                                    breaking gender inequality and poverty cycles.
+                                </p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Health & Hygiene Awareness</strong>
+                                    <br />
+                                    We conduct awareness programs on menstrual hygiene, maternal
+                                    health, nutrition, and disease prevention, ensuring that women
+                                    have access to healthcare knowledge and facilities for a
+                                    healthier life.
+                                </p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Safety & Legal Rights Awareness</strong>
+                                    <br />
+                                    We educate women and girls about their rights, laws against
+                                    gender-based violence, and self-defense techniques to help
+                                    them lead safer and more empowered lives.
+                                </p>
                             </Card.Body>
                         </Card>
                     </div>
@@ -74,29 +100,63 @@ const OpGirlChild = () => {
                         <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                             <Card.Body className="card-style p-0 ps-5">
                                 <h3 className="fw-bold fs-1 heading-font">
-                                    empowering young lives with<br />
-                                    health & knowledge
+                                    girl child & women empowerment: unlocking <br />
+                                    potential, creating change
                                 </h3>
-
-                                <p className='fw-light fs-6 lh-lg m-0'>
-                                    In order to tackle minor injuries and ailments in shelters and contact points in absence of a doctor, children are given basic training in first aid and handling emergencies. Their peers from different contact points select children who are then trained to be Child Health Educator. They are also made aware of different departments of government hospitals, to ensure that a child in need gets immediate medical attention. The children have also been provided with first aid kits for handling emergencies. Equipped to tackle situations, the child health educator complements the health team.
+                                <p className="fw-light fs-6 lh-lg m-0">
+                                    At ATAL FOUNDATION, we believe that empowering women and girls
+                                    is the foundation of a thriving society. When girls receive
+                                    education and women gain economic independence, families
+                                    prosper, communities grow, and nations progress. Our
+                                    initiatives focus on education, skill development, health
+                                    awareness, financial independence, and rights protection to
+                                    help women and girls lead empowered lives.
                                 </p>
-                                <p class="fw-bold">Responsibilities</p>
-                                <ul class="fw-light lh-lg list">
-                                    <li class="list--item">When a child falls sick, it is the responsibility of the child health educator to bring it to the notice of the street educator and the health team. If required the child health educator can take the child to a nearby government hospital for treatment</li>
-                                    <li class="list--item">If any child is hospitalized, the child health educator remains in the hospital as attendant and organizes other children for care and support</li>
-                                    <li class="list--item">Gives aid in minor ailments</li>
-                                    <li class="list--item">Counsels' children about hygiene and good living</li>
-                                    <li class="list--item">Disseminate information that helps in reducing risk behavior against substance abuse, STD's, HIV/AIDS</li>
-                                    <li class="list--item">Promotes the concept of health cooperative and collective action</li>
-                                </ul>
+                                <p class="fw-bold m-0">Our Key Initiatives</p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Education & Literacy for the Girl Child</strong>
+                                    <br />
+                                    Providing scholarships, learning materials, and digital
+                                    education for girls. Running awareness campaigns to reduce
+                                    school dropout rates and encourage higher education. Engaging
+                                    with communities to change mindsets about girls' education and
+                                    equal opportunities.
+                                </p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Women's Economic Empowerment & Skill Training</strong>
+                                    <br />
+                                    Offering vocational training in tailoring, digital literacy,
+                                    handicrafts, healthcare, and entrepreneurship.Supporting
+                                    women-led startups, self-help groups (SHGs), and
+                                    micro-business initiatives. Providing mentorship, financial
+                                    literacy programs, and microfinance support for business
+                                    growth.{" "}
+                                </p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Health & Hygiene Awareness</strong>
+                                    <br />
+                                    Spreading awareness about menstrual hygiene, maternal health,
+                                    nutrition, and disease prevention.Conducting free health
+                                    check- ups and medical support for women and young girls.
+                                    Promoting access to affordable and quality healthcare in rural
+                                    and underserved areas.{" "}
+                                </p>
+                                <p className="fw-light fs-6 m-0 p-0 lh-lg m-0">
+                                    <strong>Safety, Rights & Legal Awareness </strong>
+                                    <br />
+                                    Educating women and girls about their legal rights and
+                                    protections against gender-based violence.Conducting
+                                    self-defense workshops and confidence-building
+                                    programs.Advocating for equal rights, workplace safety, and
+                                    leadership opportunities for women.{" "}
+                                </p>
                             </Card.Body>
                         </Card>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default OpGirlChild
+export default OpGirlChild;

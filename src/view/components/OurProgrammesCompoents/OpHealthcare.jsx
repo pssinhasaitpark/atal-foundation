@@ -1,11 +1,11 @@
 import React from 'react'
-import { OPBanner2, AboutUsImgs2 } from "../../../assets/images/index";
+import { HealthCareBanner, AboutUsImgs2 } from "../../../assets/images/index";
 import { Card } from "react-bootstrap";
 const OpHealthcare = () => {
     return (
         <div className="container py-5">
-            <div className="bannerImg overflow-hidden" style={{ height: "30rem" }}>
-                <img src={OPBanner2} alt="" className=" object-fit-contain w-100 " />
+            <div className="pages-banner-img">
+                <img src={HealthCareBanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
             </div>
             <nav aria-label="custom-breadcrumb" className="pt-5">
                 <ol className="custom-breadcrumb list-unstyled d-flex align-items-end">
@@ -22,7 +22,7 @@ const OpHealthcare = () => {
                     </li>
                 </ol>
             </nav>
-            <div className="HealthCare1 border-bottom py-lg-5">
+            <div className="border-bottom py-lg-5">
                 <div className="row align-items-stretch">
                     <div className="col-md-4 d-flex">
                         <img
@@ -61,7 +61,7 @@ const OpHealthcare = () => {
                     </div>
                 </div>
             </div>
-            <div className="HealthCare2 border-bottom py-lg-5">
+            <div className="border-bottom py-lg-5">
                 <div className="row align-items-stretch">
                     <div className="col-md-4 d-flex">
                         <img

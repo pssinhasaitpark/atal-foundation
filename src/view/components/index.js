@@ -16,7 +16,14 @@ import OpEducation from "./OurProgrammesCompoents/OpEducation";
 import OpHealthcare from "./OurProgrammesCompoents/OpHealthcare";
 import OpLivelihood from "./OurProgrammesCompoents/OpLivelihood";
 import OpGirlChild from "./OurProgrammesCompoents/OpGirlChild";
-
+import OpPriviledged from "./OurProgrammesCompoents/OpPriviledged";
+import OpCivicDriven from "./OurProgrammesCompoents/OpCivicDriven";
+import OpSocial from "./OurProgrammesCompoents/OpSocial";
+import OpSpecialSupport from "./OurProgrammesCompoents/OpSpecialSupport";
+import OpSpecialIntervation from "./OurProgrammesCompoents/OpSpecialIntervation";
+import Contacts from "./Contacts/Contacts";
+import Gallery from "./Gallery/Gallery";
+import Events from "./Events/Events";
 export {
   Header,
   Footer,
@@ -36,4 +43,12 @@ export {
   OpHealthcare,
   OpLivelihood,
   OpGirlChild,
+  OpPriviledged,
+  OpCivicDriven,
+  OpSocial,
+  OpSpecialSupport,
+  OpSpecialIntervation,
+  Contacts,
+  Gallery,
+  Events
 };
