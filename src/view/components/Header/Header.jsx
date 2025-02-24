@@ -26,17 +26,10 @@ const Header = () => {
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#home">Home</a>
+              <a className="nav-link" href="/">Home</a>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="/" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                About
-              </a>
-              <ul className="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdownAbout">
-                <li><a className="dropdown-item custom-dropdown-item" href="/about">Our Soul</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/about">Our Presence</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/about">People Behind</a></li>
-              </ul>
+            <li className="nav-item">
+              <a className="nav-link" href="/about">About</a>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="/" id="navbarDropdownPrograms" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,8 +43,8 @@ const Header = () => {
                 <li><a className="dropdown-item custom-dropdown-item" href="/OpPrivileged">Privileged Children</a></li>
                 <li><a className="dropdown-item custom-dropdown-item" href="/OpCivicDriven">Civic Driven Change</a></li>
                 <li><a className="dropdown-item custom-dropdown-item" href="/OpSocial">Social Entrepreneurship</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpSocialSupport">Social Support Programme</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpSpecial">Special Interaction</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpSpecialSupport">Special Support Programme</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/OpSpecialInterventions">Special Interventions</a></li>
               </ul>
             </li>
 
@@ -66,16 +59,16 @@ const Header = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#gallery">Gallery</a>
+              <a className="nav-link" href="/gallery">Gallery</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#message">Message</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#events">Events</a>
+              <a className="nav-link" href="/events">Events</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contacts">Contacts</a>
+              <a className="nav-link" href="/contacts">Contacts</a>
             </li>
           </ul>
           <form className="d-flex border ms-auto">

@@ -13,7 +13,6 @@ import Figmaimages6 from "./Figmaimages6.png";
 import peoplebehind from "./people-behind.png";
 import EventGallery from "./EventGallery.png";
 import VisionSection from "./VisionSection.png";
-import AboutUsBanner from "./AboutUsBanner.png";
 import AboutUsImgs1 from "./AboutUsImgs1.png";
 import AboutUsImgs2 from "./AboutUsImgs2.png";
 import OPBanner1 from "./OPBanner1.png";
@@ -25,7 +24,51 @@ import OPBanner6 from "./OPBanner6.png";
 import OPBanner7 from "./OPBanner7.png";
 import OPBanner8 from "./OPBanner8.png";
 import OPBanner9 from "./OPBanner9.png";
+import contact2 from "./contact2.png";
+import contact1 from "./contact1.png";
+import contact3 from "./contact3.png";
+
+import Galleryimgs1 from "./Galleryimgs1.png";
+import Galleryimgs2 from "./Galleryimgs2.png";
+import Galleryimgs3 from "./Galleryimgs3.png";
+import Galleryimgs4 from "./Galleryimgs4.png";
+import Galleryimgs5 from "./Galleryimgs5.png";
+import Galleryimgs6 from "./Galleryimgs6.png";
+import Galleryimgs7 from "./Galleryimgs7.png";
+import MoreAboutFoundationImage1 from "./MoreAboutFoundationImage1.png";
+import MoreAboutFoundationImage2 from "./MoreAboutFoundationImage2.png";
+import MoreAboutFoundationImage3 from "./MoreAboutFoundationImage3.png";
+import EventGallery1 from "./EventGallery1.png";
+import EventGallery2 from "./EventGallery2.png";
+import EventGallery3 from "./EventGallery3.png";
+import EventGallery4 from "./EventGallery4.png";
+import EventGallery5 from "./EventGallery5.png";
+import AboutUsBanner from "./Banners/AboutUsBanner.png";
+import CivicDrivenBanner from "./Banners/CivicDrivenBanner.png";
+import ContactBanner from "./Banners/ContactBanner.png";
+import EducatingBanner from "./Banners/EducatingBanner.png";
+import EventsBanner from "./Banners/EventsBanner.png";
+import GirlChildBanner from "./Banners/GirlChildBanner.png";
+import HealthCareBanner from "./Banners/HealthCareBanner.png";
+import LivelihoodBanner from "./Banners/LivelihoodBanner.png";
+import PrivilegedBanner from "./Banners/PrivilegedBanner.png";
+import SocialBanner from "./Banners/SocialBanner.png";
+import SpecialInterventionsBanner from "./Banners/SpecialInterventionsBanner.png";
+import SpecialSupportBanner from "./Banners/SpecialSupportBanner.png";
+import GalleryBanner from"./Banners/GalleryBanner.png"
 export {
+  AboutUsBanner,
+  EventsBanner,
+  GalleryBanner,
+  CivicDrivenBanner,
+  EducatingBanner,
+  GirlChildBanner,
+  HealthCareBanner,
+  LivelihoodBanner,
+  PrivilegedBanner,
+  SocialBanner,
+  SpecialInterventionsBanner,
+  SpecialSupportBanner,
   AtalLogo,
   AtalLogo1,
   HomeSlider1,
@@ -41,7 +84,6 @@ export {
   peoplebehind,
   EventGallery,
   VisionSection,
-  AboutUsBanner,
   AboutUsImgs1,
   AboutUsImgs2,
   OPBanner1,
@@ -53,4 +95,23 @@ export {
   OPBanner7,
   OPBanner8,
   OPBanner9,
+  contact2,
+  contact1,
+  contact3,
+  ContactBanner,
+  Galleryimgs1,
+  Galleryimgs2,
+  Galleryimgs3,
+  Galleryimgs4,
+  Galleryimgs5,
+  Galleryimgs6,
+  Galleryimgs7,
+  MoreAboutFoundationImage1,
+  MoreAboutFoundationImage2,
+  MoreAboutFoundationImage3,
+  EventGallery1,
+  EventGallery2,
+  EventGallery3,
+  EventGallery4,
+  EventGallery5,
 };

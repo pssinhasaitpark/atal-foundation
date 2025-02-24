@@ -8,11 +8,11 @@ import {
 const AboutUsComponent = () => {
   return (
     <div className="container py-5">
-      <div className="bannerImg overflow-hidden" style={{ height: "30rem" }}>
+      <div className="pages-banner-img">
         <img
           src={AboutUsBanner}
           alt=""
-          className=" object-fit-contain w-100 "
+          className="img-fluid w-100 h-100 object-fit-cover"
         />
       </div>
       <nav aria-label="custom-breadcrumb" className="py-5">

@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomeSlider.css";
-import { Card, Fade } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import { HomeSlider1, HomeSlider2, HomeSlider3, HomeSlider4 } from "../../../../assets/images/index";
 

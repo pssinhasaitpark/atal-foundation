@@ -12,10 +12,10 @@ const FoundationFacts = () => {
     return (
         <div className="container py-lg-5">
             <h3 className="fw-bold heading-font">Foundation facts</h3>
-            <div className="row mt-4 justify-content-between">
+            <div className="row mt-4 justify-content-lg-between justify-content-center">
                 {facts.map((fact, index) => (
-                    <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 " style={{backgroundColor:"#FBFBFB"}}>
-                        <div className="p-4 text-center">
+                    <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 " style={{ backgroundColor: "#FBFBFB" }}>
+                        <div className="p-lg-4 p-5 text-center">
                             <p className="fs-1 fw-bold mb-1 heading-font">{fact.value}</p>
                             <p className="mb-0 text-muted">{fact.label}</p>
                         </div>

@@ -1,0 +1,8 @@
+.card-img-top-maf {
+  height: 300px;
+}
+@media (max-width: 768px) {
+  .card-img-top-maf {
+    height: auto;
+  }
+}

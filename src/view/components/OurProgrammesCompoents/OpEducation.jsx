@@ -1,11 +1,11 @@
 import React from "react";
-import { OPBanner1, AboutUsImgs2 } from "../../../assets/images/index";
+import { EducatingBanner, AboutUsImgs2 } from "../../../assets/images/index";
 import { Card } from "react-bootstrap";
 const OpEducation = () => {
   return (
     <div className="container py-5">
-      <div className="bannerImg overflow-hidden" style={{ height: "30rem" }}>
-        <img src={OPBanner1} alt="" className=" object-fit-contain w-100 " />
+      <div className="pages-banner-img">
+        <img src={EducatingBanner} alt="" className="img-fluid w-100 h-100 object-fit-cover" />
       </div>
       <nav aria-label="custom-breadcrumb" className="pt-5">
         <ol className="custom-breadcrumb list-unstyled d-flex align-items-end">

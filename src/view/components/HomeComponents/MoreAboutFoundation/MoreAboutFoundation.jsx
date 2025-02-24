@@ -1,21 +1,22 @@
 import React from "react";
-import { Figmaimages1 } from "../../../../assets/images/index"
+import { MoreAboutFoundationImage1,MoreAboutFoundationImage2,MoreAboutFoundationImage3 } from "../../../../assets/images/index"
+import "./MoreAboutFoundation.css"
 const MoreAboutFoundation = () => {
     const foundationInfo = [
         {
-            image: Figmaimages1,
+            image: MoreAboutFoundationImage1,
             title: "Our role:",
             description:
                 "At Atal Foundation, we act as catalysts for social change, focusing on Education & Skill Development",
         },
         {
-            image: Figmaimages1,
+            image: MoreAboutFoundationImage2,
             title: "How we work:",
             description:
                 "At Atal Foundation, we follow a structured and impact-driven approach to create lasting social change",
         },
         {
-            image: Figmaimages1,
+            image: MoreAboutFoundationImage3,
             title: "Our role:",
             description:
                 "Inspired by the vision of Atal Ji, Atal Foundation was established to drive meaningful social transformation.",
@@ -29,10 +30,10 @@ const MoreAboutFoundation = () => {
                 {foundationInfo.map((info, index) => (
                     <div key={index} className="col-md-4">
                         <div className="card border-0">
-                            <img src={info.image} className="card-img-top" alt="Foundation" />
+                            <img src={info.image} className="card-img-top-maf" alt="Foundation" />
                             <div className="card-body p-0 my-2">
-                                <p className="heading-font"><span className="fw-bold heading-font">{info.title}</span>:{info.description}</p>
-                                <a href="/" className="text-warning fw-bold">
+                                <p className="heading-font"><span className="fw-bold heading-font">{info.title}</span>{info.description}</p>
+                                <a href="/" className="text-warning text-decoration-none fw-bold">
                                     Learn About
                                 </a>
                             </div>
