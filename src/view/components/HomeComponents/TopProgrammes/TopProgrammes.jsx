@@ -17,9 +17,9 @@ const TopProgrammes = () => {
         <Container className="py-lg-5 py-4">
             <div className="">
                 <div className="d-flex justify-content-between align-items-center mb-3">
-                    <h3 className="top-programmes-title align-items-center heading-font">
+                    <h2 className="top-programmes-title align-items-center heading-font">
                         Top Programmes
-                    </h3>
+                    </h2>
                     <span>
                         <button
                             className="btn px-3 fs-5"
@@ -54,7 +54,7 @@ const TopProgrammes = () => {
                 >
                     <SwiperSlide>
                         <Card className="rounded-0 border-0">
-                            <Card.Img variant="top" src={Figmaimages1} className="top-programmes-image rounded-0" />
+                            <Card.Img loading="lazy" variant="top" src={Figmaimages1} className="top-programmes-image rounded-0" />
                             <Card.Body className="p-0 mt-3">
                                 <Card.Text className="fw-normal">
                                     Taking healthcare access to women who need it the most
@@ -64,7 +64,7 @@ const TopProgrammes = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Card className="rounded-0 border-0">
-                            <Card.Img variant="top" src={Figmaimages2} className="top-programmes-image rounded-0" />
+                            <Card.Img loading="lazy" variant="top" src={Figmaimages2} className="top-programmes-image rounded-0" />
                             <Card.Body className="p-0 mt-3">
                                 <Card.Text className="fw-normal">
                                     Taking healthcare access to women who need it the most
@@ -74,7 +74,7 @@ const TopProgrammes = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Card className="rounded-0 border-0">
-                            <Card.Img variant="top" src={Figmaimages3} className="top-programmes-image rounded-0" />
+                            <Card.Img loading="lazy" variant="top" src={Figmaimages3} className="top-programmes-image rounded-0" />
                             <Card.Body className="p-0 mt-3">
                                 <Card.Text className="fw-normal">
                                     Taking healthcare access to women who need it the most
@@ -84,7 +84,7 @@ const TopProgrammes = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Card className="rounded-0 border-0">
-                            <Card.Img variant="top" src={Figmaimages4} className="top-programmes-image rounded-0" />
+                            <Card.Img loading="lazy" variant="top" src={Figmaimages4} className="top-programmes-image rounded-0" />
                             <Card.Body className="p-0 mt-3">
                                 <Card.Text className="fw-normal">
                                     Taking healthcare access to women who need it the most
@@ -94,7 +94,7 @@ const TopProgrammes = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Card className="rounded-0 border-0">
-                            <Card.Img variant="top" src={Figmaimages5} className="top-programmes-image rounded-0" />
+                            <Card.Img loading="lazy" variant="top" src={Figmaimages5} className="top-programmes-image rounded-0" />
                             <Card.Body className="p-0 mt-3">
                                 <Card.Text className="fw-normal">
                                     Taking healthcare access to women who need it the most
@@ -104,7 +104,7 @@ const TopProgrammes = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Card className="rounded-0 border-0">
-                            <Card.Img variant="top" src={Figmaimages6} className="top-programmes-image rounded-0" />
+                            <Card.Img loading="lazy" variant="top" src={Figmaimages6} className="top-programmes-image rounded-0" />
                             <Card.Body className="p-0 mt-3">
                                 <Card.Text className="fw-normal">
                                     Taking healthcare access to women who need it the most

@@ -4,10 +4,9 @@ import HomeSlider from "./HomeComponents/HomeSlider/HomeSlider";
 import TopProgrammes from "./HomeComponents/TopProgrammes/TopProgrammes";
 import PeopleBehind from "./HomeComponents/PeopleBehind/PeopleBehind";
 import EventGallery from "./HomeComponents/EventGallery/EventGallery";
-import PhotoGallery from "./HomeComponents/PhotoGallery/PhotoGallery";
+import OurNews from "./HomeComponents/OurNews/OurNews";
 import PhotoGallery2 from "./HomeComponents/PhotoGallery2/PhotoGallery2";
 import VisionSection from "./HomeComponents/VisionSection/VisionSection";
-import EventsUpdates from "./HomeComponents/EventsUpdates/EventsUpdates";
 import MissionSection from "./HomeComponents/MissionSection/MissionSection";
 import FoundationFacts from "./HomeComponents/FoundationFacts/FoundationFacts";
 import MoreAboutFoundation from "./HomeComponents/MoreAboutFoundation/MoreAboutFoundation";
@@ -24,6 +23,7 @@ import OpSpecialIntervation from "./OurProgrammesCompoents/OpSpecialIntervation"
 import Contacts from "./Contacts/Contacts";
 import Gallery from "./Gallery/Gallery";
 import Events from "./Events/Events";
+
 export {
   Header,
   Footer,
@@ -31,11 +31,10 @@ export {
   TopProgrammes,
   PeopleBehind,
   EventGallery,
-  PhotoGallery,
+  OurNews,
   PhotoGallery2,
   VisionSection,
   MissionSection,
-  EventsUpdates,
   FoundationFacts,
   MoreAboutFoundation,
   AboutUsComponent,
@@ -50,5 +49,5 @@ export {
   OpSpecialIntervation,
   Contacts,
   Gallery,
-  Events
+  Events,
 };

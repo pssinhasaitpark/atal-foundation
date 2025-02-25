@@ -1,11 +1,13 @@
 import React from 'react'
-import { Galleryimgs1, Galleryimgs2, Galleryimgs3, Galleryimgs4, Galleryimgs5, Galleryimgs6, EventsBanner } from '../../../assets/images'
+import { Galleryimgs1, Galleryimgs2, Galleryimgs3, Galleryimgs4, Galleryimgs5, Galleryimgs6, EventsBanner } from '../../../assets/images/index'
 import "./Events.css"
+// import useEvents from '../../hooks/useEvents';
 const Events = () => {
+    // const { data, isLoading, isError, error } = useEvents();
     return (
         <div className='container my-lg-5 my-2'>
             <div className='pages-banner-img'>
-                <img src={EventsBanner} className='img-fluid w-100 h-100 object-fit-cover' alt="" />
+                <img loading="lazy" src={EventsBanner} className='img-fluid w-100 h-100 object-fit-cover' alt="" />
             </div>
             <div className='event-imgs-section my-4 pb-5 border-bottom'>
                 <div className='event-imgs-details'>
@@ -17,26 +19,25 @@ const Events = () => {
                 <div className='event-imgs'>
                     <div className="row d-flex flex-wrap">
                         <div className="col-12 col-md-8 event-img-1 p-3">
-                            <img src={Galleryimgs5} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs5} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-4 event-img-2 p-3">
-                            <img src={Galleryimgs3} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs3} alt="" className="img-fluid" />
                         </div>
 
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-4 event-img-4 p-3">
-                            <img src={Galleryimgs4} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs4} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-4 event-img-5 p-3">
-                            <img src={Galleryimgs6} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs6} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-4 event-img-6 p-3">
-                            <img src={Galleryimgs1} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs1} alt="" className="img-fluid" />
                         </div>
                     </div>
                 </div>
-
 
             </div>
             <div className='event-video-section my-4 pb-5 border-bottom'>
@@ -49,16 +50,16 @@ const Events = () => {
                 <div className='event-video'>
                     <div className="row d-flex flex-wrap">
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs5} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs5} alt="" className="img-fluid w-100 h-100" />
                         </div>
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs3} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs3} alt="" className="img-fluid w-100 h-100" />
                         </div>
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs2} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs2} alt="" className="img-fluid w-100 h-100" />
                         </div>
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs1} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs1} alt="" className="img-fluid w-100 h-100" />
                         </div>
                     </div>
                 </div>

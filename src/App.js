@@ -14,20 +14,28 @@ import {
   ContactsPage,
   GalleryPage,
   EventsPage,
+  Popup,
 } from "./view/pages/index";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
+
 function App() {
-  // const [showPopup, setShowPopup] = useState(true);
-  // useEffect(() => {
-  //   setShowPopup(true);
-  // }, []);
-  // const closePopup = () => {
-  //   setShowPopup(false);
-  // };
+  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    const popupShown = sessionStorage.getItem("popupShown");
+    if (!popupShown) {
+      setShowPopup(true);
+      sessionStorage.setItem("popupShown", "true");
+    }
+  }, []);
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <>
-      {/* {showPopup && <Popup onClose={closePopup} />} */}
-
+      {showPopup && <Popup onClose={closePopup} />}
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -52,4 +60,5 @@ function App() {
     </>
   );
 }
+
 export default App;

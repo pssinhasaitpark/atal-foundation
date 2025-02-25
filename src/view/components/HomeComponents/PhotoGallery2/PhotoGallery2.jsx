@@ -18,9 +18,9 @@ const PhotoGallery2 = () => {
                 <div className="">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                         <div>
-                            <h3 className="photo-gallery-title align-items-center heading-font">
+                            <h2 className="photo-gallery-title align-items-center heading-font">
                                 Photo Gallery
-                            </h3>
+                            </h2>
                             <p className="heading-font fw-bold">
                                 At Atal Foundation, our events serve as platforms for <br />
                                 awareness, empowerment, and community engagement.</p>
@@ -58,34 +58,34 @@ const PhotoGallery2 = () => {
                         }}
                     >
                         <SwiperSlide>
-                            <Card className="rounded-0 border-0">
-                                <Card.Img variant="top" src={Figmaimages1} className="top-programmes-image rounded-0" />
+                            <Card className=" border-0">
+                                <Card.Img loading="lazy" variant="top" src={Figmaimages1} className="top-programmes-image rounded-0" />
                             </Card>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Card className="rounded-0 border-0">
-                                <Card.Img variant="top" src={Figmaimages2} className="top-programmes-image rounded-0" />
+                                <Card.Img loading="lazy" variant="top" src={Figmaimages2} className="top-programmes-image rounded-0" />
                             </Card>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Card className="rounded-0 border-0">
-                                <Card.Img variant="top" src={Figmaimages3} className="top-programmes-image rounded-0" />
+                                <Card.Img loading="lazy" variant="top" src={Figmaimages3} className="top-programmes-image rounded-0" />
 
                             </Card>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Card className="rounded-0 border-0">
-                                <Card.Img variant="top" src={Figmaimages4} className="top-programmes-image rounded-0" />
+                                <Card.Img loading="lazy" variant="top" src={Figmaimages4} className="top-programmes-image rounded-0" />
                             </Card>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Card className="rounded-0 border-0">
-                                <Card.Img variant="top" src={Figmaimages5} className="top-programmes-image rounded-0" />
+                                <Card.Img loading="lazy" variant="top" src={Figmaimages5} className="top-programmes-image rounded-0" />
                             </Card>
                         </SwiperSlide>
                         <SwiperSlide>
                             <Card className="rounded-0 border-0">
-                                <Card.Img variant="top" src={Figmaimages6} className="top-programmes-image rounded-0" />
+                                <Card.Img loading="lazy" variant="top" src={Figmaimages6} className="top-programmes-image rounded-0" />
                             </Card>
                         </SwiperSlide>
                     </Swiper>

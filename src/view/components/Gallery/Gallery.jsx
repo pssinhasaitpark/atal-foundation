@@ -5,7 +5,7 @@ const Gallery = () => {
     return (
         <div className='container my-lg-5 my-2'>
             <div className='pages-banner-img'>
-                <img src={GalleryBanner} className='img-fluid w-100 h-100 object-fit-cover' alt="" />
+                <img loading="lazy" src={GalleryBanner} className='img-fluid w-100 h-100 object-fit-cover' alt="" />
             </div>
             <div className='gallery-imgs-section my-4 pb-5 border-bottom'>
                 <div className='gallery-imgs-details'>
@@ -17,24 +17,24 @@ const Gallery = () => {
                 <div className='gallery-imgs'>
                     <div className="row d-flex flex-wrap">
                         <div className="col-12 col-md-6 gallery-img-1 p-1">
-                            <img src={Galleryimgs5} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs5} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-3 gallery-img-2 p-1">
-                            <img src={Galleryimgs3} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs3} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-3 gallery-img-3 p-1">
-                            <img src={Galleryimgs2} alt="" className="img-fluid " />
+                            <img loading="lazy" src={Galleryimgs2} alt="" className="img-fluid " />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-3 gallery-img-4 p-1">
-                            <img src={Galleryimgs4} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs4} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-3 gallery-img-5 p-1">
-                            <img src={Galleryimgs6} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs6} alt="" className="img-fluid" />
                         </div>
                         <div className="col-12 col-md-6 gallery-img-6 p-1">
-                            <img src={Galleryimgs1} alt="" className="img-fluid" />
+                            <img loading="lazy" src={Galleryimgs1} alt="" className="img-fluid" />
                         </div>
                     </div>
                 </div>
@@ -51,16 +51,16 @@ const Gallery = () => {
                 <div className='gallery-video'>
                     <div className="row d-flex flex-wrap">
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs5} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs5} alt="" className="img-fluid w-100 h-100" />
                         </div>
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs3} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs3} alt="" className="img-fluid w-100 h-100" />
                         </div>
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs2} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs2} alt="" className="img-fluid w-100 h-100" />
                         </div>
                         <div className="col-12 col-md-3 p-1">
-                            <img src={Galleryimgs1} alt="" className="img-fluid w-100 h-100" />
+                            <img loading="lazy" src={Galleryimgs1} alt="" className="img-fluid w-100 h-100" />
                         </div>
                     </div>
                 </div>

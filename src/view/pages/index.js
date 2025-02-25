@@ -12,7 +12,9 @@ import OpSpecialSupportPage from "./OpSpecialSupportPage";
 import ContactsPage from "./ContactsPage";
 import GalleryPage from "./GalleryPage";
 import EventsPage from "./EventsPage";
+import Popup from "./Popup/Popup";
 export {
+  Popup,
   HomePage,
   AboutUsPage,
   OpEducationPage,

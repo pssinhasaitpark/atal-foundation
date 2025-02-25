@@ -1,3 +1,9 @@
 .top-programmes-image{
     height: 13rem !important;
 }
+@media (max-width: 768px) {
+    .top-programmes-image{
+        height: 20rem  !important;
+    }
+  }
+  

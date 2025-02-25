@@ -3,16 +3,22 @@ import { useFormik } from "formik";
 import { ToastContainer } from "react-toastify";
 import * as yup from "yup";
 import { Row, Col } from "react-bootstrap";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useContacts } from "../../hooks/index";
 import { contact1, contact2, contact3, ContactBanner } from "../../../assets/images/index";
 import "./Contacts.css";
-
-// Regex for phone number validation
+import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+const mapIconLogo = new L.Icon({
+  iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",  // You can replace this URL with your own marker image
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
 const phoneRegExp =
   /^(\+?\d{0-9})?\s?-?\s?(\(?\d{7}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 
-// Validation Schema
 const FormSchema = yup.object().shape({
   name: yup.string().max(30, "Must be 30 characters or less").required("Name is required"),
   email: yup
@@ -26,19 +32,31 @@ const FormSchema = yup.object().shape({
   enquiry: yup.string().max(300, "Enquiry must be less than 300 characters").required("Enquiry is required"),
 });
 
-const ContactCard = ({ image, title, content }) => (
-  <div className="col-md-4 mb-3 position-relative">
-    <div className="contact-card border-0 p-4 rounded-4">
-      <div className="card-body">
-        <div className="card-contact-imgs p-3 mb-3">
-          <img src={image} alt={title} />
+const ContactCard = ({ image, title, content, type }) => {
+  const handleClick = () => {
+    if (type === "location") {
+      window.open(`https://www.google.com/maps/search/?q=${encodeURIComponent(content)}`, "_blank");
+    } else if (type === "phone") {
+      window.location.href = `tel:${content}`;
+    } else if (type === "email") {
+      window.location.href = `mailto:${content}`;
+    }
+  };
+
+  return (
+    <div className="col-md-4 mb-3 position-relative" onClick={handleClick}>
+      <div className="contact-card border-0 p-4 rounded-4 cursor-pointer">
+        <div className="card-body">
+          <div className="card-contact-imgs p-3 mb-3">
+            <img loading="lazy" src={image} alt={title} />
+          </div>
+          <h5 className="fw-normal">{title}</h5>
+          <p className="fw-light mb-0">{content}</p>
         </div>
-        <h5 className="fw-normal">{title}</h5>
-        <p className="fw-light mb-0">{content}</p>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Contacts = () => {
   const { mutate } = useContacts();
@@ -63,7 +81,7 @@ const Contacts = () => {
   return (
     <div className="container text-center my-5">
       <div className="pages-banner-img">
-        <img src={ContactBanner} alt="Contact Banner" className="img-fluid w-100 h-100 object-fit-cover" />
+        <img loading="lazy" src={ContactBanner} alt="Contact Banner" className="img-fluid w-100 h-100 object-fit-cover" />
       </div>
       <h2 className="fw-bold my-5 mb-4 heading-font">CONTACT US / JOIN US</h2>
       <p className="contact-page-maindescription mx-auto mb-5 fs-6 w-50 text-center fw-light lh-lg">
@@ -74,18 +92,22 @@ const Contacts = () => {
           image={contact1}
           title="OUR LOCATION"
           content="63, Prakriti Enclave bicholi hapsi road Indore"
+          type="location"
         />
         <ContactCard
           image={contact2}
           title="PHONE NUMBER"
           content="91+942-531-6323"
+          type="phone"
         />
         <ContactCard
           image={contact3}
           title="EMAIL ADDRESS"
           content="atalfoundation@gmail.com"
+          type="email"
         />
       </div>
+
       <div className="position-relative" style={{ height: "120vh" }}>
         <div
           className="bg-img position-absolute w-100 h-100 "
@@ -93,8 +115,8 @@ const Contacts = () => {
             zIndex: -1,
           }}
         ></div>
-        <Row className="justify-content-center align-items-center h-100 shadow p-0">
-          <Col md={8} lg={6} xl={5} className="bg-white p-4 shadow shadow w-75">
+        <Row className="justify-content-center align-items-center h-100 mx-0 shadow">
+          <Col md={8} lg={6} xl={5} className="bg-white p-4 shadow  w-75">
             <Row>
               <Col md={6} className="p-0">
                 <MapContainer
@@ -104,7 +126,7 @@ const Contacts = () => {
                   key={position}
                 >
                   <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                  <Marker position={position}>
+                  <Marker position={position} icon={mapIconLogo}>
                     <Popup>Our Location</Popup>
                   </Marker>
                 </MapContainer>

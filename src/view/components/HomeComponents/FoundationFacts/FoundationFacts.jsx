@@ -11,7 +11,7 @@ const FoundationFacts = () => {
 
     return (
         <div className="container py-lg-5">
-            <h3 className="fw-bold heading-font">Foundation facts</h3>
+            <h2 className="fw-bold heading-font">Foundation facts</h2>
             <div className="row mt-4 justify-content-lg-between justify-content-center">
                 {facts.map((fact, index) => (
                     <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 " style={{ backgroundColor: "#FBFBFB" }}>

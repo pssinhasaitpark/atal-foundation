@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, HomeSlider, TopProgrammes, PeopleBehind, EventGallery, Footer, PhotoGallery, VisionSection, MissionSection, PhotoGallery2,FoundationFacts,MoreAboutFoundation } from '../components/index'
+import { Header, HomeSlider, TopProgrammes, PeopleBehind, EventGallery, Footer, OurNews, VisionSection, MissionSection, PhotoGallery2,FoundationFacts,MoreAboutFoundation } from '../components/index'
 const HomePage = () => {
     return (
         <div>
@@ -9,7 +9,7 @@ const HomePage = () => {
             <PeopleBehind />
             <EventGallery />
             <VisionSection />
-            <PhotoGallery />
+            <OurNews />
             <MissionSection />
             <PhotoGallery2 />
             <FoundationFacts/>

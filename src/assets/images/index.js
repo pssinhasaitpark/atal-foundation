@@ -15,15 +15,7 @@ import EventGallery from "./EventGallery.png";
 import VisionSection from "./VisionSection.png";
 import AboutUsImgs1 from "./AboutUsImgs1.png";
 import AboutUsImgs2 from "./AboutUsImgs2.png";
-import OPBanner1 from "./OPBanner1.png";
-import OPBanner2 from "./OPBanner2.png";
-import OPBanner3 from "./OPBanner3.png";
-import OPBanner4 from "./OPBanner4.png";
-import OPBanner5 from "./OPBanner5.png";
-import OPBanner6 from "./OPBanner6.png";
-import OPBanner7 from "./OPBanner7.png";
-import OPBanner8 from "./OPBanner8.png";
-import OPBanner9 from "./OPBanner9.png";
+
 import contact2 from "./contact2.png";
 import contact1 from "./contact1.png";
 import contact3 from "./contact3.png";
@@ -34,7 +26,7 @@ import Galleryimgs3 from "./Galleryimgs3.png";
 import Galleryimgs4 from "./Galleryimgs4.png";
 import Galleryimgs5 from "./Galleryimgs5.png";
 import Galleryimgs6 from "./Galleryimgs6.png";
-import Galleryimgs7 from "./Galleryimgs7.png";
+
 import MoreAboutFoundationImage1 from "./MoreAboutFoundationImage1.png";
 import MoreAboutFoundationImage2 from "./MoreAboutFoundationImage2.png";
 import MoreAboutFoundationImage3 from "./MoreAboutFoundationImage3.png";
@@ -55,8 +47,10 @@ import PrivilegedBanner from "./Banners/PrivilegedBanner.png";
 import SocialBanner from "./Banners/SocialBanner.png";
 import SpecialInterventionsBanner from "./Banners/SpecialInterventionsBanner.png";
 import SpecialSupportBanner from "./Banners/SpecialSupportBanner.png";
-import GalleryBanner from"./Banners/GalleryBanner.png"
+import GalleryBanner from "./Banners/GalleryBanner.png";
+import PopupImage from "./PopupImage.png"
 export {
+  PopupImage,
   AboutUsBanner,
   EventsBanner,
   GalleryBanner,
@@ -86,15 +80,6 @@ export {
   VisionSection,
   AboutUsImgs1,
   AboutUsImgs2,
-  OPBanner1,
-  OPBanner2,
-  OPBanner3,
-  OPBanner4,
-  OPBanner5,
-  OPBanner6,
-  OPBanner7,
-  OPBanner8,
-  OPBanner9,
   contact2,
   contact1,
   contact3,
@@ -105,7 +90,6 @@ export {
   Galleryimgs4,
   Galleryimgs5,
   Galleryimgs6,
-  Galleryimgs7,
   MoreAboutFoundationImage1,
   MoreAboutFoundationImage2,
   MoreAboutFoundationImage3,
