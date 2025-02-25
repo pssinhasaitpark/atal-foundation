@@ -105,7 +105,7 @@ const HomeSlider = () => {
                             <Slider {...settings1}>
                                 {sliderImages1.map((image, index) => (
                                     <div key={index} className="border-0">
-                                        <img className="card-img-top" src={image.src} alt={image.alt} />
+                                        <img loading="lazy" className="card-img-top" src={image.src} alt={image.alt} />
                                     </div>
                                 ))}
                             </Slider>
@@ -115,7 +115,7 @@ const HomeSlider = () => {
                             <Slider {...settings2}>
                                 {sliderImages2.map((image, index) => (
                                     <div key={index} className="border-0">
-                                        <img className="card-img-top" src={image.src} alt={image.alt} />
+                                        <img loading="lazy" className="card-img-top" src={image.src} alt={image.alt} />
                                     </div>
                                 ))}
                             </Slider>

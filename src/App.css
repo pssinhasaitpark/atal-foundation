@@ -50,6 +50,10 @@ button:focus {
 .pages-banner-img {
   height: 25rem;
 }
+.text-warning-color{
+  color: #f68633 ;
+
+}
 @media (max-width: 768px) {
   .pages-banner-img {
     height: 10rem;

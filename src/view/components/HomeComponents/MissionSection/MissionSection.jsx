@@ -7,9 +7,9 @@ const MissionSection = () => {
             <div className="row align-items-center">
                 <div className="col-md-6">
                     <div className="">
-                        <img
+                        <img loading="lazy"
                             src={VisionSecImg}
-                            alt="Smiling children"
+                            alt=""
                             className="img"
                             style={{ maxWidth: "100%" }}
                         />

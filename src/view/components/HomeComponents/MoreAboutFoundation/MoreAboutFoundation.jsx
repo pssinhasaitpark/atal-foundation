@@ -25,15 +25,15 @@ const MoreAboutFoundation = () => {
 
     return (
         <div className="container py-lg-5">
-            <h3 className="fw-bold heading-font">More About Foundation</h3>
+            <h2 className="fw-bold heading-font">More About Foundation</h2>
             <div className="row mt-4">
                 {foundationInfo.map((info, index) => (
                     <div key={index} className="col-md-4">
                         <div className="card border-0">
-                            <img src={info.image} className="card-img-top-maf" alt="Foundation" />
+                            <img loading="lazy" src={info.image} className="card-img-top-maf" alt={info.title}/>
                             <div className="card-body p-0 my-2">
                                 <p className="heading-font"><span className="fw-bold heading-font">{info.title}</span>{info.description}</p>
-                                <a href="/" className="text-warning text-decoration-none fw-bold">
+                                <a href="/" className="text-warning-color text-decoration-none fw-bold">
                                     Learn About
                                 </a>
                             </div>

@@ -11,7 +11,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-lg-5 py-lg-2">
       <div className="container-fluid">
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           onClick={toggleNav}
           aria-controls="navbarNav"
@@ -20,9 +20,10 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand fw-bold text-primary fs-3 d-flex align-items-center" href="/">
-          <img src={AtalLogo1} alt="Atal Logo" className="me-2" height="70" />
-        </a>
+        <div className="d-flex justify-content-center mx-auto">
+          <a className="navbar-brand fw-bold text-primary fs-3 d-flex align-items-center" href="/">
+            <img loading="lazy" src={AtalLogo1} alt="Atal Logo" className="me-2" height="70" />
+          </a></div>
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
@@ -62,7 +63,7 @@ const Header = () => {
               <a className="nav-link" href="/gallery">Gallery</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#message">Message</a>
+              <a className="nav-link" href="/message">Message</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/events">Events</a>
