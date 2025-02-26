@@ -7,7 +7,6 @@ import * as Yup from 'yup';
 const MessageUs = () => {
     const handleSubmit = (values) => {
         toast.success("Message sent successfully!");
-        console.log(values);
     };
     const validationSchema = Yup.object({
         name: Yup.string()

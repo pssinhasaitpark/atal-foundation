@@ -1,71 +1,97 @@
-import React from 'react'
-import { Galleryimgs1, Galleryimgs2, Galleryimgs3, Galleryimgs4, Galleryimgs5, Galleryimgs6, EventsBanner } from '../../../assets/images/index'
-import "./Events.css"
+import React from 'react';
+import { Galleryimgs1, Galleryimgs2, Galleryimgs3, Galleryimgs4, Galleryimgs5, Galleryimgs6, EventsBanner } from '../../../assets/images/index';
+import "./Events.css";
 // import useEvents from '../../hooks/useEvents';
+
+const eventData = {
+    banner: EventsBanner,
+    eventSection: {
+        title: "Events - Driving Change, Inspiring Action",
+        description: "At Atal Foundation, we believe that every event is an opportunity to create impact, spread awareness, and empower communities. Our events bring together leaders, changemakers, volunteers, and beneficiaries to celebrate progress, discuss challenges, and drive meaningful initiatives. Join us in our mission to create a better future through impactful gatherings, workshops, and awareness campaigns.",
+        images: [
+            { src: Galleryimgs5, alt: "Event Image 1", className: "event-img-1" },  // Added className here
+            { src: Galleryimgs3, alt: "Event Image 2" },
+            { src: Galleryimgs4, alt: "Event Image 3" },
+            { src: Galleryimgs6, alt: "Event Image 4" },
+            { src: Galleryimgs1, alt: "Event Image 5" }
+        ]
+    },
+    videoSection: {
+        title: "Event Video",
+        description: "At Atal Foundation, we believe that every event is an opportunity to create impact, spread awareness, and empower communities. Our events bring together leaders, changemakers, volunteers, and beneficiaries to celebrate progress, discuss challenges, and drive meaningful initiatives. Join us in our mission to create a better future through impactful gatherings, workshops, and awareness campaigns.",
+        images: [
+            { src: Galleryimgs5, alt: "Video Thumbnail 1" },
+            { src: Galleryimgs3, alt: "Video Thumbnail 2" },
+            { src: Galleryimgs2, alt: "Video Thumbnail 3" },
+            { src: Galleryimgs1, alt: "Video Thumbnail 4" }
+        ]
+    }
+};
+
 const Events = () => {
     // const { data, isLoading, isError, error } = useEvents();
+    const { banner, eventSection, videoSection } = eventData;
+
     return (
         <div className='container my-lg-5 my-2'>
             <div className='pages-banner-img'>
-                <img loading="lazy" src={EventsBanner} className='img-fluid w-100 h-100 object-fit-cover' alt="" />
+                <img loading="lazy" src={banner} className='img-fluid w-100 h-100 object-fit-cover' alt="Event Banner" />
             </div>
+
             <div className='event-imgs-section my-4 pb-5 border-bottom'>
                 <div className='event-imgs-details'>
                     <p className="event-imgs-title fw-bold fs-1 heading-font">
-                        Events - Driving Change, Inspiring Action
+                        {eventSection.title}
                     </p>
-                    <p className='fw-light event-imgs-description lh-lg'>At Atal Foundation, we believe that every event is an opportunity to create impact, spread awareness, and empower communities. Our events bring together leaders, changemakers, volunteers, and beneficiaries to celebrate progress, discuss challenges, and drive meaningful initiatives. Join us in our mission to create a better future through impactful gatherings, workshops, and awareness campaigns.</p>
+                    <p className='fw-light event-imgs-description lh-lg'>
+                        {eventSection.description}
+                    </p>
                 </div>
+
                 <div className='event-imgs'>
                     <div className="row d-flex flex-wrap">
-                        <div className="col-12 col-md-8 event-img-1 p-3">
-                            <img loading="lazy" src={Galleryimgs5} alt="" className="img-fluid" />
-                        </div>
-                        <div className="col-12 col-md-4 event-img-2 p-3">
-                            <img loading="lazy" src={Galleryimgs3} alt="" className="img-fluid" />
-                        </div>
-
+                        {eventSection.images.slice(0, 2).map((img, index) => (
+                            <div key={index} className={`col-12 ${index === 0 ? 'col-md-8' : 'col-md-4'} p-3`}>
+                                <img loading="lazy" src={img.src} alt={img.alt} className={`img-fluid ${img.className || ''}`} />
+                            </div>
+                        ))}
                     </div>
+
                     <div className="row">
-                        <div className="col-12 col-md-4 event-img-4 p-3">
-                            <img loading="lazy" src={Galleryimgs4} alt="" className="img-fluid" />
-                        </div>
-                        <div className="col-12 col-md-4 event-img-5 p-3">
-                            <img loading="lazy" src={Galleryimgs6} alt="" className="img-fluid" />
-                        </div>
-                        <div className="col-12 col-md-4 event-img-6 p-3">
-                            <img loading="lazy" src={Galleryimgs1} alt="" className="img-fluid" />
-                        </div>
+                        {eventSection.images.slice(2).map((img, index) => (
+                            <div key={index} className="col-12 col-md-4 p-3">
+                                <img loading="lazy" src={img.src} alt={img.alt} className={`img-fluid ${img.className || ''}`} />
+                            </div>
+                        ))}
                     </div>
                 </div>
-
             </div>
+
             <div className='event-video-section my-4 pb-5 border-bottom'>
                 <div className='event-video-details'>
                     <p className="event-video-title fw-bold fs-1 heading-font">
-                        Event Video
+                        {videoSection.title}
                     </p>
-                    <p className='fw-light event-video-description lh-lg'>At Atal Foundation, we believe that every event is an opportunity to create impact, spread awareness, and empower communities. Our events bring together leaders, changemakers, volunteers, and beneficiaries to celebrate progress, discuss challenges, and drive meaningful initiatives. Join us in our mission to create a better future through impactful gatherings, workshops, and awareness campaigns.</p>
+                    <p className='fw-light event-video-description lh-lg'>
+                        {videoSection.description}
+                    </p>
                 </div>
+
                 <div className='event-video'>
                     <div className="row d-flex flex-wrap">
-                        <div className="col-12 col-md-3 p-1">
-                            <img loading="lazy" src={Galleryimgs5} alt="" className="img-fluid w-100 h-100" />
-                        </div>
-                        <div className="col-12 col-md-3 p-1">
-                            <img loading="lazy" src={Galleryimgs3} alt="" className="img-fluid w-100 h-100" />
-                        </div>
-                        <div className="col-12 col-md-3 p-1">
-                            <img loading="lazy" src={Galleryimgs2} alt="" className="img-fluid w-100 h-100" />
-                        </div>
-                        <div className="col-12 col-md-3 p-1">
-                            <img loading="lazy" src={Galleryimgs1} alt="" className="img-fluid w-100 h-100" />
-                        </div>
+                        {videoSection.images.map((img, index) => (
+                            <div key={index} className="col-12 col-md-3 p-1">
+                                {/* <img loading="lazy" src={img.src} alt={img.alt} className="img-fluid w-100 h-100" /> */}
+                                <video height="100%" width="100%" controls="controls" preload="none" onclick="this.play();arguments[0].preventDefault();">
+                                    <source type="video/webm" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Yawning_kitten.ogv/Yawning_kitten.ogv.480p.vp9.webm"/>
+                                </video>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Events
+export default Events;

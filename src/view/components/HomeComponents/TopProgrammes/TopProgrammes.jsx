@@ -1,14 +1,50 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Card } from "react-bootstrap";
+import { GoArrowLeft, GoArrowRight } from "../../../../assets/logos/index";
 import { Figmaimages1, Figmaimages2, Figmaimages3, Figmaimages4, Figmaimages5, Figmaimages6 } from "../../../../assets/images/index";
-import { GoArrowLeft, GoArrowRight } from "../../../../assets/logos/index"
-import "./TopProgrammes.css"
+import "./TopProgrammes.css";
+
+const programData = [
+    {
+        id: 1,
+        image: Figmaimages1,
+        description: "Educating the Rural India: India's rural areas have been left behind in ..."
+    },
+    {
+        id: 2,
+        image: Figmaimages2,
+        description: "Healthcare : Street and Working Children live and work in extremely unhygienic..."
+    },
+    {
+        id: 3,
+        image: Figmaimages3,
+        description: "Girl Child&women Empowerment: At Atal Foundation, we believe empowering..."
+    },
+    {
+        id: 4,
+        image: Figmaimages4,
+        description: "Civic Driven Change: At Atal Foundation, we believe in the power of collective..."
+    },
+    {
+        id: 5,
+        image: Figmaimages5,
+        description: "Girl Child&women Empowerment: At Atal Foundation, we believe empowering..."
+    },
+    {
+        id: 6,
+        image: Figmaimages6,
+        description: "Civic Driven Change: At Atal Foundation, we believe in the power of collective..."
+    }
+];
+
 const TopProgrammes = () => {
     const swiperRef = useRef(null);
+
     const handlePrevClick = () => {
         swiperRef.current.swiper.slidePrev();
     };
+
     const handleNextClick = () => {
         swiperRef.current.swiper.slideNext();
     };
@@ -52,66 +88,23 @@ const TopProgrammes = () => {
                         },
                     }}
                 >
-                    <SwiperSlide>
-                        <Card className="rounded-0 border-0">
-                            <Card.Img loading="lazy" variant="top" src={Figmaimages1} className="top-programmes-image rounded-0" />
-                            <Card.Body className="p-0 mt-3">
-                                <Card.Text className="fw-normal">
-                                    Taking healthcare access to women who need it the most
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card className="rounded-0 border-0">
-                            <Card.Img loading="lazy" variant="top" src={Figmaimages2} className="top-programmes-image rounded-0" />
-                            <Card.Body className="p-0 mt-3">
-                                <Card.Text className="fw-normal">
-                                    Taking healthcare access to women who need it the most
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card className="rounded-0 border-0">
-                            <Card.Img loading="lazy" variant="top" src={Figmaimages3} className="top-programmes-image rounded-0" />
-                            <Card.Body className="p-0 mt-3">
-                                <Card.Text className="fw-normal">
-                                    Taking healthcare access to women who need it the most
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card className="rounded-0 border-0">
-                            <Card.Img loading="lazy" variant="top" src={Figmaimages4} className="top-programmes-image rounded-0" />
-                            <Card.Body className="p-0 mt-3">
-                                <Card.Text className="fw-normal">
-                                    Taking healthcare access to women who need it the most
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card className="rounded-0 border-0">
-                            <Card.Img loading="lazy" variant="top" src={Figmaimages5} className="top-programmes-image rounded-0" />
-                            <Card.Body className="p-0 mt-3">
-                                <Card.Text className="fw-normal">
-                                    Taking healthcare access to women who need it the most
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card className="rounded-0 border-0">
-                            <Card.Img loading="lazy" variant="top" src={Figmaimages6} className="top-programmes-image rounded-0" />
-                            <Card.Body className="p-0 mt-3">
-                                <Card.Text className="fw-normal">
-                                    Taking healthcare access to women who need it the most
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </SwiperSlide>
+                    {programData.map((program) => (
+                        <SwiperSlide key={program.id}>
+                            <Card className="rounded-0 border-0">
+                                <Card.Img
+                                    loading="lazy"
+                                    variant="top"
+                                    src={program.image}
+                                    className="top-programmes-image rounded-0"
+                                />
+                                <Card.Body className="p-0 mt-3">
+                                    <Card.Text className="fw-normal">
+                                        {program.description}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </Container>
