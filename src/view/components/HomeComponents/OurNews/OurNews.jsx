@@ -66,7 +66,7 @@ const OurNews = () => {
                                         marking the nation's freedom from British rule in 1947-a day
                                         of pride, reflection, and unity for all Indians.
                                     </p>
-                                    <a href="/" className="text-decoration-none text-warning-color">More About</a>
+                                    <a href="/" className="text-decoration-none text-warning-color align-items-center d-flex">More About <GoArrowRight className="mx-2" /></a>
                                 </div>
                             </div>
 
@@ -85,7 +85,7 @@ const OurNews = () => {
                                         marking the nation's freedom from British rule in 1947-a day
                                         of pride, reflection, and unity for all Indians.
                                     </p>
-                                    <a href="/" className="text-decoration-none text-warning-color">More About</a>
+                                    <a href="/" className="text-decoration-none text-warning-color align-items-center d-flex">More About <GoArrowRight className="mx-2" /></a>
                                 </div>
                             </div>
 
@@ -104,7 +104,7 @@ const OurNews = () => {
                                         marking the nation's freedom from British rule in 1947-a day
                                         of pride, reflection, and unity for all Indians.
                                     </p>
-                                    <a href="/" className="text-decoration-none text-warning-color">More About</a>
+                                    <a href="/" className="text-decoration-none text-warning-color align-items-center d-flex">More About <GoArrowRight className="mx-2" /></a>
                                 </div>
                             </div>
 
@@ -123,7 +123,7 @@ const OurNews = () => {
                                         marking the nation's freedom from British rule in 1947-a day
                                         of pride, reflection, and unity for all Indians.
                                     </p>
-                                    <a href="/" className="text-decoration-none text-warning-color">More About</a>
+                                    <a href="/" className="text-decoration-none text-warning-color align-items-center d-flex">More About <GoArrowRight className="mx-2" /></a>
                                 </div>
                             </div>
 

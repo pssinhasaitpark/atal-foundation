@@ -1,24 +1,33 @@
-import { useDispatch } from 'react-redux';
-import { useQuery } from '@tanstack/react-query';
-import { setSocialMediaLoading, setSocialMediaLinks, setSocialMediaError } from '../redux/slice/socialMediaSlice';
-import axiosInstance from '../redux/axios/axios'; 
-import { toast } from 'react-toastify';
+import { useDispatch } from "react-redux";
+import { useQuery } from "@tanstack/react-query";
+import {
+  setSocialMediaLoading,
+  setSocialMediaLinks,
+  setSocialMediaError,
+} from "../redux/slice/socialMediaSlice";
+import axiosInstance from "../redux/axios/axios";
 
 const fetchSocialMediaLinks = async () => {
-  const response = await axiosInstance.get('/social-media-links');
-  return response.data;
+  try {
+    const response = await axiosInstance.get("/social-media");
+    return response.data;
+  } catch (error) {
+    console.error("API call failed:", error);
+    throw error;
+  }
 };
 
 const useSocialMediaLinks = () => {
   const dispatch = useDispatch();
 
-  const { data, isLoading, isError, error } = useQuery('socialMediaLinks', fetchSocialMediaLinks, {
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ["socialMediaLinks"],
+    queryFn: fetchSocialMediaLinks,
     onSuccess: (data) => {
       dispatch(setSocialMediaLinks(data));
     },
     onError: (error) => {
       dispatch(setSocialMediaError(error.message));
-      toast.error('Failed to load social media links');
     },
     onSettled: () => {
       dispatch(setSocialMediaLoading(false));
@@ -26,7 +35,7 @@ const useSocialMediaLinks = () => {
   });
 
   if (isLoading) {
-    dispatch(setSocialMediaLoading());
+    dispatch(setSocialMediaLoading(true));
   }
 
   return { data, isLoading, isError, error };

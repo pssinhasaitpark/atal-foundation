@@ -1,6 +1,8 @@
 import React from "react";
 import { MoreAboutFoundationImage1,MoreAboutFoundationImage2,MoreAboutFoundationImage3 } from "../../../../assets/images/index"
 import "./MoreAboutFoundation.css"
+import { GoArrowRight } from "../../../../assets/logos/index"
+
 const MoreAboutFoundation = () => {
     const foundationInfo = [
         {
@@ -33,8 +35,8 @@ const MoreAboutFoundation = () => {
                             <img loading="lazy" src={info.image} className="card-img-top-maf" alt={info.title}/>
                             <div className="card-body p-0 my-2">
                                 <p className="heading-font"><span className="fw-bold heading-font">{info.title}</span>{info.description}</p>
-                                <a href="/" className="text-warning-color text-decoration-none fw-bold">
-                                    Learn About
+                                <a href="/" className="text-warning-color text-decoration-none fw-bold align-items-center d-flex">
+                                    Learn About <GoArrowRight className="mx-2"/>
                                 </a>
                             </div>
                         </div>

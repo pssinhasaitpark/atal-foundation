@@ -8,7 +8,6 @@ import {
   setStatusFailed,
 } from "../redux/slice/SubscribersSlice";
 import axiosInstance from "../redux/axios/axios";
-import { toast } from "react-toastify";
 
 const useSubscribe = () => {
   const dispatch = useDispatch();
@@ -26,12 +25,10 @@ const useSubscribe = () => {
     onSuccess: (data) => {
       dispatch(setSubscribeEmail(data.email));
       dispatch(setStatusSucceeded());
-      toast.success("You have successfully subscribed to our newsletter!");
     },
     onError: (error) => {
       dispatch(setSubscribeError(error.message));
       dispatch(setStatusFailed());
-      toast.error("There was an error subscribing to the newsletter.");
     },
   });
 
