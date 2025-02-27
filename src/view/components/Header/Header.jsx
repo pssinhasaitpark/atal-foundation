@@ -21,11 +21,11 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="d-flex justify-content-center mx-auto">
-          <a className="navbar-brand fw-bold text-primary fs-3 d-flex align-items-center" href="/">
-            <img loading="lazy" src={AtalLogo1} alt="Atal Logo" className="me-2" height="70" />
+          <a className="navbar-brand fw-bold text-primary d-flex align-items-center" href="/">
+            <img loading="lazy" src={AtalLogo1} alt="Atal Logo" className="atal-logo-header me-2" height="90" />
           </a></div>
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
-          <ul className="navbar-nav mx-auto">
+          <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="/">Home</a>
             </li>
@@ -54,9 +54,9 @@ const Header = () => {
                 Get Involved
               </a>
               <ul className="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdownInvolved">
-                <li><a className="dropdown-item custom-dropdown-item" href="#registration">Registration</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#members">Members</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="#support">Support Speaks</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/registration">Registration</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/members">Members</a></li>
+                <li><a className="dropdown-item custom-dropdown-item" href="/supportspeaks">Support Speaks</a></li>
               </ul>
             </li>
             <li className="nav-item">
@@ -72,14 +72,7 @@ const Header = () => {
               <a className="nav-link" href="/contacts">Contacts</a>
             </li>
           </ul>
-          <form className="d-flex border ms-auto">
-            <div className="input-group">
-              <input type="search" className="form-control border-0 outline-0 bg-transparent" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-              <button className="input-group-text bg-transparent border-0" id="search-addon">
-                <IoIosSearch className="fs-4" />
-              </button>
-            </div>
-          </form>
+
         </div>
       </div>
     </nav>

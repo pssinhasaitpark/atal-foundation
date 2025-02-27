@@ -1,38 +1,48 @@
-.contact-card{
-    height: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.contact-card {
+  height: 100%;
+  width: 94%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .contact-card:after {
-    content: "";
-    position: absolute;
-    width: 89%;
-    height: 2px;
-    bottom: 0;
-    left: 6%;
-    top: 99%;
-    background-color: #f68633;
-    visibility: visible;
+  content: "";
+  position: absolute;
+  width: 83%;
+  height: 2px;
+  bottom: 0;
+  left: 6%;
+  top: 99%;
+  background-color: #f68633;
+  visibility: visible;
 }
-
-.bg-img{
-    padding: 0 !important;
-    background-image: url(../../../assets/images/MapBackBanner.png);
-    background-size: cover;
+.contact-card-title{
+    font-size: 25px;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
 }
-.contact-section-minidescription{
-    font-size: smaller;
+.bg-img {
+  padding: 0 !important;
+  background-image: url(../../../assets/images/MapBackBanner.png);
+  background-size: cover;
 }
-.contact-section-title{
-    letter-spacing: 0.4rem;
+.contact-section-minidescription {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
 }
-.input-contact-fields::placeholder{
-    font-weight: 400;
-    color: lightgray !important;
-    font-size: small;
+.contact-section-title {
+  font-size: 35px !important;
+  font-weight: 500;
+  letter-spacing: 10px !important;
+}
+.input-contact-fields::placeholder {
+  font-weight: 400;
+  color: lightgray !important;
+  font-size: small;
 }
 
 @media (min-width: 250px) and (max-width: 700px) {
-p.contact-page-maindescription{
+  p.contact-page-maindescription {
     width: 100% !important;
-}
+  }
 }

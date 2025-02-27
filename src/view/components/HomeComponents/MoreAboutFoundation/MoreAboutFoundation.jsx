@@ -1,50 +1,71 @@
 import React from "react";
-import { MoreAboutFoundationImage1,MoreAboutFoundationImage2,MoreAboutFoundationImage3 } from "../../../../assets/images/index"
-import "./MoreAboutFoundation.css"
-import { GoArrowRight } from "../../../../assets/logos/index"
-
+import { MoreAboutFoundationImage1, MoreAboutFoundationImage2, MoreAboutFoundationImage3 } from "../../../../assets/images/index";
+import { LuMoveRight } from "../../../../assets/logos/index";
+import { Link } from "react-router-dom";
+import "./MoreAboutFoundation.css";
+export const foundationInfo = [
+  {
+    id: 1, // Add a unique identifier for each item
+    image: MoreAboutFoundationImage1,
+    title: "Our role:",
+    description:
+      "At Atal Foundation, we act as catalysts for social change, focusing on Education & Skill Development",
+  },
+  {
+    id: 2,
+    image: MoreAboutFoundationImage2,
+    title: "How we work:",
+    description:
+      "At Atal Foundation, we follow a structured and impact-driven approach to create lasting social change",
+  },
+  {
+    id: 3,
+    image: MoreAboutFoundationImage3,
+    title: "Our vision:",
+    description:
+      "Inspired by the vision of Atal Ji, Atal Foundation was established to drive meaningful social transformation.",
+  },
+];
 const MoreAboutFoundation = () => {
-    const foundationInfo = [
-        {
-            image: MoreAboutFoundationImage1,
-            title: "Our role:",
-            description:
-                "At Atal Foundation, we act as catalysts for social change, focusing on Education & Skill Development",
-        },
-        {
-            image: MoreAboutFoundationImage2,
-            title: "How we work:",
-            description:
-                "At Atal Foundation, we follow a structured and impact-driven approach to create lasting social change",
-        },
-        {
-            image: MoreAboutFoundationImage3,
-            title: "Our role:",
-            description:
-                "Inspired by the vision of Atal Ji, Atal Foundation was established to drive meaningful social transformation.",
-        },
-    ];
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-    return (
-        <div className="container py-lg-5">
-            <h2 className="fw-bold heading-font">More About Foundation</h2>
-            <div className="row mt-4">
-                {foundationInfo.map((info, index) => (
-                    <div key={index} className="col-md-4">
-                        <div className="card border-0">
-                            <img loading="lazy" src={info.image} className="card-img-top-maf" alt={info.title}/>
-                            <div className="card-body p-0 my-2">
-                                <p className="heading-font"><span className="fw-bold heading-font">{info.title}</span>{info.description}</p>
-                                <a href="/" className="text-warning-color text-decoration-none fw-bold align-items-center d-flex">
-                                    Learn About <GoArrowRight className="mx-2"/>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+
+  return (
+    <div className="container py-lg-5">
+      <h2 className="top-programmes-title heading-font">More About Foundation</h2>
+      <div className="row mt-4">
+        {foundationInfo.map((info, index) => (
+
+          <div key={index} className="col-md-4">
+            <div className="card border-0">
+              <img
+                loading="lazy"
+                src={info.image}
+                className="card-img-top-maf"
+                alt={info.title}
+              />
+              <div className="card-body p-0 my-2">
+                <p className="heading-font more-about-subtitle ">
+                  <span className="fw-bold heading-font">{info.title}</span>
+                  {info.description}
+                </p>
+
+                <Link
+                  to={`/foundation/${info.id}`} onClick={scrollToTop}
+
+                  className="text-warning-color text-decoration-none fw-bold align-items-center d-flex"
+                >
+                  Learn About <LuMoveRight className="mx-2" />
+                </Link>
+              </div>
             </div>
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default MoreAboutFoundation;

@@ -41,14 +41,14 @@ const AboutUsComponent = () => {
       </div>
 
       <nav aria-label="custom-breadcrumb" className="pt-5">
-        <ol className="custom-breadcrumb list-unstyled d-flex align-items-end">
-          <li className="custom-breadcrumb-item fs-2">
+        <ol className="custom-breadcrumb list-unstyled d-flex align-items-end mb-0">
+          <li className="custom-breadcrumb-item">
             <a href="/" className="heading-font text-decoration-none text-dark">
               About Us
             </a>
           </li>
           <li
-            className="custom-breadcrumb-item active fs-3 heading-font text-muted ps-1"
+            className="custom-breadcrumb-item active heading-font text-muted ps-1"
             aria-current="page"
           >
             Our Soul

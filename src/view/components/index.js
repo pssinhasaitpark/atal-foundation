@@ -23,8 +23,16 @@ import OpSpecialIntervation from "./OurProgrammesCompoents/OpSpecialIntervation"
 import Contacts from "./Contacts/Contacts";
 import Gallery from "./Gallery/Gallery";
 import Events from "./Events/Events";
-
+import Message from "./Message/Message"
+import GetMembers from "./GetInvolvedComponents/GetMembers";
+import GetRegistration from "./GetInvolvedComponents/GetRegistration";
+import GetSupportSpeaks from "./GetInvolvedComponents/GetSupportSpeaks";
+import NewsDetail from "./HomeComponents/OurNews/NewsDetail"
+import FoundationDetailPage from "./HomeComponents/MoreAboutFoundation/FoundationDetailPage"
 export {
+  FoundationDetailPage,
+  NewsDetail,
+  Message,
   Header,
   Footer,
   HomeSlider,
@@ -50,4 +58,7 @@ export {
   Contacts,
   Gallery,
   Events,
+  GetMembers,
+  GetRegistration,
+  GetSupportSpeaks
 };

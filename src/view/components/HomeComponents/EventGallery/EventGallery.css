@@ -1,0 +1,31 @@
+.event-gallery-bg {
+  background-color: rgb(102, 102, 102);
+}
+.event-title {
+  font-weight: 500;
+  font-size: 40px;
+}
+.scale-image {
+  transform: scale(1.5); /* Scale up the image by 10% */
+}
+.event-gallery-text-bg {
+  background-color: rgba(0, 0, 0, 0.911);
+  filter: blur(0px);
+}
+.event-gallery-font {
+  filter: blur(0);
+}
+.event-sub-heading{
+    font-size: 40px;
+    font-weight: 500;
+}
+.event-sub-subtitle{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 35px;
+}
+.event-sub-bottom-sub{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}

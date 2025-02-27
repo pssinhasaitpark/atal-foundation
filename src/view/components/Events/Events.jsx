@@ -38,7 +38,7 @@ const Events = () => {
                 <img loading="lazy" src={banner} className='img-fluid w-100 h-100 object-fit-cover' alt="Event Banner" />
             </div>
 
-            <div className='event-imgs-section my-4 pb-5 border-bottom'>
+            <div className='event-imgs-section my-4 pb-3'>
                 <div className='event-imgs-details'>
                     <p className="event-imgs-title fw-bold fs-1 heading-font">
                         {eventSection.title}
@@ -67,7 +67,7 @@ const Events = () => {
                 </div>
             </div>
 
-            <div className='event-video-section my-4 pb-5 border-bottom'>
+            <div className='event-video-section my-4'>
                 <div className='event-video-details'>
                     <p className="event-video-title fw-bold fs-1 heading-font">
                         {videoSection.title}
@@ -80,8 +80,8 @@ const Events = () => {
                 <div className='event-video'>
                     <div className="row d-flex flex-wrap">
                         {videoSection.images.map((img, index) => (
-                            <div key={index} className="col-12 col-md-3 p-1">
-                                {/* <img loading="lazy" src={img.src} alt={img.alt} className="img-fluid w-100 h-100" /> */}
+                            <div key={index} className="col-12 col-md-3 p-1" style={{width:"25%",height:"400px"}}>
+                               
                                 <video height="100%" width="100%" controls="controls" preload="none" onclick="this.play();arguments[0].preventDefault();">
                                     <source type="video/webm" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Yawning_kitten.ogv/Yawning_kitten.ogv.480p.vp9.webm"/>
                                 </video>

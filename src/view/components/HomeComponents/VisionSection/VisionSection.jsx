@@ -8,8 +8,8 @@ const VisionSection = () => {
         {/* Left Text Section */}
         <div className="col-md-6">
           <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
-            <Card.Body className="card-style p-lg-5">
-              <h5 className="custom-badge badge rounded-0 border mb-3">
+            <Card.Body className="card-style ps-lg-0 p-lg-5">
+              <h5 className="custom-badge badge mb-3">
                 Our Vision
               </h5>
               <h3 className="fw-bold fs-1 heading-font">
@@ -32,8 +32,8 @@ const VisionSection = () => {
             <img loading="lazy"
               src={VisionSecImg}
               alt=""
-              className="img"
-              style={{ maxWidth: "100%" }}
+              className="img-fluid w-100"
+             
             />
           </div>
         </div>

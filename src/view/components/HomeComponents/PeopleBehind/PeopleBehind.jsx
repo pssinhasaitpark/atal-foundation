@@ -2,7 +2,7 @@
 import React from 'react'
 import { peoplebehind } from "../../../../assets/images/index"
 import { Card } from "react-bootstrap"
-
+import { Link } from 'react-router'
 const PeopleBehind = () => {
   const topProgrammes = {
     title: "atal foundation india-inspired by atal,committed to progress",
@@ -10,7 +10,10 @@ const PeopleBehind = () => {
     badge: "People Behind",
   };
 
-  // Team member data
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const teamMembers = [
     { id: 1, name: 'Adv. Santosh Shukla', imageUrl: peoplebehind },
     { id: 2, name: 'Dr. Prachi Shukla', imageUrl: peoplebehind },
@@ -24,7 +27,7 @@ const PeopleBehind = () => {
     <div className="container py-lg-5">
       <div className="row">
 
-        {/* Left Column: Team Members */}
+
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center flex-column">
           <div className="row w-100">
             {teamMembers.map(member => (
@@ -48,31 +51,31 @@ const PeopleBehind = () => {
         <div className="col-lg-6 col-md-6 d-flex flex-column justify-content-center">
           <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center px-2">
             <Card.Body className="card-style">
-              <h5 className="custom-badge badge rounded-0 border mb-3">
+              <h5 className="custom-badge badge mb-3">
                 {topProgrammes.badge}
               </h5>
-              <h3 className="fw-bold fs-1 mb-3 heading-font">
+              <h3 className="fs-1 fw-bold mb-3 heading-font">
                 {topProgrammes.title}
               </h3>
               <div className="mb-2">
                 <div className="d-flex align-items-start">
                   <span className="text-success me-1">✅</span>
-                  <p className="mb-2">education for all - ensuring quality education and skill development for holistic growth.</p>
+                  <p className="custom-subtitle  mb-2">education for all - ensuring quality education and skill development for holistic growth.</p>
                 </div>
               </div>
               <div className="mb-2">
                 <div className="d-flex align-items-start">
                   <span className="text-success me-1">✅</span>
-                  <p className="mb-2">health & well-being - providing healthcare access, nutrition, and mental health support.</p>
+                  <p className="custom-subtitle  mb-2">health & well-being - providing healthcare access, nutrition, and mental health support.</p>
                 </div>
               </div>
               <div className="mb-4">
                 <div className="d-flex align-items-start">
                   <span className="text-success me-1">✅</span>
-                  <p className="mb-2">livelihood & empowerment - creating sustainable employment and entrepreneurship</p>
+                  <p className="custom-subtitle  mb-2">livelihood & empowerment - creating sustainable employment and entrepreneurship</p>
                 </div>
               </div>
-              <button className="btn btn-primary">Learn About</button>
+             <Link onClick={scrollToTop} to="/supportspeaks" ><button className="custom-button">Learn About</button></Link>
             </Card.Body>
           </Card>
         </div>
