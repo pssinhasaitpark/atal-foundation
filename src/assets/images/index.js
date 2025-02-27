@@ -15,7 +15,7 @@ import EventGallery from "./EventGallery.png";
 import VisionSection from "./VisionSection.png";
 import AboutUsImgs1 from "./AboutUsImgs1.png";
 import AboutUsImgs2 from "./AboutUsImgs2.png";
-
+import ourMissionImg from "./ourMissionImg.png"
 import contact2 from "./contact2.png";
 import contact1 from "./contact1.png";
 import contact3 from "./contact3.png";
@@ -50,6 +50,7 @@ import SpecialSupportBanner from "./Banners/SpecialSupportBanner.png";
 import GalleryBanner from "./Banners/GalleryBanner.png";
 import PopupImage from "./PopupImage.png"
 export {
+  ourMissionImg,
   PopupImage,
   AboutUsBanner,
   EventsBanner,

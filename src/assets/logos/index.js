@@ -14,8 +14,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import { TiSocialFacebookCircular } from "react-icons/ti";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
+import { LuMoveLeft } from "react-icons/lu";
+import { LuMoveRight } from "react-icons/lu";
+
 
 export {
+  LuMoveLeft,
+  LuMoveRight,
   FaWhatsapp,
   TiSocialFacebookCircular,
   FaInstagram,

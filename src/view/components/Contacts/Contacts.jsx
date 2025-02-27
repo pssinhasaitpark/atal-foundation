@@ -50,8 +50,8 @@ const ContactCard = ({ image, title, content, type }) => {
           <div className="card-contact-imgs p-3 mb-3">
             <img loading="lazy" src={image} alt={title} />
           </div>
-          <h5 className="fw-normal">{title}</h5>
-          <p className="fw-light mb-0">{content}</p>
+          <h5 className="contact-card-title">{title}</h5>
+          <p className="fw-normal mb-0">{content}</p>
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@ const Contacts = () => {
         />
       </div>
 
-      <div className="position-relative" style={{ height: "120vh" }}>
+      <div className="position-relative" style={{ height: "140vh" }}>
         <div
           className="bg-img position-absolute w-100 h-100 "
           style={{
@@ -116,9 +116,9 @@ const Contacts = () => {
           }}
         ></div>
         <Row className="justify-content-center align-items-center h-100 mx-0 shadow">
-          <Col md={8} lg={6} xl={5} className="bg-white p-4 shadow  w-75">
+          <Col md={8} lg={6} xl={5} className="bg-white p-3 shadow  w-75">
             <Row>
-              <Col md={6} className="p-0">
+              <Col md={6} className="p-2 py-0">
                 <MapContainer
                   center={position}
                   zoom={13}
@@ -132,15 +132,15 @@ const Contacts = () => {
                 </MapContainer>
               </Col>
               <Col md={6} className="p-5">
-                <p className="contact-section-title mb-2 fs-2 text-start">GET A QUOTE NOW</p>
+                <p className="contact-section-title mb-2 text-start">GET A QUOTE NOW</p>
                 <p className="contact-section-minidescription text-muted text-start fw-light">
                   We’d love to hear what you have in mind for your project and how we can help out. Contact us through the form below.
                 </p>
                 <form onSubmit={memoizedSubmit}>
-                  <div className="mb-2">
+                  <div className="mb-4">
                     <input
                       type="text"
-                      placeholder="Your Name"
+                      placeholder="Name"
                       name="name"
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
@@ -155,10 +155,10 @@ const Contacts = () => {
                     )}
                   </div>
 
-                  <div className="mb-2">
+                  <div className="mb-4">
                     <input
                       type="email"
-                      placeholder="Email Address"
+                      placeholder="Email"
                       name="email"
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
@@ -171,7 +171,7 @@ const Contacts = () => {
                     )}
                   </div>
 
-                  <div className="mb-2">
+                  <div className="mb-4">
                     <input
                       type="text"
                       placeholder="Phone Number"
@@ -189,9 +189,9 @@ const Contacts = () => {
                     )}
                   </div>
 
-                  <div className="mb-3">
+                  <div className="mb-4">
                     <textarea
-                      placeholder="Your Enquiry"
+                      placeholder="Enquiry"
                       name="enquiry"
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
@@ -208,7 +208,7 @@ const Contacts = () => {
 
                   <button
                     type="submit"
-                    className="btn btn-primary w-100 fw-bold font-monospace"
+                    className="btn btn-primary w-100 fs-5 fw-bolder font-monospace"
                   >
                     Submit
                   </button>

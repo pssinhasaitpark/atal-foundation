@@ -37,22 +37,52 @@ button:focus {
   font-family: "Frank Ruhl Libre", serif;
 }
 .custom-badge {
+  font-size: 0.75rem !important;
   font-family: "Inter", serif;
   font-weight: 400 !important;
   letter-spacing: 5px;
-  text-transform: uppercase;
   color: black !important;
-  font-size: 0.9rem !important;
+  border: 0.5px solid black;
+  border-radius: 0px !important;
+  padding: 8px !important;
 }
 .custom-breadcrumb-item:not(.active)::after {
   content: " /";
 }
-.pages-banner-img {
-  height: 25rem;
+.custom-breadcrumb-item:not(.active) {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
 }
-.text-warning-color{
-  color: #f68633 ;
-
+.custom-breadcrumb-item {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+}
+.pages-banner-img {
+  height: 26.375rem;
+}
+.text-warning-color {
+  color: #f68633;
+}
+.custom-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+}
+.custom-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 60px;
+}
+.custom-button {
+  width: 180px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: #f68633;
 }
 @media (max-width: 768px) {
   .pages-banner-img {

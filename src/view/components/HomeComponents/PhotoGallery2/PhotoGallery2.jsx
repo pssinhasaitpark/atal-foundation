@@ -1,10 +1,23 @@
 import React, { useRef } from "react";
+import { Figmaimages1, Figmaimages2, Figmaimages3, Figmaimages4, Figmaimages5, Figmaimages6 } from "../../../../assets/images/index";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Card } from "react-bootstrap";
-import { Figmaimages1, Figmaimages2, Figmaimages3, Figmaimages4, Figmaimages5, Figmaimages6 } from "../../../../assets/images/index";
-import { GoArrowLeft, GoArrowRight } from "../../../../assets/logos/index"
+import { LuMoveLeft, LuMoveRight } from "../../../../assets/logos/index";
+import "./PhotoGallery2.css";
+
 const PhotoGallery2 = () => {
     const swiperRef = useRef(null);
+
+    // JSON data for images and their details
+    const imagesData = [
+        { src: Figmaimages1, alt: "Image 1" },
+        { src: Figmaimages2, alt: "Image 2" },
+        { src: Figmaimages3, alt: "Image 3" },
+        { src: Figmaimages4, alt: "Image 4" },
+        { src: Figmaimages5, alt: "Image 5" },
+        { src: Figmaimages6, alt: "Image 6" },
+    ];
+
     const handlePrevClick = () => {
         swiperRef.current.swiper.slidePrev();
     };
@@ -18,28 +31,30 @@ const PhotoGallery2 = () => {
                 <div className="">
                     <div className="d-flex justify-content-between align-items-center mb-3">
                         <div>
-                            <h2 className="photo-gallery-title align-items-center heading-font">
+                            <h2 className="top-programmes-title photo-gallery-title  align-items-center heading-font">
                                 Photo Gallery
                             </h2>
-                            <p className="heading-font fw-bold">
+                            <p className="heading-font custom-our-mission-sub">
                                 At Atal Foundation, our events serve as platforms for <br />
-                                awareness, empowerment, and community engagement.</p>
+                                awareness, empowerment, and community engagement.
+                            </p>
                         </div>
                         <span>
                             <button
-                                className="btn px-3 fs-5"
+                                className="btn px-3 py-0 fs-2 border-0"
                                 onClick={handlePrevClick}
                             >
-                                <GoArrowLeft />
+                                <LuMoveLeft />
                             </button>
                             <button
-                                className="btn px-3 fs-5"
+                                className="btn px-3 py-0 fs-2 border-0"
                                 onClick={handleNextClick}
                             >
-                                <GoArrowRight />
+                                <LuMoveRight />
                             </button>
                         </span>
                     </div>
+
                     <Swiper
                         ref={swiperRef}
                         spaceBetween={30}
@@ -57,37 +72,20 @@ const PhotoGallery2 = () => {
                             },
                         }}
                     >
-                        <SwiperSlide>
-                            <Card className=" border-0">
-                                <Card.Img loading="lazy" variant="top" src={Figmaimages1} className="top-programmes-image rounded-0" />
-                            </Card>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className="rounded-0 border-0">
-                                <Card.Img loading="lazy" variant="top" src={Figmaimages2} className="top-programmes-image rounded-0" />
-                            </Card>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className="rounded-0 border-0">
-                                <Card.Img loading="lazy" variant="top" src={Figmaimages3} className="top-programmes-image rounded-0" />
-
-                            </Card>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className="rounded-0 border-0">
-                                <Card.Img loading="lazy" variant="top" src={Figmaimages4} className="top-programmes-image rounded-0" />
-                            </Card>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className="rounded-0 border-0">
-                                <Card.Img loading="lazy" variant="top" src={Figmaimages5} className="top-programmes-image rounded-0" />
-                            </Card>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className="rounded-0 border-0">
-                                <Card.Img loading="lazy" variant="top" src={Figmaimages6} className="top-programmes-image rounded-0" />
-                            </Card>
-                        </SwiperSlide>
+                        {/* Dynamically render SwiperSlides based on imagesData */}
+                        {imagesData.map((image, index) => (
+                            <SwiperSlide key={index} className="photo-gallery-slider-card me-3">
+                                <Card className="border-0">
+                                    <Card.Img
+                                        loading="lazy"
+                                        variant="top"
+                                        src={image.src}
+                                        alt={image.alt}
+                                        className="photo-gallery-img rounded-0 img-fluid"
+                                    />
+                                </Card>
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </div>
             </Container>

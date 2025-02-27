@@ -1,10 +1,13 @@
 .quick-links-div {
   border-left: 2px solid rgba(255, 255, 255, 0.1);
   border-right: 2px solid rgba(255, 255, 255, 0.1);
+  padding-left: 4% !important;
 }
 .footer-padding {
-  padding: 5%;
-  padding-top: 7%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 .footer-bottom-background {
   background-color: #f68633;
@@ -16,4 +19,33 @@
   font-size: 3rem;
   border: 2px solid #f68633;
   border-radius: 10px;
+}
+.fotter-bottom-text{
+  font-size: 16px;
+  line-height: 45px;
+  font-weight: 500;
+  color: white;
+}
+.custom-footer-text{
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 500;
+}
+.footer-center-list{
+  font-size: 25px;
+  font-weight: 500;
+}
+.quick-links-list{
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.input-sub-bar{
+  height: 55px;
+}
+.fotter-right-section{
+  padding-left: 5% !important;
+  font-size: 25px;
+  font-weight: 500;
+
 }

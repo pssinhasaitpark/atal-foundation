@@ -35,7 +35,7 @@ const Gallery = () => {
                     </div>
 
                     <div className="row">
-                        {gallerySection.images.slice(3).map((img, index) => (
+                        {gallerySection.images.slice(3,6).map((img, index) => (
                             <div key={index} className="col-12 col-md-4 p-1">
                                 <img loading="lazy" src={img} alt={img.alt} className={`img-fluid ${img.className || ''}`} />
                             </div>
@@ -44,7 +44,7 @@ const Gallery = () => {
                 </div>
             </div>
 
-            <div className='gallery-video-section my-4 pb-5 border-bottom'>
+            <div className='gallery-video-section my-4'>
                 <div className='gallery-video-details'>
                     <p className="gallery-video-title fw-bold fs-1 heading-font">
                         {videoSection.title || "Video Gallery"}
@@ -56,8 +56,8 @@ const Gallery = () => {
 
                 <div className='gallery-video'>
                     <div className="row d-flex flex-wrap">
-                        {videoSection.videos.map((video, index) => (
-                            <div key={index} className="col-12 col-md-3 p-1">
+                        {videoSection.videos.slice(0,4).map((video, index) => (
+                            <div key={index} className="col-12 col-md-3 p-1" style={{width:"25%",height:"400px"}}>
                                 <video height="100%" width="100%" controls preload="metadata">
                                     <source src={video} type="video/webm" />
                                     Your browser does not support the video tag.

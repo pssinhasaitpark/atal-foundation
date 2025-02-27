@@ -14,7 +14,13 @@ import {
   ContactsPage,
   GalleryPage,
   EventsPage,
+  MessagePage,
   Popup,
+  GetMembersPage,
+  GetRegistrationPage,
+  GetSupportSpeaksPage,
+  SingleNewsPage,
+  SingleFoundationDetailPage,
 } from "./view/pages/index";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
@@ -55,6 +61,15 @@ function App() {
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/message" element={<MessagePage />} />
+          <Route path="/members" element={<GetMembersPage />} />
+          <Route path="/registration" element={<GetRegistrationPage />} />
+          <Route path="/supportspeaks" element={<GetSupportSpeaksPage />} />
+          <Route path="/news/:id" element={<SingleNewsPage />} />
+          <Route
+            path="/foundation/:id"
+            element={<SingleFoundationDetailPage />}
+          />
         </Routes>
       </div>
     </>

@@ -1,6 +1,7 @@
 .card-style {
   padding: 10%;
 }
+
 @media (min-width: 250px) and (max-width: 700px) {
   .card-style {
     padding: 5%;
