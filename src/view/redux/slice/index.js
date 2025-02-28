@@ -5,4 +5,6 @@ import ourProgramSlice from "./ourProgramSlice"
 import aboutUsSlice from "./aboutUsSlice"
 import popupSlice from "./popupSlice"
 import eventsSlice from "./eventsSlice"
-export { ContactSlice, SubscribersSlice,socialMediaReducer,ourProgramSlice,aboutUsSlice,popupSlice,eventsSlice };
+import messageUsSlice from "./messageUsSlice"
+import registrationSlice from "./registrationSlice"
+export { registrationSlice,ContactSlice, SubscribersSlice,socialMediaReducer,ourProgramSlice,aboutUsSlice,popupSlice,eventsSlice,messageUsSlice };
