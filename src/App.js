@@ -21,6 +21,8 @@ import {
   GetSupportSpeaksPage,
   SingleNewsPage,
   SingleFoundationDetailPage,
+  SingleEventPage,
+  PeopleBehindPage,
 } from "./view/pages/index";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
@@ -70,6 +72,8 @@ function App() {
             path="/foundation/:id"
             element={<SingleFoundationDetailPage />}
           />
+          <Route path="/event/:id" element={<SingleEventPage />} />
+          <Route path="/people-behind" element={<PeopleBehindPage />} />
         </Routes>
       </div>
     </>

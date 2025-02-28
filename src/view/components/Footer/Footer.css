@@ -20,32 +20,41 @@
   border: 2px solid #f68633;
   border-radius: 10px;
 }
-.fotter-bottom-text{
+.fotter-bottom-text {
   font-size: 16px;
   line-height: 45px;
   font-weight: 500;
   color: white;
 }
-.custom-footer-text{
+.custom-footer-text {
   font-size: 50px;
   line-height: 60px;
   font-weight: 500;
 }
-.footer-center-list{
+.footer-center-list {
   font-size: 25px;
   font-weight: 500;
 }
-.quick-links-list{
+.quick-links-list {
   font-size: 22px;
   font-weight: 400;
   line-height: 40px;
 }
-.input-sub-bar{
+.input-sub-bar {
   height: 55px;
 }
-.fotter-right-section{
+.fotter-right-section {
   padding-left: 5% !important;
   font-size: 25px;
   font-weight: 500;
-
+}
+.custom-badge-footer {
+  font-size: 0.75rem !important;
+  font-family: "Inter", serif;
+  font-weight: 400 !important;
+  letter-spacing: 5px;
+  color: rgb(255, 255, 255) !important;
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 0px !important;
+  padding: 8px !important;
 }

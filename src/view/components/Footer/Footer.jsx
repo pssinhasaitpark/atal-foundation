@@ -63,7 +63,7 @@ const Footer = () => {
         <div className="footer-padding">
           <div className="row">
             <div className="col-md-4 footer-section my-5 my-lg-0">
-              <h5 className="custom-badge badge rounded-0 border mb-3 text-light text-uppercase">
+              <h5 className="custom-badge-footer badge  mb-3 text-uppercase">
                 Atal Foundation
               </h5>
               <h3 className="custom-footer-text heading-font">

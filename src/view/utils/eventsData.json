@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "image": "EventGallery5",
+        "alt": "August 15 - Indian Independence Day",
+        "title": "August 15 - Indian Independence Day",
+        "description": "Hello Hello"
+    },
+    {
+        "id": 2,
+        "image": "EventGallery3",
+        "alt": "March 24 - World TB Day",
+        "title": "March 24 - World TB Day",
+        "description": "Hello Hello"
+    },
+    {
+        "id": 3,
+        "image": "EventGallery2",
+        "alt": "November 19 - National Integration Day",
+        "title": "November 19 - National Integration Day",
+        "description": "Hello Hello"
+    },
+    {
+        "id": 4,
+        "image": "EventGallery4",
+        "alt": "10th - Human Rights Day",
+        "title": "10th - Human Rights Day",
+        "description": "Hello Hello"
+    },
+    {
+        "id": 5,
+        "image": "EventGallery1",
+        "alt": "October 17 - Anti Poverty Day",
+        "title": "October 17 - Anti Poverty Day",
+        "description": "Hello Hello"
+    }
+]

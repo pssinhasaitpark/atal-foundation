@@ -13,7 +13,7 @@ const NewsDetail = () => {
     return (
         <div className="news-detail-container container my-5 w-75">
             <h2 className='heading-font text-center'>{newsItem.title}</h2>
-            <img src={newsItem.image} alt={newsItem.title} className="w-100 my-4" />
+            <img src={newsItem.image} alt={newsItem.title} className="w-100 my-4 object-fit-contain" style={{height:"500px"}} />
             <p className=''>{newsItem.description}</p>
         </div>
 

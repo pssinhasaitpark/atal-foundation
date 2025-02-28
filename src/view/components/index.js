@@ -29,6 +29,8 @@ import GetRegistration from "./GetInvolvedComponents/GetRegistration";
 import GetSupportSpeaks from "./GetInvolvedComponents/GetSupportSpeaks";
 import NewsDetail from "./HomeComponents/OurNews/NewsDetail"
 import FoundationDetailPage from "./HomeComponents/MoreAboutFoundation/FoundationDetailPage"
+import SingleEvent from "./Events/SingleEvent";
+import PeopleBehindcomponent from "./PeopleBehind/PeopleBehindcompoent";
 export {
   FoundationDetailPage,
   NewsDetail,
@@ -60,5 +62,8 @@ export {
   Events,
   GetMembers,
   GetRegistration,
-  GetSupportSpeaks
+  GetSupportSpeaks,
+  SingleEvent,
+  PeopleBehindcomponent,
+
 };
