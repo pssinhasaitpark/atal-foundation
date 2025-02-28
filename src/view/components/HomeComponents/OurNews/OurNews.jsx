@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom"; 
+import "./OurNews.css"
 import {
     Figmaimages1,
     Figmaimages2,
@@ -14,25 +15,27 @@ export const newsData = [
     {
         id: 1,
         title: "August 15 - India Independence Day",
-        description: "On August 15, India celebrates its 77th Independence Day, marking the nation's freedom from British rule in 1947—a day of pride, reflection, and unity for all Indians.",
+        description: "In 1951, Vajpayee was seconded by the RSS, along with Deendayal Upadhyaya, to work for the newly formed Bharatiya Jana Sangh, a Hindu right-wing political party associated with the RSS. He was appointed as a national secretary of the party in charge of the Northern region, based in Delhi. He soon became a follower and aide of party leader Syama Prasad Mukherjee. In the 1957 Indian general election, Vajpayee contested elections to the Lok Sabha, the lower house of the Indian Parliament. He lost to Raja Mahendra Pratap in Mathura, but was elected from Balrampur.",
+
         image: Figmaimages1,
     },
     {
         id: 2,
         title: "October 17 - Anti Poverty Day",
-        description: "On October 17, we observe Anti Poverty Day to raise awareness and engage people in fighting poverty and hunger across the globe.",
+        description: "In 1951, Vajpayee was seconded by the RSS, along with Deendayal Upadhyaya, to work for the newly formed Bharatiya Jana Sangh, a Hindu right-wing political party associated with the RSS. He was appointed as a national secretary of the party in charge of the Northern region, based in Delhi. He soon became a follower and aide of party leader Syama Prasad Mukherjee. In the 1957 Indian general election, Vajpayee contested elections to the Lok Sabha, the lower house of the Indian Parliament. He lost to Raja Mahendra Pratap in Mathura, but was elected from Balrampur.",
         image: Figmaimages2,
     },
     {
         id: 3,
         title: "August 15 - India Independence Day",
-        description: "On August 15, India celebrates its 77th Independence Day, marking the nation's freedom from British rule in 1947—a day of pride, reflection, and unity for all Indians.",
+        description: "In 1951, Vajpayee was seconded by the RSS, along with Deendayal Upadhyaya, to work for the newly formed Bharatiya Jana Sangh, a Hindu right-wing political party associated with the RSS. He was appointed as a national secretary of the party in charge of the Northern region, based in Delhi. He soon became a follower and aide of party leader Syama Prasad Mukherjee. In the 1957 Indian general election, Vajpayee contested elections to the Lok Sabha, the lower house of the Indian Parliament. He lost to Raja Mahendra Pratap in Mathura, but was elected from Balrampur.",
+
         image: Figmaimages3,
     },
     {
         id: 4,
         title: "August 15 - India Independence Day",
-        description: "On August 15, India celebrates its 77th Independence Day, marking the nation's freedom from British rule in 1947—a day of pride, reflection, and unity for all Indians.",
+        description: "In 1951, Vajpayee was seconded by the RSS, along with Deendayal Upadhyaya, to work for the newly formed Bharatiya Jana Sangh, a Hindu right-wing political party associated with the RSS. He was appointed as a national secretary of the party in charge of the Northern region, based in Delhi. He soon became a follower and aide of party leader Syama Prasad Mukherjee. In the 1957 Indian general election, Vajpayee contested elections to the Lok Sabha, the lower house of the Indian Parliament. He lost to Raja Mahendra Pratap in Mathura, but was elected from Balrampur.",
         image: Figmaimages4,
     },
 ];
@@ -98,7 +101,7 @@ const OurNews = () => {
                                         <p className="fs-4 heading-font fw-bold">
                                             {news.title}
                                         </p>
-                                        <p className="heading-font">{news.description}</p>
+                                        <p className="our-news-homepage-description heading-font  ">{news.description}</p>
                                         <Link to={`/news/${news.id}`} onClick={scrollToTop}
                                             className="text-decoration-none text-warning-color align-items-center d-flex">
                                             More About <LuMoveRight className="mx-2" />

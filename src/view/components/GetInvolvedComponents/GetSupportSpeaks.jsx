@@ -1,29 +1,30 @@
 import React from "react";
-import {peoplebehind } from "../../../assets/images/index"
+import {peopleimg1,peopleimg2,peopleimg3,peopleimg4 } from "../../../assets/images/index"
+
 const supportSpeaksData = [
   {
     name: "Dr. C.L. Yadav",
     designation: "Advocate",
     location: "Indore",
-    image: peoplebehind,
+    image: peopleimg4,
   },
   {
     name: "Adv. Avijit Mishra",
     designation: "Advocate",
     location: "Sagar",
-    image: peoplebehind,
+    image: peopleimg2,
   },
   {
     name: "Ritesh Rajora",
     designation: "Sundaram BNP Paribas Asset Management",
     location: "Bhopal",
-    image: peoplebehind,
+    image: peopleimg3,
   },
   {
     name: "Rohit Yadav",
     designation: "Assistant Doctor Homoeo Clinic",
     location: "A-23.24 Homoeo Clinic Sukhliya Chouraha Indore",
-    image: peoplebehind,
+    image: peopleimg1,
   },
 ];
 

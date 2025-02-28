@@ -7,20 +7,20 @@ const FoundationDetailPage = () => {
   const foundationDetails = {
     1: {
       title: "Our role",
-      description:
-        "At Atal Foundation, we act as catalysts for social change, focusing on Education & Skill Development",
+      description: "In 1951, Vajpayee was seconded by the RSS, along with Deendayal Upadhyaya, to work for the newly formed Bharatiya Jana Sangh, a Hindu right-wing political party associated with the RSS. He was appointed as a national secretary of the party in charge of the Northern region, based in Delhi. He soon became a follower and aide of party leader Syama Prasad Mukherjee. In the 1957 Indian general election, Vajpayee contested elections to the Lok Sabha, the lower house of the Indian Parliament. He lost to Raja Mahendra Pratap in Mathura, but was elected from Balrampur.",
+
       image: MoreAboutFoundationImage1,
     },
     2: {
       title: "How we work",
-      description:
-        "At Atal Foundation, we follow a structured and impact-driven approach to create lasting social change",
+      description: "In 1951, Vajpayee was seconded by the RSS, along with Deendayal Upadhyaya, to work for the newly formed Bharatiya Jana Sangh, a Hindu right-wing political party associated with the RSS. He was appointed as a national secretary of the party in charge of the Northern region, based in Delhi. He soon became a follower and aide of party leader Syama Prasad Mukherjee. In the 1957 Indian general election, Vajpayee contested elections to the Lok Sabha, the lower house of the Indian Parliament. He lost to Raja Mahendra Pratap in Mathura, but was elected from Balrampur.",
+
       image: MoreAboutFoundationImage2
     },
     3: {
       title: "Our vision",
-      description:
-        "Inspired by the vision of Atal Ji, Atal Foundation was established to drive meaningful social transformation.",
+      description: "In 1951, Vajpayee was seconded by the RSS, along with Deendayal Upadhyaya, to work for the newly formed Bharatiya Jana Sangh, a Hindu right-wing political party associated with the RSS. He was appointed as a national secretary of the party in charge of the Northern region, based in Delhi. He soon became a follower and aide of party leader Syama Prasad Mukherjee. In the 1957 Indian general election, Vajpayee contested elections to the Lok Sabha, the lower house of the Indian Parliament. He lost to Raja Mahendra Pratap in Mathura, but was elected from Balrampur.",
+
       image: MoreAboutFoundationImage3,
     },
   };

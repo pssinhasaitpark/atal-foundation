@@ -1,15 +1,16 @@
 import React from 'react';
-import { Galleryimgs1, Galleryimgs2, Galleryimgs3, Galleryimgs4, Galleryimgs5, Galleryimgs6, EventsBanner } from '../../../assets/images/index';
+import { Galleryimgs1, Galleryimgs2, Galleryimgs3, Galleryimgs4, Galleryimgs5, Galleryimgs6, EventsBanner,EventGallery1, EventGallery2, EventGallery3, EventGallery4, EventGallery5  } from '../../../assets/images/index';
 import "./Events.css";
 // import useEvents from '../../hooks/useEvents';
 
+
 const eventData = {
     banner: EventsBanner,
-    eventSection: {
+    imageSection: {
         title: "Events - Driving Change, Inspiring Action",
         description: "At Atal Foundation, we believe that every event is an opportunity to create impact, spread awareness, and empower communities. Our events bring together leaders, changemakers, volunteers, and beneficiaries to celebrate progress, discuss challenges, and drive meaningful initiatives. Join us in our mission to create a better future through impactful gatherings, workshops, and awareness campaigns.",
         images: [
-            { src: Galleryimgs5, alt: "Event Image 1", className: "event-img-1" },  // Added className here
+            { src: Galleryimgs5, alt: "Event Image 1", className: "event-img-1" },
             { src: Galleryimgs3, alt: "Event Image 2" },
             { src: Galleryimgs4, alt: "Event Image 3" },
             { src: Galleryimgs6, alt: "Event Image 4" },
@@ -30,7 +31,7 @@ const eventData = {
 
 const Events = () => {
     // const { data, isLoading, isError, error } = useEvents();
-    const { banner, eventSection, videoSection } = eventData;
+    const { banner, imageSection, videoSection } = eventData;
 
     return (
         <div className='container my-lg-5 my-2'>
@@ -41,16 +42,16 @@ const Events = () => {
             <div className='event-imgs-section my-4 pb-3'>
                 <div className='event-imgs-details'>
                     <p className="event-imgs-title fw-bold fs-1 heading-font">
-                        {eventSection.title}
+                        {imageSection.title}
                     </p>
                     <p className='fw-light event-imgs-description lh-lg'>
-                        {eventSection.description}
+                        {imageSection.description}
                     </p>
                 </div>
 
                 <div className='event-imgs'>
                     <div className="row d-flex flex-wrap">
-                        {eventSection.images.slice(0, 2).map((img, index) => (
+                        {imageSection.images.slice(0, 2).map((img, index) => (
                             <div key={index} className={`col-12 ${index === 0 ? 'col-md-8' : 'col-md-4'} p-3`}>
                                 <img loading="lazy" src={img.src} alt={img.alt} className={`img-fluid ${img.className || ''}`} />
                             </div>
@@ -58,7 +59,7 @@ const Events = () => {
                     </div>
 
                     <div className="row">
-                        {eventSection.images.slice(2).map((img, index) => (
+                        {imageSection.images.slice(2).map((img, index) => (
                             <div key={index} className="col-12 col-md-4 p-3">
                                 <img loading="lazy" src={img.src} alt={img.alt} className={`img-fluid ${img.className || ''}`} />
                             </div>

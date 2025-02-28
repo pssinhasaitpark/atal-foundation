@@ -1,23 +1,23 @@
 import React from "react";
-import {peopleimg1,peopleimg2,peopleimg3,peopleimg4 } from "../../../assets/images/index"
-const GetMembersData = [
+import {peopleimg1,peopleimg6,peopleimg4,peopleimg5 } from "../../../assets/images/index"
+const supportSpeaksData = [
   {
     name: "Dr. C.L. Yadav",
     designation: "Advocate",
     location: "Indore",
-    image: peopleimg4,
+    image: peopleimg5,
   },
   {
     name: "Adv. Avijit Mishra",
     designation: "Advocate",
     location: "Sagar",
-    image: peopleimg3,
+    image: peopleimg4,
   },
   {
     name: "Ritesh Rajora",
     designation: "Sundaram BNP Paribas Asset Management",
     location: "Bhopal",
-    image: peopleimg2,
+    image: peopleimg6,
   },
   {
     name: "Rohit Yadav",
@@ -27,12 +27,12 @@ const GetMembersData = [
   },
 ];
 
-const GetMembers = () => {
+const PeopleBehindcomponent = () => {
   return (
     <div className="container my-4">
-      <h3 className="text-center mb-4">Members</h3>
+      <h3 className="text-center mb-4">People Behind</h3>
       <div className="row">
-        {GetMembersData.map((person, index) => (
+        {supportSpeaksData.map((person, index) => (
           <div key={index} className="col-md-6 mb-4">
             <div className="card shadow-sm p-3 d-flex flex-row align-items-center">
               <img
@@ -55,4 +55,4 @@ const GetMembers = () => {
   );
 };
 
-export default GetMembers;
+export default PeopleBehindcomponent;

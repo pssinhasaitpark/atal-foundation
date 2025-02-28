@@ -43,7 +43,7 @@ const MoreAboutFoundation = () => {
               <img
                 loading="lazy"
                 src={info.image}
-                className="card-img-top-maf"
+                className="card-img-top-maf object-fit-cover"
                 alt={info.title}
               />
               <div className="card-body p-0 my-2">

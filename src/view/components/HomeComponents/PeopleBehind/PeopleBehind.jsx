@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { peoplebehind } from "../../../../assets/images/index"
+import { peopleimg1, peopleimg2, peopleimg3, peopleimg4, peopleimg5, peopleimg6 } from "../../../../assets/images/index"
 import { Card } from "react-bootstrap"
 import { Link } from 'react-router'
 const PeopleBehind = () => {
@@ -15,12 +15,12 @@ const PeopleBehind = () => {
   };
 
   const teamMembers = [
-    { id: 1, name: 'Adv. Santosh Shukla', imageUrl: peoplebehind },
-    { id: 2, name: 'Dr. Prachi Shukla', imageUrl: peoplebehind },
-    { id: 3, name: 'Dr. Prabhakar Mishra', imageUrl: peoplebehind },
-    { id: 4, name: 'Abhishek Tiwari', imageUrl: peoplebehind },
-    { id: 5, name: 'Mrs. Mala Tiwari', imageUrl: peoplebehind },
-    { id: 6, name: 'Mrs. Ruchi Mishra', imageUrl: peoplebehind },
+    { id: 1, name: 'Adv. Santosh Shukla', imageUrl: peopleimg6 },
+    { id: 2, name: 'Dr. Prachi Shukla', imageUrl: peopleimg2 },
+    { id: 3, name: 'Dr. Prabhakar Mishra', imageUrl: peopleimg3 },
+    { id: 4, name: 'Abhishek Tiwari', imageUrl: peopleimg1 },
+    { id: 5, name: 'Mrs. Mala Tiwari', imageUrl: peopleimg5 },
+    { id: 6, name: 'Mrs. Ruchi Mishra', imageUrl: peopleimg4 },
   ];
 
   return (
@@ -31,15 +31,15 @@ const PeopleBehind = () => {
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center flex-column">
           <div className="row w-100">
             {teamMembers.map(member => (
-              <div key={member.id} className="col-12 col-sm-6 col-md-4 mb-4 p-1">
-                <div className="position-relative">
+              <div key={member.id} className="col-12 col-sm-6 col-md-4 p-2">
+                <div className="position-relative h-100 w-100">
                   <img loading="lazy"
                     src={member.imageUrl}
                     alt={member.name}
-                    className="img-fluid w-100"
+                    className="img-fluid w-100 h-100 object-fit-cover"
                   />
-                  <div className="text-center text-light py-1 position-absolute bottom-0 start-0 w-100">
-                    <p className="mb-0 small">{member.name}</p>
+                  <div className="justify-content-center d-flex position-absolute bottom-0 w-100">
+                    <p className="text-center mb-0 small bg-light py-1 px-4 text-dark">{member.name}</p>
                   </div>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const PeopleBehind = () => {
                   <p className="custom-subtitle  mb-2">livelihood & empowerment - creating sustainable employment and entrepreneurship</p>
                 </div>
               </div>
-             <Link onClick={scrollToTop} to="/supportspeaks" ><button className="custom-button">Learn About</button></Link>
+              <Link onClick={scrollToTop} to="/people-behind" ><button className="custom-button">Learn About</button></Link>
             </Card.Body>
           </Card>
         </div>

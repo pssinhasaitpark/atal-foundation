@@ -19,6 +19,8 @@ import GetRegistrationPage from "./GetRegistrationPage";
 import GetSupportSpeaksPage from "./GetSupportSpeaksPage";
 import SingleNewsPage from "./SingleNewsPage";
 import SingleFoundationDetailPage from "./SingleFoundationDetailPage";
+import SingleEventPage from "./SingleEventPage"
+import PeopleBehindPage from "./PeopleBehindPage";
 export {
   Popup,
   HomePage,
@@ -41,4 +43,6 @@ export {
   GetSupportSpeaksPage,
   SingleNewsPage,
   SingleFoundationDetailPage,
+  SingleEventPage,
+  PeopleBehindPage,
 };

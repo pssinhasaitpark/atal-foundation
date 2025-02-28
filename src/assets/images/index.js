@@ -10,12 +10,12 @@ import Figmaimages3 from "./Figmaimages3.png";
 import Figmaimages4 from "./Figmaimages4.png";
 import Figmaimages5 from "./Figmaimages5.png";
 import Figmaimages6 from "./Figmaimages6.png";
-import peoplebehind from "./people-behind.png";
+
 import EventGallery from "./EventGallery.png";
 import VisionSection from "./VisionSection.png";
 import AboutUsImgs1 from "./AboutUsImgs1.png";
 import AboutUsImgs2 from "./AboutUsImgs2.png";
-import ourMissionImg from "./ourMissionImg.png"
+import ourMissionImg from "./ourMissionImg.png";
 import contact2 from "./contact2.png";
 import contact1 from "./contact1.png";
 import contact3 from "./contact3.png";
@@ -48,7 +48,14 @@ import SocialBanner from "./Banners/SocialBanner.png";
 import SpecialInterventionsBanner from "./Banners/SpecialInterventionsBanner.png";
 import SpecialSupportBanner from "./Banners/SpecialSupportBanner.png";
 import GalleryBanner from "./Banners/GalleryBanner.png";
-import PopupImage from "./PopupImage.png"
+import PopupImage from "./PopupImage.png";
+import peoplebehind from "./peoplebehind.png"
+import peopleimg1 from "./people-behind-img1.png";
+import peopleimg2 from "./people-behind-img2.png";
+import peopleimg3 from "./people-behind-img3.png";
+import peopleimg4 from "./people-behind-img4.png";
+import peopleimg5 from "./people-behind-img5.png";
+import peopleimg6 from "./people-behind-img6.png";
 export {
   ourMissionImg,
   PopupImage,
@@ -76,7 +83,6 @@ export {
   Figmaimages4,
   Figmaimages5,
   Figmaimages6,
-  peoplebehind,
   EventGallery,
   VisionSection,
   AboutUsImgs1,
@@ -99,4 +105,11 @@ export {
   EventGallery3,
   EventGallery4,
   EventGallery5,
+  peopleimg1,
+  peopleimg2,
+  peopleimg3,
+  peopleimg4,
+  peopleimg5,
+  peopleimg6,
+  peoplebehind,
 };
