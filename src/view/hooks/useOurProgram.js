@@ -9,8 +9,8 @@ import axiosInstance from "../redux/axios/axios";
 
 const fetchOurProgramData = async () => {
   try {
-    const response = await axiosInstance.get("/our-program");
-    return response.data;
+    const response = await axiosInstance.get("/our-programme");
+    return response.data.ourProgrammes;
   } catch (error) {
     console.error("API call failed:", error);
     throw error;

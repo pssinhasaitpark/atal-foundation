@@ -1,5 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { ContactSlice, SubscribersSlice,socialMediaReducer,ourProgramSlice,aboutUsSlice,eventsSlice } from "../slice/index";
+import {
+  ContactSlice,
+  SubscribersSlice,
+  socialMediaReducer,
+  ourProgramSlice,
+  aboutUsSlice,
+  eventsSlice,
+  messageUsSlice,
+  registrationSlice,
+} from "../slice/index";
 
 const store = configureStore({
   reducer: {
@@ -9,6 +18,8 @@ const store = configureStore({
     ourProgram: ourProgramSlice,
     aboutUs: aboutUsSlice,
     events: eventsSlice,
+    message: messageUsSlice,
+    registration: registrationSlice,
   },
 });
 
