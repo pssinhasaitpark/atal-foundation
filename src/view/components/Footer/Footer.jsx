@@ -44,18 +44,18 @@ const Footer = () => {
         .email("Invalid email address")
         .required("Email is required"),
     }),
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       subscribe(values.email, {
         onSuccess: () => {
-          toast.success("You have successfully subscribed to our newsletter!");
+          toast.success("Successfully subscribed!");
+          resetForm();
         },
         onError: (error) => {
-          toast.error(`Error: ${error.message}`);
+          toast.error(`Error: ${error.response.data.message}`);
         },
       });
     },
   });
-
 
   return (
     <>
