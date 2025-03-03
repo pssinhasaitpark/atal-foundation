@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import useMessagesUs from "../../hooks/useMessageUs";
-import { toast } from "react-toastify";
+import { ToastContainer,toast } from "react-toastify";
 
 const MessageForm = () => {
   const { mutate, isLoading } = useMessagesUs();
@@ -108,6 +108,7 @@ const MessageForm = () => {
           )}
         </Formik>
       </div>
+      <ToastContainer/>
     </div>
   );
 };
