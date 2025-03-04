@@ -1,44 +1,44 @@
 import { useDispatch } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 import {
-  setAboutUsLoading,
-  setAboutUsData,
-  setAboutUsError,
-} from "../redux/slice/aboutUsSlice";
+  setOurNewsLoading,
+  setOurNewsData,
+  setOurNewsError,
+} from "../redux/slice/ourNewsSlice";
 import axiosInstance from "../redux/axios/axios";
 
-const fetchAboutUsData = async () => {
+const fetchOurNewsData = async () => {
   try {
-    const response = await axiosInstance.get('/about');
-    return response.data[0];
+    const response = await axiosInstance.get("/news");
+    return response.data.allNews;
   } catch (error) {
     console.error("API call failed:", error);
     throw error;
   }
 };
 
-const useAboutUs = () => {
+const useOurNews = () => {
   const dispatch = useDispatch();
 
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["aboutUsData"],
-    queryFn: fetchAboutUsData,
+    queryKey: ["ourNewsData"],
+    queryFn: fetchOurNewsData,
+
     onSuccess: (data) => {
-      dispatch(setAboutUsData(data));
+      dispatch(setOurNewsData(data));
     },
     onError: (error) => {
-      dispatch(setAboutUsError(error.message));
+      dispatch(setOurNewsError(error.message));
     },
     onSettled: () => {
-      dispatch(setAboutUsLoading(false));
+      dispatch(setOurNewsLoading(false));
     },
   });
-
   if (isLoading && !isError) {
-    dispatch(setAboutUsLoading());
+    dispatch(setOurNewsLoading());
   }
 
   return { data, isLoading, isError, error };
 };
 
-export default useAboutUs;
+export default useOurNews;

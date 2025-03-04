@@ -1,11 +1,42 @@
+.custom-p-3 {
+  padding: 1rem !important;
+}
+
+.custom-p-1 {
+  padding: 0.5rem !important;
+}
+
 .event-imgs img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.event-img-1 {
-  height: 400px !important;
+
+.event-img-0 {
+  height: 460px !important;
 }
-.event-imgs-description{
+
+.event-imgs-description {
   width: 86% !important;
+}
+
+
+.event-gallery-text-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .event-imgs-description {
+    width: 100% !important;
+  }
+  
+  .event-video video {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .event-video video {
+    height: 250px;
+  }
 }

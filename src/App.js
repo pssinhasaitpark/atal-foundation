@@ -48,16 +48,22 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/OpEducation" element={<OpEducationPage />} />
-          <Route path="/OpHealthcare" element={<OpHealthcarePage />} />
-          <Route path="/OpLivelihood" element={<OpLivelihoodPage />} />
-          <Route path="/OpGirlChild" element={<OpGirlChildPage />} />
-          <Route path="/OpPrivileged" element={<OpPriviledgedPage />} />
-          <Route path="/OpCivicDriven" element={<OpCivicDrivenPage />} />
-          <Route path="/OpSocial" element={<OpSocialPage />} />
-          <Route path="/OpSpecialSupport" element={<OpSpecialSupportPage />} />
+          <Route path="/Education" element={<OpEducationPage />} />
+          <Route path="/Healthcare" element={<OpHealthcarePage />} />
+          <Route path="/Livelihood" element={<OpLivelihoodPage />} />
           <Route
-            path="/OpSpecialInterventions"
+            path="/Girl Child & Women Empowerment"
+            element={<OpGirlChildPage />}
+          />
+          <Route path="/Privileged Children" element={<OpPriviledgedPage />} />
+          <Route path="/Civic Driven Change" element={<OpCivicDrivenPage />} />
+          <Route path="/Social Entrepreneurship" element={<OpSocialPage />} />
+          <Route
+            path="/Special Support ourProgramme"
+            element={<OpSpecialSupportPage />}
+          />
+          <Route
+            path="/Special Interventions"
             element={<OpSpecialIntervationPage />}
           />
           <Route path="/contacts" element={<ContactsPage />} />

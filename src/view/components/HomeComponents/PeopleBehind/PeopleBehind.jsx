@@ -29,7 +29,7 @@ const PeopleBehind = () => {
 
 
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center flex-column">
-          <div className="row w-100">
+          <div className="row">
             {teamMembers.map(member => (
               <div key={member.id} className="col-12 col-sm-6 col-md-4 p-2">
                 <div className="position-relative h-100 w-100">

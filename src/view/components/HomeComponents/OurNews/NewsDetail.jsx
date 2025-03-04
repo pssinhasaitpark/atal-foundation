@@ -1,23 +1,32 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { newsData } from './OurNews';
+import React from "react";
+import { useParams } from "react-router-dom";
+import useOurNews from "../../../hooks/useOurNews";
 
 const NewsDetail = () => {
-    const { id } = useParams();
-    const newsItem = newsData.find((item) => item.id === parseInt(id));
+  const { id } = useParams();
+  const { data, isLoading, isError } = useOurNews();
+  if (isLoading)
+    return <p className="text-muted fs-2 text-center">Loading Gallery...</p>;
+  if (isError && isError)
+    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  const newsItem = data.find((item) => item._id === id);
 
-    if (!newsItem) {
-        return <div>News not found!</div>;
-    }
+  if (!newsItem) {
+    return <div>News not found!</div>;
+  }
 
-    return (
-        <div className="news-detail-container container my-5 w-75">
-            <h2 className='heading-font text-center'>{newsItem.title}</h2>
-            <img src={newsItem.image} alt={newsItem.title} className="w-100 my-4 object-fit-contain" style={{height:"500px"}} />
-            <p className=''>{newsItem.description}</p>
-        </div>
-
-    );
+  return (
+    <div className="news-detail-container container my-5 w-75">
+      <h2 className="heading-font text-center">{newsItem.headline}</h2>
+      <img
+        src={newsItem.images}
+        alt={newsItem.headline}
+        className="w-100 my-4 object-fit-contain"
+        style={{ height: "500px" }}
+      />
+      <p className="">{newsItem.description}</p>
+    </div>
+  );
 };
 
 export default NewsDetail;

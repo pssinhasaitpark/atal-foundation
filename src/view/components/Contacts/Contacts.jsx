@@ -114,7 +114,7 @@ const Contacts = () => {
         />
       </div>
       <h2 className="fw-bold my-5 mb-4 heading-font">CONTACT US / JOIN US</h2>
-      <p className="contact-page-maindescription mx-auto mb-5 fs-6 w-50 text-center fw-light lh-lg">
+      <p className="contact-page-maindescription mx-auto mb-5 fs-6 w-lg-50 text-center fw-light lh-lg">
         At Atal Foundation, we are always ready to connect with individuals,
         organizations, and partners who share our vision of empowering
         communities and driving meaningful change. Whether you have a question,

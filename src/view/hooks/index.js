@@ -5,6 +5,7 @@ import useOurProgram from "../hooks/useOurProgram";
 import useAboutUs from "./useAboutUs";
 import useEvents from "./useEvents";
 import useMessageUs from "./useMessageUs";
+import useOurNews from "./useOurNews"
 export {
   useContacts,
   useSubscribe,
@@ -13,4 +14,5 @@ export {
   useAboutUs,
   useEvents,
   useMessageUs,
+  useOurNews,
 };

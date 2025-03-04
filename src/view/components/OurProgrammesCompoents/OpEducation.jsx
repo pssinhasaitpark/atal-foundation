@@ -1,44 +1,19 @@
 import React from "react";
-import { EducatingBanner, AboutUsImgs2 } from "../../../assets/images/index";
 import { Card } from "react-bootstrap";
-
-// import useOurProgram from "../../hooks/useOurProgram";
+import useOurProgram from "../../hooks/useOurProgram";
 const OpEducation = () => {
-  // const { data, isLoading, isError } = useOurProgram();
-  // let educationData = [];
-  // if (!isLoading && !isError) {
-  //   educationData = data.filter((item) => item.category === "education");
-  // }
-  // console.log("educationData",educationData)
+  const { data, isLoading, isError } = useOurProgram();
+  let Education = [];
+  if (!isLoading && !isError) {
+    Education = data.filter((item) => item.category === "Education");
+  }
+  if (isLoading)
+    return <p className="text-muted fs-2 text-center">Loading Data...</p>;
+  if (isError && isError)
+    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
 
-  // if (isLoading) {
-  //   return <p>Loading...</p>;
-  // }
-
-  // if (isError) {
-  //   return <p>Error: {isError}</p>;
-  // }
-  // const EducatingData = data;
-  // console.log(EducatingData);
-
-  const bannerImage = EducatingBanner;
-  const dynamicData = [
-    {
-      image: AboutUsImgs2,
-      title: "Educating Rural India: A Step Towards a Brighter Future",
-      description: `India's rapid economic growth has transformed urban landscapes, but rural areas continue to struggle with poverty and a lack of basic education. The disparity between urban and rural education is a major challenge, with millions of children in villages unable to access proper schooling. Despite the government's vision for Universal Compulsory Primary Education, challenges such as poverty, lack of infrastructure, and the need for child labor prevent many children from receiving an education. Without basic education, these children remain trapped in a cycle of hard labor and low wages, limiting their opportunities for a better future. Education is the key to breaking this cycle, and ATAL FOUNDATION is committed to making quality education accessible to every child in rural India.`,
-    },
-    {
-      image: AboutUsImgs2,
-      title: "Transforming Education for All",
-      description: `Education is the foundation of progress. The ATAL FOUNDATION focuses on ensuring every child, especially in rural areas, has access to quality education. Our goal is to break barriers like poverty and lack of infrastructure that prevent children from reaching their full potential. The future of India lies in educating its rural children and providing them with the resources to succeed in a rapidly changing world.`,
-    },
-    {
-      image: AboutUsImgs2,
-      title: "Building a Better Tomorrow Through Education",
-      description: `Rural education is essential for the growth and development of India's rural communities. The ATAL FOUNDATION strives to provide innovative educational solutions that cater to the unique needs of rural children. We believe that education is a powerful tool to eliminate poverty, create equality, and provide a brighter future for every child in rural India.`,
-    },
-  ];
+  const dynamicData = Education[0].details;
+  const bannerImage = Education[0].banner;
 
   return (
     <div className="container py-5">
@@ -62,7 +37,7 @@ const OpEducation = () => {
             className="custom-breadcrumb-item active fs-3 heading-font text-muted ps-1"
             aria-current="page"
           >
-            Educating
+            {Education[0].category}
           </li>
         </ol>
       </nav>
@@ -75,7 +50,7 @@ const OpEducation = () => {
             <div className="col-md-4 d-flex">
               <img
                 loading="lazy"
-                src={data.image}
+                src={data.images[0].url}
                 alt={data.title}
                 className="img-fluid w-100 h-100 object-fit-cover"
               />

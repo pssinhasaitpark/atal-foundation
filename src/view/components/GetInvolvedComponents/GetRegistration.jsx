@@ -21,29 +21,31 @@ const category = [
 ];
 
 const validationSchema = Yup.object({
-  message: Yup.string(),
-  first_name: Yup.string(),
-  last_name: Yup.string(),
+  message: Yup.string().required("Message is required"),
+  first_name: Yup.string().required("First name is required"),
+  last_name: Yup.string().required("Last name is required"),
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
   mobile: Yup.string()
     .matches(/^[0-9]{10}$/, "Mobile number must be 10 digits")
     .required("Mobile is required"),
-  address: Yup.string(),
-  gender: Yup.string(),
-  date_of_birth: Yup.date(),
-  city: Yup.string(),
-  state: Yup.string(),
-  category: Yup.string(),
-  designation: Yup.string(),
-  images: Yup.array().of(
-    Yup.mixed()
-      .test("fileType", "Only image files are allowed", (value) =>
-        value && value[0] ? value[0] : true
-      )
-      .required("Image file is required")
-  ),
+  address: Yup.string().required("Address is required"),
+  gender: Yup.string().required("Gender is required"),
+  date_of_birth: Yup.date().required("Date of birth is required"),
+  city: Yup.string().required("City is required"),
+  state: Yup.string().required("State is required"),
+  category: Yup.string().required("Category is required"),
+  designation: Yup.string().required("Designation is required"),
+  images: Yup.array()
+    .of(
+      Yup.mixed()
+        .test("fileType", "Only image files are allowed", (value) =>
+          value && value[0] ? value[0] : true
+        )
+        .required("Image file is required")
+    )
+    .required("Profile image is required"),
 });
 
 const RegistrationForm = () => {
@@ -89,7 +91,6 @@ const RegistrationForm = () => {
   };
 
   const onSubmit = (values, { resetForm }) => {
-    console.log("Form Submitted:", values);
     const formData = new FormData();
     Object.keys(values).forEach((key) => {
       if (key === "images") {
@@ -107,7 +108,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="container mt-5 w-50">
+    <div className="container mt-5 w-75">
       <h4>Registration Form</h4>
       <Formik
         initialValues={initialValues}

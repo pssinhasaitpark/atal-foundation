@@ -8,6 +8,8 @@ import {
   eventsSlice,
   messageUsSlice,
   registrationSlice,
+  ourNewsSlice,
+  homeSlideSlice,
 } from "../slice/index";
 
 const store = configureStore({
@@ -20,6 +22,8 @@ const store = configureStore({
     events: eventsSlice,
     message: messageUsSlice,
     registration: registrationSlice,
+    ourNews: ourNewsSlice,
+    homeSlide: homeSlideSlice,
   },
 });
 

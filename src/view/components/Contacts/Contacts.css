@@ -15,34 +15,122 @@
   background-color: #f68633;
   visibility: visible;
 }
-.contact-card-title{
-    font-size: 25px;
-    font-weight: 500 !important;
-    letter-spacing: 2px;
+
+.contact-card-title {
+  font-size: 25px;
+  font-weight: 500 !important;
+  letter-spacing: 2px;
 }
+
 .bg-img {
   padding: 0 !important;
   background-image: url(../../../assets/images/MapBackBanner.png);
   background-size: cover;
 }
+
 .contact-section-minidescription {
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
 }
+
 .contact-section-title {
   font-size: 35px !important;
   font-weight: 500;
   letter-spacing: 10px !important;
 }
+
 .input-contact-fields::placeholder {
   font-weight: 400;
   color: lightgray !important;
   font-size: small;
 }
 
-@media (min-width: 250px) and (max-width: 700px) {
-  p.contact-page-maindescription {
+@media (max-width: 767px) {
+  .contact-page-maindescription {
     width: 100% !important;
+  }
+
+  .contact-card-title {
+    font-size: 20px;
+  }
+
+  .contact-section-title {
+    font-size: 28px !important;
+    letter-spacing: 5px !important;
+  }
+
+  .contact-section-minidescription {
+    font-size: 10px !important;
+  }
+
+  .input-contact-fields {
+    font-size: 14px !important;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .map-container {
+    height: 40vh;
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-page-maindescription {
+    width: 70%;
+  }
+
+  .contact-card-title {
+    font-size: 22px;
+  }
+
+  .contact-section-title {
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+
+  .input-contact-fields {
+    font-size: 15px !important;
+  }
+
+  .map-container {
+    height: 45vh;
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact-page-maindescription {
+    width: 50%;
+  }
+
+  .contact-card-title {
+    font-size: 25px;
+  }
+
+  .contact-section-title {
+    font-size: 35px;
+    letter-spacing: 10px;
+  }
+
+  .input-contact-fields {
+    font-size: 16px !important;
+  }
+
+  .map-container {
+    height: 50vh;
+  }
+
+  .contact-form-container {
+    width: 75%;
   }
 }

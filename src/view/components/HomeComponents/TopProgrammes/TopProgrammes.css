@@ -1,16 +1,20 @@
-.top-programmes-image{
-    height: 15rem !important;
+.top-programmes-image {
+  height: 15rem !important;
 }
-.top-programmes-title{
-    font-weight: 500;
-    font-size: 40px;
+.top-programmes-title {
+  font-weight: 500;
+  font-size: 40px;
 }
-.top-programme-slider-card{
-    width: 374px !important;
+
+.truncated-paragraph {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
+
 @media (max-width: 768px) {
-    .top-programmes-image{
-        height: 20rem  !important;
-    }
+  .top-programmes-image {
+    height: 20rem !important;
   }
-  
+}
