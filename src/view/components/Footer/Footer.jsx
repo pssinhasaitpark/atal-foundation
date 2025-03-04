@@ -61,8 +61,8 @@ const Footer = () => {
     <>
       <div className="footer bg-dark text-light">
         <div className="footer-padding">
-          <div className="row">
-            <div className="col-md-4 footer-section my-5 my-lg-0">
+          <div className="row w-100">
+            <div className="col-md-4 col-12 footer-section my-5 my-lg-0">
               <h5 className="custom-badge-footer badge  mb-3 text-uppercase">
                 Atal Foundation
               </h5>
@@ -71,7 +71,7 @@ const Footer = () => {
                 india, inspired by atal
               </h3>
             </div>
-            <div className="col-md-3 footer-section quick-links-div my-5 my-lg-0">
+            <div className="col-md-3 col-12 footer-section quick-links-div my-5 my-lg-0">
               <div className="quick-links">
                 <p className="mb-3 footer-center-list">Quick Links</p>
               </div>
@@ -104,7 +104,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-5 fotter-right-section my-5 my-lg-0 ">
+            <div className="col-md-5 col-12 fotter-right-section my-5 my-lg-0 ">
               <h5 className="mb-4 fs-4 fw-medium">
                 Sign up for our newsletter
               </h5>

@@ -55,9 +55,9 @@ const Gallery = () => {
                 </div>
 
                 <div className='gallery-video'>
-                    <div className="row d-flex flex-wrap">
+                    <div className="row">
                         {videoSection.videos.slice(0,4).map((video, index) => (
-                            <div key={index} className="col-12 col-md-3 p-1" style={{width:"25%",height:"400px"}}>
+                            <div key={index} className="col-lg-3 col-sm-2 p-1" style={{height:"400px"}}>
                                 <video height="100%" width="100%" controls preload="metadata">
                                     <source src={video} type="video/webm" />
                                     Your browser does not support the video tag.

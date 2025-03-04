@@ -68,20 +68,17 @@ const PhotoGallery2 = () => {
 
           <Swiper
             ref={swiperRef}
-            spaceBetween={30}
+            spaceBetween={10}
             modules={[]}
             className="mySwiper mb-4"
             breakpoints={{
               400: {
-                slidesPerView: 1, // 1 card per view for small devices
+                slidesPerView: 1,
               },
               768: {
-                slidesPerView: 2, // 2 cards per view for medium screens
+                slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 3, // 3 cards per view for large screens
-              },
-              1440: {
                 slidesPerView: 4,
               },
             }}

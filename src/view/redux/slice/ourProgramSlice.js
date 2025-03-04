@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const ourProgramSlice = createSlice({
-  name: "ourProgram", // Prefix for slice
+  name: "ourProgram",
   initialState,
   reducers: {
     setOurProgramLoading: (state) => {

@@ -20,7 +20,7 @@ const MessageForm = () => {
 
   return (
     <div className="container my-5">
-      <div className="w-50 mx-auto">
+      <div className=" mx-auto">
         <h1 className="text-center">Message Us</h1>
         <Formik
           initialValues={{

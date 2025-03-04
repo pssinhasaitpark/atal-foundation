@@ -4,15 +4,8 @@
   line-height: 30px;
 }
 
-.photo-gallery-slider-card {
-  width: 100%;
-  max-width: 374px;
-  margin-bottom: 30px;
-}
-
 .photo-gallery-img {
-
-  max-height: 15rem;
+  height: 15rem;
   object-fit: cover;
 }
 
@@ -43,15 +36,5 @@
 
   .photo-gallery-img {
     height: 15rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .photo-gallery-slider-card {
-    max-width: 23%;
-  }
-
-  .photo-gallery-img {
-    height: 18rem;
   }
 }

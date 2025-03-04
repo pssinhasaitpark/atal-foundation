@@ -1,10 +1,24 @@
 import ContactSlice from "./ContactSlice";
 import SubscribersSlice from "./SubscribersSlice";
-import socialMediaReducer from "./socialMediaSlice"
-import ourProgramSlice from "./ourProgramSlice"
-import aboutUsSlice from "./aboutUsSlice"
-import popupSlice from "./popupSlice"
-import eventsSlice from "./eventsSlice"
-import messageUsSlice from "./messageUsSlice"
-import registrationSlice from "./registrationSlice"
-export { registrationSlice,ContactSlice, SubscribersSlice,socialMediaReducer,ourProgramSlice,aboutUsSlice,popupSlice,eventsSlice,messageUsSlice };
+import socialMediaReducer from "./socialMediaSlice";
+import ourProgramSlice from "./ourProgramSlice";
+import aboutUsSlice from "./aboutUsSlice";
+import popupSlice from "./popupSlice";
+import eventsSlice from "./eventsSlice";
+import messageUsSlice from "./messageUsSlice";
+import registrationSlice from "./registrationSlice";
+import ourNewsSlice from "./ourNewsSlice";
+import homeSlideSlice from "./homeSlideSlice"
+export {
+  registrationSlice,
+  ContactSlice,
+  SubscribersSlice,
+  socialMediaReducer,
+  ourProgramSlice,
+  aboutUsSlice,
+  popupSlice,
+  eventsSlice,
+  messageUsSlice,
+  ourNewsSlice,
+  homeSlideSlice,
+};
