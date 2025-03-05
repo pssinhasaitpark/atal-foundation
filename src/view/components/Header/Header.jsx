@@ -7,13 +7,6 @@ import useOurProgram from "../../hooks/useOurProgram";
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { data, isLoading, isError } = useOurProgram();
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-  if (isError) {
-    return <p>Error: {isError}</p>;
-  }
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -74,16 +67,22 @@ const Header = () => {
                 className="dropdown-menu custom-dropdown-menu"
                 aria-labelledby="navbarDropdownPrograms"
               >
-                {data.map((opCategory) => (
-                  <li key={opCategory._id}>
-                    <a
-                      className="dropdown-item custom-dropdown-item"
-                      href={`/${opCategory.category}`}
-                    >
-                      {opCategory.category}
-                    </a>
-                  </li>
-                ))}
+                {isError ? (
+                  <p>Error: {isError}</p>
+                ) : isLoading ? (
+                  <p>Loading...</p>
+                ) : (
+                  data.map((opCategory) => (
+                    <li key={opCategory._id}>
+                      <a
+                        className="dropdown-item custom-dropdown-item"
+                        href={`/${opCategory.category}`}
+                      >
+                        {opCategory.category}
+                      </a>
+                    </li>
+                  ))
+                )}
 
                 {/* <li><a className="dropdown-item custom-dropdown-item" href="/OpEducation">Education</a></li>
                 <li><a className="dropdown-item custom-dropdown-item" href="/OpHealthcare">Healthcare</a></li>

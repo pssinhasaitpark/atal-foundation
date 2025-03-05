@@ -7,7 +7,7 @@ const initialState = {
   status: 'idle',
 };
 
-const eventsSlice = createSlice({
+const eventsImgsSlice = createSlice({
   name: 'events',
   initialState,
   reducers: {
@@ -33,11 +33,11 @@ export const {
   setEventsLoading,
   setEventsData,
   setEventsError,
-} = eventsSlice.actions;
+} = eventsImgsSlice.actions;
 
 export const selectEventsData = (state) => state.events.eventsData;
 export const selectEventsLoading = (state) => state.events.loading;
 export const selectEventsError = (state) => state.events.error;
 export const selectEventsStatus = (state) => state.events.status;
 
-export default eventsSlice.reducer;
+export default eventsImgsSlice.reducer;

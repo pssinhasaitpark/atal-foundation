@@ -4,19 +4,19 @@ import {
   setEventsLoading,
   setEventsData,
   setEventsError,
-} from "../redux/slice/eventsSlice";
+} from "../redux/slice/eventsImgsSlice";
 import axiosInstance from "../redux/axios/axios";
 
 const fetchEventsData = async () => {
   try {
-    const response = await axiosInstance.get("/event");
-    return response.data;
+    const response = await axiosInstance.get("/event");    
+    return response.data.events[0];
   } catch (error) {
     console.error("API call failed:", error);
     throw error;
   }
 };
-const useEvents = () => {
+const useEventsImgs = () => {
   const dispatch = useDispatch();
 
   const { data, isLoading, isError, error } = useQuery({
@@ -40,4 +40,4 @@ const useEvents = () => {
   return { data, isLoading, isError, error };
 };
 
-export default useEvents;
+export default useEventsImgs;

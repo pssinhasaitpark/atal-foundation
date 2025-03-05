@@ -4,12 +4,13 @@ import {
   SubscribersSlice,
   socialMediaReducer,
   ourProgramSlice,
-  aboutUsSlice,
-  eventsSlice,
+  aboutUsReducer,
+  eventsImgsSlice,
   messageUsSlice,
   registrationSlice,
   ourNewsSlice,
   homeSlideSlice,
+  eventVidsSlice,
 } from "../slice/index";
 
 const store = configureStore({
@@ -18,13 +19,15 @@ const store = configureStore({
     subscribe: SubscribersSlice,
     socialMedia: socialMediaReducer,
     ourProgram: ourProgramSlice,
-    aboutUs: aboutUsSlice,
-    events: eventsSlice,
+    aboutUs: aboutUsReducer,
+    eventsImgs: eventsImgsSlice,
+    eventsVids:eventVidsSlice,
     message: messageUsSlice,
     registration: registrationSlice,
     ourNews: ourNewsSlice,
     homeSlide: homeSlideSlice,
   },
+  
 });
 
 export default store;

@@ -31,6 +31,7 @@ import NewsDetail from "./HomeComponents/OurNews/NewsDetail"
 import FoundationDetailPage from "./HomeComponents/MoreAboutFoundation/FoundationDetailPage"
 import SingleEvent from "./Events/SingleEvent";
 import PeopleBehindcomponent from "./PeopleBehind/PeopleBehindcompoent";
+
 export {
   FoundationDetailPage,
   NewsDetail,
