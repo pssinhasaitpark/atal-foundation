@@ -1,14 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Container, Card, Modal } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { LuMoveLeft, LuMoveRight } from "../../../../assets/logos/index";
 import "./PhotoGallery2.css";
 import useGallery from "../../../hooks/useGallery";
-import { Link } from "react-router";
+import { SlideshowLightbox } from "lightbox.js-react";
 
 const PhotoGallery2 = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [currentImage, setCurrentImage] = useState(null);
   const swiperRef = useRef(null);
   const { data, isLoading, isError } = useGallery();
 
@@ -25,15 +23,6 @@ const PhotoGallery2 = () => {
 
   const handleNextClick = () => {
     swiperRef.current.swiper.slideNext();
-  };
-  const handleImageClick = (image) => {
-    setCurrentImage(image);
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-    setCurrentImage(null);
   };
 
   return (
@@ -85,39 +74,22 @@ const PhotoGallery2 = () => {
           >
             {imagesData.map((image, index) => (
               <SwiperSlide key={index} className="photo-gallery-slider-card">
-                <Link onClick={() => handleImageClick(image)}>
-                  <Card className="border-0 ">
-                    <Card.Img
-                      loading="lazy"
-                      variant="top"
-                      src={image}
-                      alt={`gallery_image_${index}`}
-                      className="photo-gallery-img rounded-0 object-fit-cover"
-                    />
-                  </Card>
-                </Link>
+                <SlideshowLightbox
+                  backgroundColor="black"
+                  modalClose="clickOutside"
+                >
+                  <img
+                    loading="lazy"
+                    src={image}
+                    alt={`gallery_image_${index}`}
+                    className="photo-gallery-img w-100 "
+                  />
+                </SlideshowLightbox>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </Container>
-      <Modal
-        show={showModal}
-        onHide={handleCloseModal}
-        size="lg"
-        centered
-        animation={false}
-      >
-        <Modal.Body className="p-0">
-          <img
-            src={currentImage}
-            alt="Full Size"
-            className="d-block w-100 bg-transparent object-fit-cover"
-            onClick={handleCloseModal}
-            style={{ cursor: "pointer" }}
-          />
-        </Modal.Body>
-      </Modal>
     </div>
   );
 };

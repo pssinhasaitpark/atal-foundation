@@ -3,7 +3,7 @@ import useSubscribe from "../hooks/useSubscribe";
 import useSocialMediaLinks from "../hooks/useSocialMediaLinks";
 import useOurProgram from "../hooks/useOurProgram";
 import useAboutUs from "./useAboutUs";
-import useEvents from "./useEvents";
+import useEventsImgs from "./useEventsImgs";
 import useMessageUs from "./useMessageUs";
 import useOurNews from "./useOurNews"
 export {
@@ -12,7 +12,7 @@ export {
   useSocialMediaLinks,
   useOurProgram,
   useAboutUs,
-  useEvents,
+  useEventsImgs,
   useMessageUs,
   useOurNews,
 };

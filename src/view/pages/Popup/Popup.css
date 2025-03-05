@@ -2,8 +2,32 @@
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.72);
 }
-@media (min-width: 250px) and (max-width: 700px) {
+
+.popup-data {
+  max-width: 100%;
+  width: 35rem;
+  height: auto;
+  max-height: 100vh;
+  min-width: 15rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
   .popup-data {
-    width: 25rem;
+    width: 90%;
+    max-height: 100vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup-data {
+    width: 95%;
+    max-height: 100vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .popup-main button {
+    font-size: 0.8rem;
   }
 }
