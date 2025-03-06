@@ -1,14 +1,11 @@
-import React from 'react'
-import { Header, Footer, Gallery, FoundationFacts } from '../components/index'
+import React from "react";
+import { Gallery } from "../components/index";
 const GalleryPage = () => {
-    return (
-        <div>
-            <Header />
-            <Gallery />
-            <FoundationFacts />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <Gallery />
+    </div>
+  );
+};
 
 export default GalleryPage;

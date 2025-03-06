@@ -1,13 +1,11 @@
 import React from 'react'
-import { Header, Footer, FoundationFacts, OpSpecialIntervation } from '../components/index'
+import { OpSpecialIntervation } from '../components/index'
 
 const OpSpecialPage = () => {
   return (
-    <div>
-      <Header />
+    <div className="App">
       <OpSpecialIntervation />
-      <FoundationFacts />
-      <Footer />
+    
     </div>
   )
 }

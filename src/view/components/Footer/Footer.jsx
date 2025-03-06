@@ -11,7 +11,6 @@ import {
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import useSubscribe from "../../hooks/useSubscribe.js";
-import { toast } from "react-toastify";
 import useSocialMediaLinks from "../../hooks/useSocialMediaLinks.js";
 
 const Footer = () => {
@@ -21,10 +20,11 @@ const Footer = () => {
     isLoading: isLoadingLinks,
     isError: isErrorLinks,
   } = useSocialMediaLinks();
+  
   const quickLinks = [
     { title: "Home", url: "/" },
     { title: "About", url: "/about" },
-    { title: "Our Programmes", url: "/opEducation" },
+    { title: "Our Programmes", url: "/Education" },
     { title: "Get Involved", url: "/registration" },
     { title: "Gallery", url: "/gallery" },
     { title: "Message", url: "/message" },
@@ -47,11 +47,10 @@ const Footer = () => {
     onSubmit: (values, { resetForm }) => {
       subscribe(values.email, {
         onSuccess: () => {
-          toast.success("Successfully subscribed!");
           resetForm();
         },
         onError: (error) => {
-          toast.error(`Error: ${error.response.data.message}`);
+          // console.log(error.response.data.message);
         },
       });
     },
@@ -127,9 +126,9 @@ const Footer = () => {
                     {isLoading ? "Subscribing..." : "Subscribe"}
                   </button>
                 </div>
-                {formik.touched.email && formik.errors.email && (
+                {/* {formik.errors.email && (
                   <div className="text-danger mt-2">{formik.errors.email}</div>
-                )}
+                )} */}
               </form>
 
               <div className="footer-socialmedia-icons">
@@ -138,7 +137,6 @@ const Footer = () => {
                 ) : isLoadingLinks ? (
                   <p>Loading...</p>
                 ) : (
-                  // Convert socialMediaLinks object to an array of entries (key-value pairs)
                   Object.entries(socialMediaLinks).map(
                     ([icon, { link }], index) => (
                       <Link

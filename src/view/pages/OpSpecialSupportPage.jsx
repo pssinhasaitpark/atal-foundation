@@ -1,14 +1,11 @@
-import React from 'react'
-import { Header, Footer, FoundationFacts, OpSpecialSupport } from '../components/index'
+import React from "react";
+import { OpSpecialSupport } from "../components/index";
 
 const OpSpecialSupportPage = () => {
   return (
-    <div>
-      <Header />
+    <div className="App">
       <OpSpecialSupport />
-      <FoundationFacts />
-      <Footer />
     </div>
-  )
-}
+  );
+};
 export default OpSpecialSupportPage;

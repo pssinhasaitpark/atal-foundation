@@ -1,14 +1,11 @@
-
-import React from 'react'
-import { Header, Footer, Message } from '../components/index'
+import React from "react";
+import { Message } from "../components/index";
 const MessagePage = () => {
-    return (
-        <div>
-            <Header />
-            <Message/>
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <Message />
+    </div>
+  );
+};
 
-export default MessagePage
+export default MessagePage;

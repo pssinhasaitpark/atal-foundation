@@ -4,8 +4,10 @@ import useSocialMediaLinks from "../hooks/useSocialMediaLinks";
 import useOurProgram from "../hooks/useOurProgram";
 import useAboutUs from "./useAboutUs";
 import useEventsImgs from "./useEventsImgs";
+import useEventsVids from "./useEventsVids";
 import useMessageUs from "./useMessageUs";
 import useOurNews from "./useOurNews"
+
 export {
   useContacts,
   useSubscribe,
@@ -15,4 +17,5 @@ export {
   useEventsImgs,
   useMessageUs,
   useOurNews,
+  useEventsVids,
 };

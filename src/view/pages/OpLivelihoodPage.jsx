@@ -1,14 +1,11 @@
-import React from 'react'
-import { Header, Footer, FoundationFacts, OpLivelihood } from '../components/index'
+import React from "react";
+import { OpLivelihood } from "../components/index";
 
 const OpLivelihoodPage = () => {
-    return (
-        <div>
-            <Header />
-            <OpLivelihood />
-            <FoundationFacts />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <OpLivelihood />
+    </div>
+  );
+};
 export default OpLivelihoodPage;

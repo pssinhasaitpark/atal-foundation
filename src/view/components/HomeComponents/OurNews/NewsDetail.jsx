@@ -24,7 +24,12 @@ const NewsDetail = () => {
         className="w-100 my-4 object-fit-contain"
         style={{ height: "500px" }}
       />
-      <p className="">{newsItem.description}</p>
+      <div
+                    className="fw-light fs-6 lh-lg"
+                    dangerouslySetInnerHTML={{
+                      __html: newsItem.description,
+                    }}
+                  />
     </div>
   );
 };

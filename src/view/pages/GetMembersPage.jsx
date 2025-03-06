@@ -1,13 +1,11 @@
-import React from 'react'
-import { Header, Footer, GetMembers } from '../components/index'
+import React from "react";
+import { GetMembers } from "../components/index";
 const GetMembersPage = () => {
-    return (
-        <div>
-            <Header />
-            <GetMembers/>
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <GetMembers />
+    </div>
+  );
+};
 
-export default GetMembersPage
+export default GetMembersPage;

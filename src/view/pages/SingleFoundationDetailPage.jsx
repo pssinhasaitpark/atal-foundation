@@ -1,13 +1,11 @@
-import React from 'react'
-import { Header, Footer, FoundationDetailPage } from '../components/index'
+import React from "react";
+import { FoundationDetailPage } from "../components/index";
 const SingleFoundationDetailPage = () => {
-    return (
-        <div>
-            <Header />
-            <FoundationDetailPage />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <FoundationDetailPage />
+    </div>
+  );
+};
 
-export default SingleFoundationDetailPage
+export default SingleFoundationDetailPage;

@@ -1,14 +1,11 @@
-import React from 'react'
-import { Header, Footer, FoundationFacts, OpCivicDriven } from '../components/index'
+import React from "react";
+import { OpCivicDriven } from "../components/index";
 
 const OpCivicDrivenPage = () => {
-    return (
-        <div>
-            <Header />
-            <OpCivicDriven />
-            <FoundationFacts />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <OpCivicDriven />
+    </div>
+  );
+};
 export default OpCivicDrivenPage;

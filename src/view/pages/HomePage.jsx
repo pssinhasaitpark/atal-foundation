@@ -1,22 +1,31 @@
-import React from 'react'
-import { Header, HomeSlider, TopProgrammes, PeopleBehind, EventGallery, Footer, OurNews, VisionSection, MissionSection, PhotoGallery2,FoundationFacts,MoreAboutFoundation } from '../components/index'
+import React from "react";
+import {
+  HomeSlider,
+  TopProgrammes,
+  PeopleBehind,
+  EventGallery,
+  OurNews,
+  VisionSection,
+  MissionSection,
+  PhotoGallery2,
+  FoundationFacts,
+  MoreAboutFoundation,
+} from "../components/index";
 const HomePage = () => {
-    return (
-        <div>
-            <Header />
-            <HomeSlider />
-            <TopProgrammes />
-            <PeopleBehind />
-            <EventGallery />
-            <VisionSection />
-            <OurNews />
-            <MissionSection />
-            <PhotoGallery2 />
-            <FoundationFacts/>
-            <MoreAboutFoundation/>
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <HomeSlider />
+      <TopProgrammes />
+      <PeopleBehind />
+      <EventGallery />
+      <VisionSection />
+      <OurNews />
+      <MissionSection />
+      <PhotoGallery2 />
+      <FoundationFacts />
+      <MoreAboutFoundation />
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

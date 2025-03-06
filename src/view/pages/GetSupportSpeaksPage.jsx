@@ -1,14 +1,11 @@
-
-import React from 'react'
-import { Header, Footer, GetSupportSpeaks } from '../components/index'
+import React from "react";
+import { GetSupportSpeaks } from "../components/index";
 const GetSupportSpeaksPage = () => {
-    return (
-        <div>
-            <Header />
-            <GetSupportSpeaks/>
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <GetSupportSpeaks />
+    </div>
+  );
+};
 
-export default GetSupportSpeaksPage
+export default GetSupportSpeaksPage;

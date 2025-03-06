@@ -1,13 +1,11 @@
-import React from 'react'
-import { Header, Footer,SingleEvent } from '../components/index'
+import React from "react";
+import { SingleEvent } from "../components/index";
 const SingleEventPage = () => {
-    return (
-        <div>
-            <Header />
-            <SingleEvent />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <SingleEvent />
+    </div>
+  );
+};
 
 export default SingleEventPage;

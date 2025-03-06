@@ -1,13 +1,12 @@
-import React from 'react'
-import { Header, Footer, FoundationFacts, OpGirlChild } from '../components/index'
+import React from "react";
+import { OpGirlChild } from "../components/index";
 
 const OpGirlChildPage = () => {
-    return (
-        <div><Header />
-            <OpGirlChild />
-            <FoundationFacts />
-            <Footer /></div>
-    )
-}
+  return (
+    <div className="App">
+      <OpGirlChild />
+    </div>
+  );
+};
 
-export default OpGirlChildPage
+export default OpGirlChildPage;

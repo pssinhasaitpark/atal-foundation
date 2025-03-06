@@ -1,14 +1,11 @@
-import React from 'react'
-import { Header, Footer, OpEducation, FoundationFacts} from '../components/index'
+import React from "react";
+import { OpEducation } from "../components/index";
 
 const OpEducationPage = () => {
-    return (
-        <div>
-            <Header />
-            <OpEducation />
-            <FoundationFacts />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <OpEducation />
+    </div>
+  );
+};
 export default OpEducationPage;

@@ -27,7 +27,7 @@ const EventGallery = () => {
           <div className="row g-3">
             {eventImgData?.slice(0,5).map((event, index) => (
               <div
-                key={event.id}
+                key={index}
                 className={`col-12 col-md-${
                   index === 0 || index === 3 || index === 4 ? "6" : "3"
                 } p-3 mt-0`}

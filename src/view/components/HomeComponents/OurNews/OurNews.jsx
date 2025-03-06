@@ -68,10 +68,10 @@ const OurNews = () => {
               },
             }}
           >
-            {newsData.map((news,index) => (
+            {newsData.map((news, index) => (
               <SwiperSlide key={`${news.id}-${index}`}>
                 <div className="row">
-                  <div className="col-sm-5">
+                  <div className="col-sm-5" style={{height:"300px"}}>
                     <img
                       loading="lazy"
                       src={news.images}
@@ -79,11 +79,16 @@ const OurNews = () => {
                       className="w-100 h-100 object-fit-cover"
                     />
                   </div>
-                  <div className="col-sm-7 px-4 py-3">
+                  <div className="col-sm-7 px-4 py-3 d-flex flex-column justify-content-around">
                     <p className="fs-4 heading-font fw-bold">{news.headline}</p>
-                    <p className="our-news-homepage-description heading-font  ">
-                      {news.description}
-                    </p>
+
+                    <div
+                      className="our-news-homepage-description heading-font fw-light fs-6 lh-lg"
+                      dangerouslySetInnerHTML={{
+                        __html: news.description,
+                      }}
+                    />
+
                     <Link
                       to={`/news/${news._id}`}
                       onClick={scrollToTop}
