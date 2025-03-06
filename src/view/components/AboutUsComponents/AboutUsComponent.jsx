@@ -2,12 +2,12 @@ import React from "react";
 import { AboutUsBanner } from "../../../assets/images/index";
 import { Card } from "react-bootstrap";
 import useAboutUs from "../../hooks/useAboutUs";
-
 const AboutUsComponent = () => {
   const { data, isLoading, isError } = useAboutUs();
   if (isLoading)
     return (
-      <p className="text-muted fs-2 text-center">Loading About Us data...</p>
+    //  <LoadingSpinner/>a
+    <p>ladoing</p>
     );
   if (isError && isError)
     return <p className="text-muted fs-2 text-center">Error: {isError}</p>;

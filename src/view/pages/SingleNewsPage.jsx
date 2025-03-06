@@ -1,13 +1,11 @@
-import React from 'react'
-import { Header, Footer, NewsDetail } from '../components/index'
+import React from "react";
+import { NewsDetail } from "../components/index";
 const SingleNewsPage = () => {
-    return (
-        <div>
-            <Header />
-            <NewsDetail />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <NewsDetail />
+    </div>
+  );
+};
 
 export default SingleNewsPage;

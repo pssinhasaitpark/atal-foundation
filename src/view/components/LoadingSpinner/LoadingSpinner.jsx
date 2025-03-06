@@ -5,11 +5,12 @@ const LoadingSpinner = () => {
     <div
       style={{
         position: "fixed",
+    
         top: 0,
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "rgba(199, 199, 199, 0.07)",
+        backgroundColor: "rgb(255, 255, 255)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

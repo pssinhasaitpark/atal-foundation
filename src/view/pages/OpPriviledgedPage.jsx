@@ -1,14 +1,11 @@
-import React from 'react'
-import { Header, Footer, FoundationFacts, OpPriviledged } from '../components/index'
+import React from "react";
+import { OpPriviledged } from "../components/index";
 
 const OpPriviledgedPage = () => {
-    return (
-        <div>
-            <Header />
-            <OpPriviledged />
-            <FoundationFacts />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <OpPriviledged />
+    </div>
+  );
+};
 export default OpPriviledgedPage;

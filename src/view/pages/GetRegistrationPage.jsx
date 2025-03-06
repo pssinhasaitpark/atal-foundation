@@ -1,13 +1,11 @@
-import React from 'react'
-import { Header, Footer, GetRegistration } from '../components/index'
+import React from "react";
+import { GetRegistration } from "../components/index";
 const GetRegistrationPage = () => {
-    return (
-        <div>
-            <Header />
-            <GetRegistration />
-            <Footer />
-        </div>
-    )
-}
+  return (
+    <div className="App">
+      <GetRegistration />
+    </div>
+  );
+};
 
-export default GetRegistrationPage
+export default GetRegistrationPage;

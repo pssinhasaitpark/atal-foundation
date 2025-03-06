@@ -1,13 +1,11 @@
 import React from 'react'
-import { Header, Footer,FoundationFacts, Contacts } from '../components/index'
+import { Contacts } from '../components/index'
 
 const ContactsPage = () => {
     return (
-        <div>
-            <Header />
+        <div className="App">
             <Contacts />
-            <FoundationFacts />
-            <Footer />
+           
         </div>
     )
 }

@@ -141,7 +141,7 @@ const Contacts = () => {
         />
       </div>
 
-      <div className="position-relative" style={{ height: "140vh" }}>
+      <div className="position-relative" style={{ height: "100vh" }}>
         <div
           className="bg-img position-absolute w-100 h-100 "
           style={{

@@ -3,7 +3,7 @@ import { AtalLogo1 } from "../../../assets/images/index";
 // import { IoIosSearch } from "../../../assets/logos/index";
 import "./Header.css";
 import useOurProgram from "../../hooks/useOurProgram";
-
+import { Link } from "react-router";
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { data, isLoading, isError } = useOurProgram();
@@ -24,9 +24,9 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="d-flex justify-content-center mx-auto">
-          <a
+          <Link
             className="navbar-brand fw-bold text-primary d-flex align-items-center"
-            href="/"
+            to="/"
           >
             <img
               loading="lazy"
@@ -35,7 +35,7 @@ const Header = () => {
               className="atal-logo-header me-2"
               height="90"
             />
-          </a>
+          </Link>
         </div>
         <div
           className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`}
@@ -43,26 +43,26 @@ const Header = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
-                href="/"
+                to="/"
                 id="navbarDropdownPrograms"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Our Programmes
-              </a>
+              </Link>
               <ul
                 className="dropdown-menu custom-dropdown-menu"
                 aria-labelledby="navbarDropdownPrograms"
@@ -74,88 +74,88 @@ const Header = () => {
                 ) : (
                   data.map((opCategory) => (
                     <li key={opCategory._id}>
-                      <a
+                      <Link
                         className="dropdown-item custom-dropdown-item"
-                        href={`/${opCategory.category}`}
+                        to={`/${opCategory.category}`}
                       >
                         {opCategory.category}
-                      </a>
+                      </Link>
                     </li>
                   ))
                 )}
 
-                {/* <li><a className="dropdown-item custom-dropdown-item" href="/OpEducation">Education</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpHealthcare">Healthcare</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpLivelihood">Livelihood</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpGirlChild">Girl Child & Women Empowerment</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpPrivileged">Privileged Children</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpCivicDriven">Civic Driven Change</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpSocial">Social Entrepreneurship</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpSpecialSupport">Special Support Programme</a></li>
-                <li><a className="dropdown-item custom-dropdown-item" href="/OpSpecialInterventions">Special Interventions</a></li> */}
+                {/* <li><Link className="dropdown-item custom-dropdown-item" to="/OpEducation">Education</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpHealthcare">Healthcare</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpLivelihood">Livelihood</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpGirlChild">Girl Child & Women Empowerment</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpPrivileged">Privileged Children</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpCivicDriven">Civic Driven Change</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpSocial">Social Entrepreneurship</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpSpecialSupport">Special Support Programme</Link></li>
+                <li><Link className="dropdown-item custom-dropdown-item" to="/OpSpecialInterventions">Special Interventions</Link></li> */}
               </ul>
             </li>
 
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
-                href="/"
+                to="/"
                 id="navbarDropdownInvolved"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Get Involved
-              </a>
+              </Link>
               <ul
                 className="dropdown-menu custom-dropdown-menu"
                 aria-labelledby="navbarDropdownInvolved"
               >
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item custom-dropdown-item"
-                    href="/registration"
+                    to="/registration"
                   >
                     Registration
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item custom-dropdown-item"
-                    href="/members"
+                    to="/members"
                   >
                     Members
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item custom-dropdown-item"
-                    href="/supportspeaks"
+                    to="/supportspeaks"
                   >
                     Support Speaks
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/gallery">
+              <Link className="nav-link" to="/gallery">
                 Gallery
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/message">
+              <Link className="nav-link" to="/message">
                 Message
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/events">
+              <Link className="nav-link" to="/events">
                 Events
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contacts">
+              <Link className="nav-link" to="/contacts">
                 Contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

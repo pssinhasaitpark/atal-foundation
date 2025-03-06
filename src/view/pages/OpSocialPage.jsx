@@ -1,14 +1,10 @@
-
-import { Header, Footer, FoundationFacts, OpSocial } from '../components/index'
+import { OpSocial } from "../components/index";
 
 const OpSocialPage = () => {
   return (
-    <div>
-      <Header />
+    <div className="App">
       <OpSocial />
-      <FoundationFacts />
-      <Footer />
     </div>
-  )
-}
+  );
+};
 export default OpSocialPage;
