@@ -82,7 +82,7 @@ const HomeSlider = () => {
         <div className="container">
           <div className="row p-3">
             <div className="col-sm-12 col-md-6 p-0">
-              <div className="ps-lg-0 p-lg-5">
+              <div className="">
                 <Card className="custom-card bg-transparent border-0 ps-lg-0 p-lg-5 justify-content-center align-items-center">
                   <Card.Body className="card-style w-100 ">
                     <h5 className="custom-badge badge text-uppercase mb-3">

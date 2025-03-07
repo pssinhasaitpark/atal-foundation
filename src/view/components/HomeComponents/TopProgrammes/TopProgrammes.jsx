@@ -84,12 +84,14 @@ const TopProgrammes = () => {
                     className="top-programmes-image rounded-0 object-fit-cover"
                   />
                   <Card.Body className="p-0 mt-3">
-                    <Card.Text className="heading-font fw-normal truncated-paragraph ">
-                      <span className="fw-bold heading-font">
-                        {program.category} :{" "}
-                      </span>
-                      {program.details[0].description}
-                    </Card.Text>
+                    <div className="heading-font fw-normal truncated-paragraph ">
+                      <div
+                        className="fw-light fs-6 lh-lg"
+                        dangerouslySetInnerHTML={{
+                          __html: `${program.category}:${program.details[0].description.replace(/<p>/g, '<span>').replace(/<\/p>/g, '</span>')}`,
+                        }}
+                      />
+                    </div>
                   </Card.Body>
                 </Card>
               </Link>

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -31,9 +30,7 @@ button:focus {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
 }
-.container {
-  max-width: 85% !important;
-}
+
 .heading-font {
   font-family: "Frank Ruhl Libre", serif;
 }
@@ -54,7 +51,9 @@ button:focus {
 .text-warning-color {
   color: #f68633;
 }
-
+.top-border{
+  border-top: 2px solid #f68633;
+}
 .custom-button {
   width: 180px;
   height: 45px;
@@ -311,10 +310,10 @@ button:focus {
     line-height: 28px;
   }
   img.atal-logo-header.me-2 {
-    height: 140px;
-  }
+    height: 85px;
+}
   a.nav-link {
-    font-size: 30px !important;
+    font-size: 22px !important;
   }
   h3.fw-bold.fs-1.heading-font.w-75 {
     font-size: 65px !important;
@@ -323,7 +322,7 @@ button:focus {
     font-size: 25px !important;
   }
   .custom-heading {
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 45px;
+    line-height: 50px;
   }
 }

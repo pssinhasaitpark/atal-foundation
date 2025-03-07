@@ -13,6 +13,9 @@ a.dropdown-item.custom-dropdown-item {
   padding: 10px;
   padding-left: 15px;
 }
+.dropdown-item.active, .dropdown-item:active {
+  color: #f68633 !important;
+}
 
 .dropdown-item {
   font-size: 18px;
@@ -77,9 +80,7 @@ a.nav-link {
     height: 90px;
   }
 
-  .navbar-nav {
-    margin-left: 5rem;
-  }
+
 
   .nav-item {
     margin-left: 0.5rem;
