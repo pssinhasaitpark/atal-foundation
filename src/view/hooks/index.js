@@ -7,7 +7,9 @@ import useEventsImgs from "./useEventsImgs";
 import useEventsVids from "./useEventsVids";
 import useMessageUs from "./useMessageUs";
 import useOurNews from "./useOurNews"
-
+import useGallery from "./useGallery";
+import useHomeSlide from "./useHomeSlide";
+import useRegistrations from "./useRegistration";
 export {
   useContacts,
   useSubscribe,
@@ -18,4 +20,7 @@ export {
   useMessageUs,
   useOurNews,
   useEventsVids,
+  useGallery,
+  useHomeSlide,
+  useRegistrations
 };

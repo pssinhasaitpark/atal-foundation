@@ -11,8 +11,8 @@ const Header = () => {
     setIsNavOpen(!isNavOpen);
   };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-lg-5 py-lg-2">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm top-border">
+      <div className="container">
         <button
           className="navbar-toggler border-0"
           type="button"
@@ -72,7 +72,7 @@ const Header = () => {
                 ) : isLoading ? (
                   <p>Loading...</p>
                 ) : (
-                  data.map((opCategory) => (
+                  data?.map((opCategory) => (
                     <li key={opCategory._id}>
                       <Link
                         className="dropdown-item custom-dropdown-item"
