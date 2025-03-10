@@ -3,19 +3,14 @@ import { Card } from "react-bootstrap";
 import useOurProgram from "../../hooks/useOurProgram";
 
 const OpHealthcare = () => {
-  const { data, isLoading, isError } = useOurProgram();
+  const { data, isLoading, isError, status } = useOurProgram();
   let healthCareData = [];
   if (!isLoading && !isError) {
     healthCareData = data.filter((item) => item.category === "Healthcare");
   }
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-  if (isError) {
-    return <p>Error: {isError}</p>;
-  }
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
 
   const dynamicData = healthCareData[0].details;
   const bannerImage = healthCareData[0].banner;
@@ -63,7 +58,7 @@ const OpHealthcare = () => {
             <div className="col-md-8 d-flex flex-column justify-content-center">
               <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                 <Card.Body className="card-style p-0 ps-5">
-                  <h3 className="fw-bold fs-1 heading-font w-75">
+                  <h3 className="fw-bold fs-1 heading-font ">
                     {data.title}
                   </h3>
                   <div

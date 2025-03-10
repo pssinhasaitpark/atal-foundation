@@ -1,5 +1,7 @@
 import React from "react";
 import {peopleimg1,peopleimg2,peopleimg3,peopleimg4 } from "../../../assets/images/index"
+import "./GetInvolved.css"
+
 const GetMembersData = [
   {
     name: "Dr. C.L. Yadav",
@@ -29,8 +31,8 @@ const GetMembersData = [
 
 const GetMembers = () => {
   return (
-    <div className="container my-4">
-      <h3 className="text-center mb-4">Members</h3>
+    <div className="container mt-5 w-75 position-relative">
+      <h4 className="text-center getInvolvedline">Members</h4>
       <div className="row">
         {GetMembersData.map((person, index) => (
           <div key={index} className="col-md-6 mb-4">

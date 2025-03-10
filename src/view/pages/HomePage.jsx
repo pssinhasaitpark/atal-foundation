@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   HomeSlider,
   TopProgrammes,
@@ -12,37 +12,42 @@ import {
   MoreAboutFoundation,
 } from "../components/index";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
-import {
-  useHomeSlide,
-  useOurProgram,
-  useOurNews,
-  useGallery,
-} from "../hooks/index";
+
 const HomePage = () => {
-  const { isLoading: homeSliderLoading } = useHomeSlide();
-  const { isLoading: ourProgramLoading } = useOurProgram();
-  const { isLoading: ourNewsLoading } = useOurNews();
-  const { isLoading: galleryLoading } = useGallery();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const isFirstLoad = sessionStorage.getItem("isFirstLoad");
+
+    if (!isFirstLoad) {
+      setTimeout(() => {
+        setIsLoading(false);
+        sessionStorage.setItem("isFirstLoad", "true");
+      }, 1500);
+    } else {
+      setIsLoading(false);
+    }
+  }, []);
+
   return (
     <>
-      {homeSliderLoading &&
-      ourProgramLoading &&
-      ourNewsLoading &&
-      galleryLoading ? (
+      {isLoading ? (
         <LoadingSpinner />
       ) : (
-        <div className="App">
-          <HomeSlider />
-          <TopProgrammes />
-          <PeopleBehind />
-          <EventGallery />
-          <VisionSection />
-          <OurNews />
-          <MissionSection />
-          <PhotoGallery2 />
-          <FoundationFacts />
-          <MoreAboutFoundation />
-        </div>
+        <>
+          <div className="App">
+            <HomeSlider />
+            <TopProgrammes />
+            <PeopleBehind />
+            <EventGallery />
+            <VisionSection />
+            <OurNews />
+            <MissionSection />
+            <PhotoGallery2 />
+            <FoundationFacts />
+            <MoreAboutFoundation />
+          </div>
+        </>
       )}
     </>
   );

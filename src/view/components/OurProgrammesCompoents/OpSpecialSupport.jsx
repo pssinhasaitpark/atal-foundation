@@ -2,17 +2,15 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import useOurProgram from "../../hooks/useOurProgram";
 const OpSpecialSupport = () => {
-  const { data, isLoading, isError } = useOurProgram();
+  const { data, isLoading, isError, status } = useOurProgram();
   let specialSupportData = [];
   if (!isLoading && !isError) {
     specialSupportData = data.filter(
       (item) => item.category === "Special Support ourProgramme"
     );
   }
-  if (isLoading)
-    return <p className="text-muted fs-2 text-center">Loading Data...</p>;
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
   const dynamicData = specialSupportData[0].details;
   const bannerImage = specialSupportData[0].banner;
 
@@ -59,7 +57,7 @@ const OpSpecialSupport = () => {
             <div className="col-md-8 d-flex flex-column justify-content-center">
               <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                 <Card.Body className="card-style p-0 ps-5">
-                  <h3 className="fw-bold fs-1 heading-font w-75">
+                  <h3 className="fw-bold fs-1 heading-font ">
                     {data.title}
                   </h3>
                   <div

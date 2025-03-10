@@ -79,7 +79,7 @@ const ContactCard = ({ image, title, content, type }) => {
 };
 
 const Contacts = () => {
-  const { mutate } = useContacts();
+  const { mutate, status, isError, isLoading } = useContacts();
 
   const formik = useFormik({
     initialValues: {
@@ -102,6 +102,8 @@ const Contacts = () => {
     (event) => formik.handleSubmit(event),
     [formik]
   );
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
 
   return (
     <div className="container text-center my-5">

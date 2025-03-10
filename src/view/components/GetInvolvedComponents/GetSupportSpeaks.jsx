@@ -1,5 +1,6 @@
 import React from "react";
 import {peopleimg1,peopleimg2,peopleimg3,peopleimg4 } from "../../../assets/images/index"
+import "./GetInvolved.css"
 
 const supportSpeaksData = [
   {
@@ -30,8 +31,8 @@ const supportSpeaksData = [
 
 const GetSupportSpeaks = () => {
   return (
-    <div className="container my-4">
-      <h3 className="text-center mb-4">Support Speaks</h3>
+    <div className="container mt-5 w-75 position-relative">
+      <h4 className="text-center getInvolvedline">Support Speaks</h4>
       <div className="row">
         {supportSpeaksData.map((person, index) => (
           <div key={index} className="col-md-6 mb-4">

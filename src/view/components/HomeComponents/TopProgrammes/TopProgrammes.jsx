@@ -9,15 +9,11 @@ import useOurProgram from "../../../hooks/useOurProgram";
 
 const TopProgrammes = () => {
   const swiperRef = useRef(null);
-  const { data, isLoading, isError } = useOurProgram();
+  const { data, isLoading, isError, status } = useOurProgram();
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
 
-  if (isError) {
-    return <p>Error: {isError}</p>;
-  }
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -29,7 +25,10 @@ const TopProgrammes = () => {
   const handleNextClick = () => {
     swiperRef.current.swiper.slideNext();
   };
-
+  const stripHTML = (htmlString) => {
+    const doc = new DOMParser().parseFromString(htmlString, "text/html");
+    return doc.body.textContent || "";
+  };
   return (
     <Container className="pt-lg-5 py-lg-4 py-4 border-bottom">
       <div className="">
@@ -84,14 +83,12 @@ const TopProgrammes = () => {
                     className="top-programmes-image rounded-0 object-fit-cover"
                   />
                   <Card.Body className="p-0 mt-3">
-                    <div className="heading-font fw-normal truncated-paragraph ">
-                      <div
-                        className="fw-light fs-6 lh-lg"
-                        dangerouslySetInnerHTML={{
-                          __html: `${program.category}:${program.details[0].description.replace(/<p>/g, '<span>').replace(/<\/p>/g, '</span>')}`,
-                        }}
-                      />
-                    </div>
+                    <Card.Text className="heading-font fw-normal truncated-paragraph ">
+                      <span className="fw-bold heading-font">
+                        {program.category} :{" "}
+                      </span>
+                      {stripHTML(program.details[0].description)}
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               </Link>

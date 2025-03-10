@@ -5,17 +5,17 @@ import useEventsImgs from "../../hooks/useEventsImgs";
 import useEventsVids from "../../hooks/useEventsVids";
 
 const Events = () => {
-  const { data: eventData, isLoading, isError } = useEventsImgs();
+  const { data: eventData, isLoading,status } = useEventsImgs();
   const {
     data: eventVidData,
     isLoading: isLoadingVid,
-    isError: isErrorVid,
-  } = useEventsVids();
-  if (isLoading || isLoadingVid)
-    return <span className="sr-only">Loading...</span>;
-  if ((isError && isError) || isErrorVid)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
 
+  } = useEventsVids();
+  if (isLoading && isLoadingVid) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: </div>;
+  if (!eventData || !eventVidData) {
+    return <div className="spinner"></div>;
+  }
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -87,7 +87,7 @@ const Events = () => {
 
         <div className="event-video">
           <div className="row">
-            {eventVideoData.videos.map((vid, index) => (
+            {eventVideoData?.videos?.map((vid, index) => (
               <div
                 key={index}
                 className="col-lg-3 col-sm-6 col-12 custom-p-1"

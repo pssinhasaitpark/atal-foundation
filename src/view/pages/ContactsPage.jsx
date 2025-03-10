@@ -5,7 +5,6 @@ const ContactsPage = () => {
     return (
         <div className="App">
             <Contacts />
-           
         </div>
     )
 }
