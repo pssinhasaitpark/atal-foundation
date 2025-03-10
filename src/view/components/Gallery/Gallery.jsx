@@ -4,11 +4,9 @@ import "./Gallery.css";
 import useGallery from "../../hooks/useGallery";
 import { SlideshowLightbox } from "lightbox.js-react";
 const Gallery = () => {
-  const { data, isLoading, isError } = useGallery();
-  if (isLoading) return <span className="sr-only"></span>;
-
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  const { data, isLoading, status, isError } = useGallery();
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
   const gallerySection = data.gallery_image;
   const videoSection = data.gallery_video;
 
@@ -46,7 +44,7 @@ const Gallery = () => {
               >
                 {" "}
                 <SlideshowLightbox
-                className="h-100"
+                  className="h-100"
                   backgroundColor="black"
                   modalClose="clickOutside"
                 >

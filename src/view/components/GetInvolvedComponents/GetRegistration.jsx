@@ -3,7 +3,7 @@ import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import useRegistration from "../../hooks/useRegistration";
-
+import "./GetInvolved.css"
 const states = ["Madhya Pradesh", "Uttar Pradesh", "Maharashtra"];
 const cities = {
   "Madhya Pradesh": ["Indore", "Bhopal", "Gwalior"],
@@ -108,15 +108,15 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="container mt-5 w-75">
-      <h4>Registration Form</h4>
+    <div className="container mt-5 w-75 position-relative">
+      <h4 className="text-center getInvolvedline">Registration Form</h4>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
       >
         {({ touched, errors, setFieldValue }) => (
-          <Form>
+          <Form className="my-4">
             <div className="mb-3">
               <label htmlFor="first_name" className="form-label">
                 First Name
@@ -330,7 +330,7 @@ const RegistrationForm = () => {
               )}
             </div>
 
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary d-flex mx-auto">
               Submit
             </button>
           </Form>

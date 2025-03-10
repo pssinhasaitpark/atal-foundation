@@ -6,11 +6,10 @@ import { Link } from "react-router";
 import useHomeSlide from "../../../hooks/useHomeSlide";
 
 const HomeSlider = () => {
-  const { data, isLoading, isError } = useHomeSlide();
-  if (isLoading)
-    return <p className="text-muted fs-2 text-center">Loading HomePage...</p>;
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  const { data, isLoading, isError,status } = useHomeSlide();
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
+
   const memorialInfo = data;
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -45,7 +44,10 @@ const HomeSlider = () => {
       },
     ],
   };
-
+  const stripHTML = (htmlString) => {
+    const doc = new DOMParser().parseFromString(htmlString, "text/html");
+    return doc.body.textContent || "";
+  };
   const settings2 = {
     dots: false,
     infinite: true,
@@ -77,22 +79,22 @@ const HomeSlider = () => {
   };
 
   return (
+    
     <>
       <div className="py-5" style={{ backgroundColor: "#FBFBFB" }}>
         <div className="container">
           <div className="row p-3">
             <div className="col-sm-12 col-md-6 p-0">
-              <div className="">
+              <div className="pt-lg-5">
                 <Card className="custom-card bg-transparent border-0 ps-lg-0 p-lg-5 justify-content-center align-items-center">
                   <Card.Body className="card-style w-100 ">
                     <h5 className="custom-badge badge text-uppercase mb-3">
                       {memorialInfo.badge}
                     </h5>
                     <h3 className="custom-heading heading-font">
-                      building a stronger india,
-                      <br /> inspired by atal
+                    {stripHTML(memorialInfo.title)}
                     </h3>
-                    <p className="custom-subtitle">
+                    <p className="custom-subtitle my-3">
                       {memorialInfo.description}
                     </p>
                     <Link to="/about" onClick={scrollToTop}>

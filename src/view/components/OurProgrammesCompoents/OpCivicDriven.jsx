@@ -3,17 +3,15 @@ import { Card } from "react-bootstrap";
 import useOurProgram from "../../hooks/useOurProgram";
 
 const OpCivicDriven = () => {
-  const { data, isLoading, isError } = useOurProgram();
+  const { data, isLoading, isError, status } = useOurProgram();
   let civicDrivenData = [];
   if (!isLoading && !isError) {
     civicDrivenData = data.filter(
       (item) => item.category === "Civic Driven Change"
     );
   }
-  if (isLoading)
-    return <p className="text-muted fs-2 text-center">Loading Data...</p>;
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
   const dynamicData = civicDrivenData[0].details;
   const bannerImage = civicDrivenData[0].banner;
 
@@ -60,7 +58,7 @@ const OpCivicDriven = () => {
             <div className="col-md-8 d-flex flex-column justify-content-center">
               <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                 <Card.Body className="card-style p-0 ps-5">
-                  <h3 className="fw-bold fs-1 heading-font w-75">
+                  <h3 className="fw-bold fs-1 heading-font ">
                     {data.title}
                   </h3>
                   <div

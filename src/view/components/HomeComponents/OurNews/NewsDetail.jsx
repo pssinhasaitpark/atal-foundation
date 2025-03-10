@@ -25,11 +25,11 @@ const NewsDetail = () => {
         style={{ height: "500px" }}
       />
       <div
-                    className="fw-light fs-6 lh-lg"
-                    dangerouslySetInnerHTML={{
-                      __html: newsItem.description,
-                    }}
-                  />
+        className="fw-light fs-6 lh-lg"
+        dangerouslySetInnerHTML={{
+          __html: newsItem.description,
+        }}
+      />
     </div>
   );
 };

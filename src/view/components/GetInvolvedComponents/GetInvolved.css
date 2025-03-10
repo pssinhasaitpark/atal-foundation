@@ -1,0 +1,12 @@
+/* .getInvolvedline::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    bottom: 0;
+    left: 45%;
+    top: 2.5%;
+    background-color: #f68633b3;
+    border: 1px solid #ffb781;
+    border-radius: 100% !important;
+} */

@@ -4,10 +4,10 @@ import "./EventGallery.css";
 import useEventsImgs from "../../../hooks/useEventsImgs";
 
 const EventGallery = () => {
-  const { data: eventData, isLoading, isError } = useEventsImgs();
-  if (isLoading) return <span className="sr-only">Loading...</span>;
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  const { data: eventData, isLoading, isError ,status} = useEventsImgs();
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
+
 
   const eventImgData = eventData.imageGroups;
   const scrollToTop = () => {

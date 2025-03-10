@@ -3,14 +3,9 @@ import { AboutUsBanner } from "../../../assets/images/index";
 import { Card } from "react-bootstrap";
 import useAboutUs from "../../hooks/useAboutUs";
 const AboutUsComponent = () => {
-  const { data, isLoading, isError } = useAboutUs();
-  if (isLoading)
-    return (
-    //  <LoadingSpinner/>a
-    <p>ladoing</p>
-    );
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  const { data, isLoading, status, isError } = useAboutUs();
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
 
   const aboutUsData = data.sections;
   const aboutUsBanner = AboutUsBanner || data.banner;
@@ -55,7 +50,7 @@ const AboutUsComponent = () => {
             <div className="col-sm-8">
               <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                 <Card.Body className="card-style p-0 ps-lg-5">
-                  <h3 className="fw-bold fs-1 heading-font w-75">
+                  <h3 className="fw-bold fs-1 heading-font">
                     {data.title}
                   </h3>
                   <div

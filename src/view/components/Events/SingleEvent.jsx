@@ -4,16 +4,15 @@ import useEventsImgs from "../../hooks/useEventsImgs";
 
 const SingleEvent = () => {
   const { id } = useParams();
-  const { data: eventData, isLoading, isError } = useEventsImgs();
+  const { data: eventData, isLoading, isError, status } = useEventsImgs();
 
-  if (isLoading) return <span className="sr-only">Loading...</span>;
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
-
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError} </div>;
   const event = eventData.imageGroups.find((e) => e._id === id);
   if (!event) {
     return <div>Event not found</div>;
   }
+  
 
   return (
     <div className="container py-5">
@@ -26,7 +25,12 @@ const SingleEvent = () => {
         className="img-fluid w-100 object-fit-cover my-5"
         style={{ height: "450px" }}
       />
-      <p>{event.image_description}</p>
+      <div
+        className="fw-light fs-6 lh-lg"
+        dangerouslySetInnerHTML={{
+          __html: event.image_description,
+        }}
+      />
     </div>
   );
 };
