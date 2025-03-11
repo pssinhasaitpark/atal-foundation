@@ -347,3 +347,6 @@ button:focus {
 p,ul {
    margin-bottom: 5px !important;
 }
+.Toastify__progress-bar--success {
+  background: #f68633 !important;
+}

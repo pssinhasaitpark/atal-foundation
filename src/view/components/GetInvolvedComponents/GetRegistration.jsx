@@ -321,8 +321,9 @@ const RegistrationForm = () => {
                 <img
                   src={imagePreview}
                   alt="Preview"
-                  className="img-thumbnail mt-2"
-                  width="150"
+                  className="img-thumbnail mt-2 rounded-circle"
+                  width="100"
+                style={{height:"100px"}}
                 />
               )}
               {touched.images && errors.images && (

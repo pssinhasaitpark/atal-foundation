@@ -5,12 +5,8 @@ import useEventsImgs from "../../hooks/useEventsImgs";
 import useEventsVids from "../../hooks/useEventsVids";
 
 const Events = () => {
-  const { data: eventData, isLoading,status } = useEventsImgs();
-  const {
-    data: eventVidData,
-    isLoading: isLoadingVid,
-
-  } = useEventsVids();
+  const { data: eventData, isLoading, status } = useEventsImgs();
+  const { data: eventVidData, isLoading: isLoadingVid } = useEventsVids();
   if (isLoading && isLoadingVid) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: </div>;
   if (!eventData || !eventVidData) {
@@ -97,7 +93,7 @@ const Events = () => {
                   height="100%"
                   width="100%"
                   controls="controls"
-                  preload="none"
+                  preload="metadata"
                   className="border"
                 >
                   <source type="video/webm" src={vid} />
