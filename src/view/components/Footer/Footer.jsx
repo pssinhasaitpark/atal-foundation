@@ -12,25 +12,36 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import useSubscribe from "../../hooks/useSubscribe.js";
 import useSocialMediaLinks from "../../hooks/useSocialMediaLinks.js";
-
+const FooterLeftData = [
+  {
+    badge: {
+      text: "Atal Foundation",
+      classCSS: "custom-badge-footer badge  mb-3 text-uppercase",
+    },
+    heading: {
+      text: "building a stronger india, inspired by atal",
+      classCss: "custom-footer-text heading-font",
+    },
+  },
+];
+const quickLinks = [
+  { title: "Home", url: "/" },
+  { title: "Gallery", url: "/gallery" },
+  { title: "About", url: "/about" },
+  { title: "Message", url: "/message" },
+  { title: "Our Programmes", url: "/Education" },
+  { title: "Events", url: "/events" },
+  { title: "Get Involved", url: "/registration" },
+  { title: "Contact", url: "/contacts" },
+];
 const Footer = () => {
-  const { mutate: subscribe, isLoading } = useSubscribe();
+  const { mutate: subscribe, isPending } = useSubscribe();
   const {
     data: socialMediaLinks,
     isLoading: isLoadingLinks,
     isError: isErrorLinks,
   } = useSocialMediaLinks();
-  
-  const quickLinks = [
-    { title: "Home", url: "/" },
-    { title: "About", url: "/about" },
-    { title: "Our Programmes", url: "/Education" },
-    { title: "Get Involved", url: "/registration" },
-    { title: "Gallery", url: "/gallery" },
-    { title: "Message", url: "/message" },
-    { title: "Events", url: "/events" },
-    { title: "Contact", url: "/contacts" },
-  ];
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -49,9 +60,6 @@ const Footer = () => {
         onSuccess: () => {
           resetForm();
         },
-        onError: (error) => {
-          // console.log(error.response.data.message);
-        },
       });
     },
   });
@@ -61,23 +69,26 @@ const Footer = () => {
       <div className="footer bg-dark text-light">
         <div className="footer-padding">
           <div className="row w-100">
-            <div className="col-md-4 col-12 footer-section my-5 my-lg-0">
-              <h5 className="custom-badge-footer badge  mb-3 text-uppercase">
-                Atal Foundation
-              </h5>
-              <h3 className="custom-footer-text heading-font">
-                building a stronger <br />
-                india, inspired by atal
-              </h3>
-            </div>
+            {FooterLeftData.map((dt, index) => (
+              <div
+                key={index}
+                className="col-md-4 col-12 footer-section my-5 my-lg-0"
+              >
+                <h5 className={dt.badge.classCSS}>{dt.badge.text}</h5>
+                <h3 className={dt.heading.classCss}>{dt.heading.text}</h3>
+              </div>
+            ))}
             <div className="col-md-3 col-12 footer-section quick-links-div my-5 my-lg-0">
               <div className="quick-links">
-                <p className="mb-3 footer-center-list">Quick Links</p>
+                <p className="footer-center-list">Quick Links</p>
               </div>
-              <div className="row quick-links-list">
-                <div className="col-6">
-                  {quickLinks.slice(0, 4).map((link, index) => (
-                    <div key={index} className="">
+              <div>
+                <ul
+                  className="d-grid list-unstyled lh-lg fs-5"
+                  style={{ gridTemplateColumns: "1fr 1fr" }}
+                >
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
                       <Link
                         to={link.url}
                         className="text-light text-decoration-none"
@@ -85,22 +96,9 @@ const Footer = () => {
                       >
                         {link.title}
                       </Link>
-                    </div>
+                    </li>
                   ))}
-                </div>
-                <div className="col-6 ">
-                  {quickLinks.slice(4).map((link, index) => (
-                    <div key={index} className="">
-                      <Link
-                        to={link.url}
-                        className="text-light text-decoration-none"
-                        onClick={scrollToTop}
-                      >
-                        {link.title}
-                      </Link>
-                    </div>
-                  ))}
-                </div>
+                </ul>
               </div>
             </div>
             <div className="col-md-5 col-12 fotter-right-section my-5 my-lg-0 ">
@@ -120,17 +118,15 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="btn btn-primary fs-3 d-flex align-items-center justify-content-center w-50"
-                    disabled={isLoading}
+                    className={`btn btn-primary d-flex align-items-center justify-content-center w-50 ${
+                      isPending ? "fs-5" : "fs-3"
+                    }`}
+                    disabled={isPending}
                   >
-                    {isLoading ? "Subscribing..." : "Subscribe"}
+                    {isPending ? "Subscribing..." : "Subscribe"}
                   </button>
                 </div>
-                {/* {formik.errors.email && (
-                  <div className="text-danger mt-2">{formik.errors.email}</div>
-                )} */}
               </form>
-
               <div className="footer-socialmedia-icons">
                 {isErrorLinks ? (
                   <p>Error: {isErrorLinks}</p>
