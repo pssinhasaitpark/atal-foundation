@@ -171,7 +171,7 @@ const Contacts = () => {
                   GET A QUOTE NOW
                 </p>
                 <p className="contact-section-minidescription text-muted text-start fw-light">
-                  We’d love to hear what you have in mind for your project and
+                  We'd love to hear what you have in mind for your project and
                   how we can help out. Contact us through the form below.
                 </p>
                 <form onSubmit={memoizedSubmit}>

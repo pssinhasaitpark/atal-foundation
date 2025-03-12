@@ -8,14 +8,12 @@ import { SlideshowLightbox } from "lightbox.js-react";
 
 const PhotoGallery2 = () => {
   const swiperRef = useRef(null);
-  const { data, isLoading, isError } = useGallery();
+  const { data, isLoading, isError,status } = useGallery();
 
-  if (isLoading)
-    return <p className="text-muted fs-2 text-center">Loading Gallery...</p>;
-  if (isError && isError)
-    return <p className="text-muted fs-2 text-center">Error: {isError}</p>;
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
 
-  const imagesData = data.gallery_image.images;
+  const imagesData = data?.gallery_image.images;
 
   const handlePrevClick = () => {
     swiperRef.current.swiper.slidePrev();
@@ -72,7 +70,7 @@ const PhotoGallery2 = () => {
               },
             }}
           >
-            {imagesData.map((image, index) => (
+            {imagesData?.map((image, index) => (
               <SwiperSlide key={index} className="photo-gallery-slider-card">
                 <SlideshowLightbox
                   backgroundColor="black"

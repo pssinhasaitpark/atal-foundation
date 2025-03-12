@@ -36,20 +36,20 @@ const MoreAboutFoundation = () => {
     <div className="container py-lg-5">
       <h2 className="top-programmes-title heading-font">More About Foundation</h2>
       <div className="row mt-4">
-        {foundationInfo.map((info, index) => (
+        {foundationInfo?.map((info, index) => (
 
           <div key={index} className="col-md-4">
             <div className="card border-0">
               <img
                 loading="lazy"
-                src={info.image}
+                src={info?.image}
                 className="card-img-top-maf object-fit-cover"
-                alt={info.title}
+                alt={info?.title}
               />
               <div className="card-body p-0 my-2">
                 <p className="heading-font more-about-subtitle ">
-                  <span className="fw-bold heading-font">{info.title}</span>
-                  {info.description}
+                  <span className="fw-bold heading-font">{info?.title}</span>
+                  {info?.description}
                 </p>
 
                 <Link

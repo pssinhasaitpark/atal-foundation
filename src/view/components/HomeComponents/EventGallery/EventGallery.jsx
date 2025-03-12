@@ -9,7 +9,7 @@ const EventGallery = () => {
   if (status === "failed") return <div>Error: {isError}</div>;
 
 
-  const eventImgData = eventData.imageGroups;
+  const eventImgData = eventData?.imageGroups;
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -25,26 +25,26 @@ const EventGallery = () => {
 
         <div className="col-md-12 col-12 mt-2 text-light ps-0">
           <div className="row g-3">
-            {eventImgData?.slice(0,5).map((event, index) => (
+            {eventImgData?.slice(0,5)?.map((event, index) => (
               <div
                 key={index}
                 className={`col-12 col-md-${
                   index === 0 || index === 3 || index === 4 ? "6" : "3"
                 } p-3 mt-0`}
               >
-                <Link to={`/event/${event._id}`} onClick={scrollToTop}>
+                <Link to={`/event/${event?._id}`} onClick={scrollToTop}>
                   <div className="position-relative h-100 shadow-lg rounded-0 overflow-hidden">
                     <img
                       loading="lazy"
-                      src={event.images[0]}
-                      alt={event.alt}
+                      src={event?.images[0]}
+                      alt={event?.alt}
                       className="scale-image img-fluid w-100 object-fit-cover"
                       style={{ height: "308px" }}
                     />
                     <div className="event-gallery-text-bg position-absolute bottom-0 text-white w-100 text-center py-2">
                       <div className="event-gallery-font">
                         {" "}
-                        {event.image_title}
+                        {event?.image_title}
                       </div>
                     </div>
                   </div>

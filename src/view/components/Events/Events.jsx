@@ -15,9 +15,9 @@ const Events = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const eventImgData = eventData.imageGroups;
+  const eventImgData = eventData?.imageGroups;
   const eventVideoData = eventVidData;
-  const bannerimg = eventData.banner;
+  const bannerimg = eventData?.banner;
   return (
     <div className="container my-lg-5 my-2">
       <div className="pages-banner-img">
@@ -32,10 +32,10 @@ const Events = () => {
       <div className="event-imgs-section my-4 pb-3">
         <div className="event-imgs-details">
           <p className="event-imgs-title fw-bold fs-1 heading-font">
-            {eventData.title}
+            {eventData?.title}
           </p>
           <p className="fw-light event-imgs-description lh-lg">
-            {eventData.description}
+            {eventData?.description}
           </p>
         </div>
 
@@ -74,10 +74,10 @@ const Events = () => {
       <div className="event-video-section my-4">
         <div className="event-video-details">
           <p className="event-video-title fw-bold fs-1 heading-font">
-            {eventVideoData.video_title}
+            {eventVideoData?.video_title}
           </p>
           <p className="fw-light event-video-description lh-lg">
-            {eventVideoData.video_description}
+            {eventVideoData?.video_description}
           </p>
         </div>
 

@@ -3,13 +3,10 @@ import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import useRegistration from "../../hooks/useRegistration";
-import "./GetInvolved.css"
-const states = ["Madhya Pradesh", "Uttar Pradesh", "Maharashtra"];
-const cities = {
-  "Madhya Pradesh": ["Indore", "Bhopal", "Gwalior"],
-  "Uttar Pradesh": ["Lucknow", "Kanpur", "Agra"],
-  Maharashtra: ["Mumbai", "Pune", "Nagpur"],
-};
+import "./GetInvolved.css";
+import { citiesList } from "../../utils/index";
+const states = Object.keys(citiesList);
+const cities = citiesList;
 const category = [
   "Individual",
   "Corporate",
@@ -323,7 +320,7 @@ const RegistrationForm = () => {
                   alt="Preview"
                   className="img-thumbnail mt-2 rounded-circle"
                   width="100"
-                style={{height:"100px"}}
+                  style={{ height: "100px" }}
                 />
               )}
               {touched.images && errors.images && (
