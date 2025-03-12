@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AtalLogo1 } from "../../../assets/images/index";
-// import { IoIosSearch } from "../../../assets/logos/index";
 import "./Header.css";
 import useOurProgram from "../../hooks/useOurProgram";
 import { Link } from "react-router";
@@ -83,19 +82,8 @@ const Header = () => {
                     </li>
                   ))
                 )}
-
-                {/* <li><Link className="dropdown-item custom-dropdown-item" to="/OpEducation">Education</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpHealthcare">Healthcare</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpLivelihood">Livelihood</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpGirlChild">Girl Child & Women Empowerment</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpPrivileged">Privileged Children</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpCivicDriven">Civic Driven Change</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpSocial">Social Entrepreneurship</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpSpecialSupport">Special Support Programme</Link></li>
-                <li><Link className="dropdown-item custom-dropdown-item" to="/OpSpecialInterventions">Special Interventions</Link></li> */}
               </ul>
             </li>
-
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"

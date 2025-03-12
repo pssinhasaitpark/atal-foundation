@@ -68,7 +68,7 @@ const TopProgrammes = () => {
             },
           }}
         >
-          {data.map((program, index) => (
+          {data?.map((program, index) => (
             <SwiperSlide key={index} className="top-programme-slider-card">
               <Link
                 to={`/${program.category}`}

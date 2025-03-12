@@ -7,8 +7,8 @@ const Gallery = () => {
   const { data, isLoading, status, isError } = useGallery();
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
-  const gallerySection = data.gallery_image;
-  const videoSection = data.gallery_video;
+  const gallerySection = data?.gallery_image;
+  const videoSection = data?.gallery_video;
 
   return (
     <div className="container my-lg-5 my-2">
@@ -24,18 +24,17 @@ const Gallery = () => {
       <div className="gallery-imgs-section my-4 pb-5 border-bottom">
         <div className="gallery-imgs-details">
           <p className="gallery-imgs-title fw-bold fs-1 heading-font">
-            {gallerySection.title ||
-              "Gallery - Capturing Moments Of Change & Impact"}
+            {gallerySection?.title}
+            
           </p>
           <p className="fw-light gallery-imgs-description lh-lg">
-            {gallerySection.description ||
-              "Welcome to the Atal Foundation Gallery, where every image tells a story of hope, transformation, and resilience. Through our various initiatives, we have touched thousands of lives, empowering communities, supporting education, providing healthcare, and driving meaningful social change."}
+            {gallerySection?.description}
           </p>
         </div>
 
         <div className="gallery-imgs">
           <div className="row">
-            {gallerySection.images?.map((img, index) => (
+            {gallerySection?.images?.map((img, index) => (
               <div
                 key={index}
                 className={`col-12 ${
@@ -64,17 +63,16 @@ const Gallery = () => {
       <div className="gallery-video-section my-4">
         <div className="gallery-video-details">
           <p className="gallery-video-title fw-bold fs-1 heading-font">
-            {videoSection.title || "Video Gallery"}
+            {videoSection?.title}
           </p>
           <p className="fw-light gallery-video-description lh-lg">
-            {videoSection.description ||
-              "Welcome to the Atal Foundation Video Gallery, where we showcase impactful stories, events, and initiatives through visual storytelling. Our videos capture the essence of the work we do and the change we inspire in the communities we serve."}
+            {videoSection?.description}
           </p>
         </div>
 
         <div className="gallery-video">
           <div className="row">
-            {videoSection.videos.slice(0, 4).map((video, index) => (
+            {videoSection?.videos?.slice(0, 4)?.map((video, index) => (
               <div
                 key={index}
                 className="col-lg-3 col-sm-2 p-1 "

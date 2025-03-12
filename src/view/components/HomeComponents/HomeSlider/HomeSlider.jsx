@@ -14,8 +14,8 @@ const HomeSlider = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const sliderImages1 = memorialInfo.image1;
-  const sliderImages2 = memorialInfo.image2;
+  const sliderImages1 = memorialInfo?.image1;
+  const sliderImages2 = memorialInfo?.image2;
   const settings1 = {
     dots: false,
     infinite: true,
@@ -89,13 +89,13 @@ const HomeSlider = () => {
                 <Card className="custom-card bg-transparent border-0 ps-lg-0 p-lg-5 justify-content-center align-items-center">
                   <Card.Body className="card-style w-100 ">
                     <h5 className="custom-badge badge text-uppercase mb-3">
-                      {memorialInfo.badge}
+                      {memorialInfo?.badge}
                     </h5>
                     <h3 className="custom-heading heading-font">
-                    {stripHTML(memorialInfo.title)}
+                    {stripHTML(memorialInfo?.title)}
                     </h3>
                     <p className="custom-subtitle my-3">
-                      {memorialInfo.description}
+                      {memorialInfo?.description}
                     </p>
                     <Link to="/about" onClick={scrollToTop}>
                       {" "}
@@ -109,13 +109,13 @@ const HomeSlider = () => {
               <div className="row">
                 <div className="col-sm-12 col-md-6 p-0">
                   <Slider {...settings1}>
-                    {sliderImages1.map((image) => (
-                      <div key={image._id} className="border-0">
+                    {sliderImages1?.map((image) => (
+                      <div key={image?._id} className="border-0">
                         <img
                           loading="lazy"
                           className="img-fluid h-100 w-100 card-img-top"
-                          src={image.url}
-                          alt={image.alt}
+                          src={image?.url}
+                          alt={image?.alt}
                         />
                       </div>
                     ))}
@@ -124,13 +124,13 @@ const HomeSlider = () => {
 
                 <div className="col-sm-12 col-md-6 p-0">
                   <Slider {...settings2}>
-                    {sliderImages2.map((image) => (
-                      <div key={image._id} className="border-0">
+                    {sliderImages2?.map((image) => (
+                      <div key={image?._id} className="border-0">
                         <img
                           loading="lazy"
                           className="img-fluid h-100 w-100 card-img-top"
-                          src={image.url}
-                          alt={image.alt}
+                          src={image?.url}
+                          alt={image?.alt}
                         />
                       </div>
                     ))}

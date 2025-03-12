@@ -1,5 +1,4 @@
 import React from "react";
-import { AboutUsBanner } from "../../../assets/images/index";
 import { Card } from "react-bootstrap";
 import useAboutUs from "../../hooks/useAboutUs";
 const AboutUsComponent = () => {
@@ -7,8 +6,8 @@ const AboutUsComponent = () => {
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
 
-  const aboutUsData = data.sections;
-  const aboutUsBanner = AboutUsBanner || data.banner;
+  const aboutUsData = data?.sections;
+  const aboutUsBanner =  data?.banner;
 
   return (
     <div className="container py-5">
