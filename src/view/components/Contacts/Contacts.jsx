@@ -112,7 +112,7 @@ const Contacts = () => {
           loading="lazy"
           src={ContactBanner}
           alt="Contact Banner"
-          className="img-fluid w-100 h-100 object-fit-cover"
+          className="img-fluid w-100 h-100 object-fit-fill"
         />
       </div>
       <h2 className="fw-bold my-5 mb-4 heading-font">CONTACT US / JOIN US</h2>

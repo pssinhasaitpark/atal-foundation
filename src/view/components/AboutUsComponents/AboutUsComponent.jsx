@@ -5,9 +5,8 @@ const AboutUsComponent = () => {
   const { data, isLoading, status, isError } = useAboutUs();
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
-
   const aboutUsData = data?.sections;
-  const aboutUsBanner =  data?.banner;
+  const aboutUsBanner = data?.banner;
 
   return (
     <div className="container py-5">
@@ -23,7 +22,10 @@ const AboutUsComponent = () => {
       <nav aria-label="custom-breadcrumb" className="pt-5">
         <ol className="custom-breadcrumb list-unstyled d-flex align-items-end mb-0">
           <li className="custom-breadcrumb-item">
-            <a href="/" className="heading-font text-decoration-none text-dark">
+            <a
+              href="about"
+              className="heading-font text-decoration-none text-dark"
+            >
               About Us
             </a>
           </li>
@@ -42,16 +44,14 @@ const AboutUsComponent = () => {
               <img
                 loading="lazy"
                 src={data.image}
-                alt=""
-                className="img-fluid w-100 h-100 object-fit-cover"
+                alt={`${data.title}`}
+                className="img-fluid w-100 h-100 object-fit-cover "
               />
             </div>
             <div className="col-sm-8">
               <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                 <Card.Body className="card-style p-0 ps-lg-5">
-                  <h3 className="fw-bold fs-1 heading-font">
-                    {data.title}
-                  </h3>
+                  <h3 className="fw-bold fs-1 heading-font">{data.title}</h3>
                   <div
                     className="fw-light fs-6 lh-lg"
                     dangerouslySetInnerHTML={{

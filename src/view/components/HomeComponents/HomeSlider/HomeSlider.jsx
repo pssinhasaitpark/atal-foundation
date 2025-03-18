@@ -7,6 +7,7 @@ import useHomeSlide from "../../../hooks/useHomeSlide";
 
 const HomeSlider = () => {
   const { data, isLoading, isError,status } = useHomeSlide();
+  
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
 

@@ -16,7 +16,7 @@ const Gallery = () => {
         <img
           loading="lazy"
           src={GalleryBanner}
-          className="img-fluid w-100 h-100 object-fit-cover"
+          className="img-fluid w-100 h-100 object-fit-fill"
           alt="Gallery Banner"
         />
       </div>
