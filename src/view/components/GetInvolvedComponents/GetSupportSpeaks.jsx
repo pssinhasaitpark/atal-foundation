@@ -3,16 +3,27 @@ import "./GetInvolved.css";
 import { useSupportSpeaks } from "../../hooks/index";
 
 const GetSupportSpeaks = () => {
-  const { data, isLoading, status, isError } = useSupportSpeaks();
+  const { data, isLoading, status } = useSupportSpeaks();
   if (isLoading) return <div className="spinner"></div>;
-  if (status === "failed") return <div>Error: {isError}</div>;
-  const supportSpeaksData = data.supportSpeakers;
-  
+  if (status === "failed")
+    return (
+      <h4 className="my-5 py-5  text-center getInvolvedline">
+        No Data Available
+      </h4>
+    );
+  const supportSpeaksData = data?.supportSpeakers;
+  if (supportSpeaksData === undefined)
+    return (
+      <h4 className="my-5 py-5  text-center getInvolvedline">
+        No Data Available
+      </h4>
+    );
+
   return (
     <div className="container mt-5 w-75 position-relative">
       <h4 className="text-center getInvolvedline">Support Speaks</h4>
       <div className="row">
-        {supportSpeaksData.map((person, index) => (
+        {supportSpeaksData?.map((person, index) => (
           <div key={index} className="col-md-6 mb-4">
             <div className="card shadow-sm p-3 d-flex flex-row align-items-center">
               <img

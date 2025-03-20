@@ -9,6 +9,18 @@ const Gallery = () => {
   if (status === "failed") return <div>Error: {isError}</div>;
   const gallerySection = data?.gallery_image;
   const videoSection = data?.gallery_video;
+  const generateLargeColIndices = (n) => {
+    const indices = [];
+    for (let i = 0; i <= n; i++) {
+      if ([0, 5, 6, 11].includes(i % 12)) {
+        indices.push(i);
+      }
+    }
+    return indices;
+  };
+
+  const n = gallerySection.images.length;
+  const largeColIndices = generateLargeColIndices(n);
 
   return (
     <div className="container my-lg-5 my-2">
@@ -25,7 +37,6 @@ const Gallery = () => {
         <div className="gallery-imgs-details">
           <p className="gallery-imgs-title fw-bold fs-1 heading-font">
             {gallerySection?.title}
-            
           </p>
           <p className="fw-light gallery-imgs-description lh-lg">
             {gallerySection?.description}
@@ -38,7 +49,7 @@ const Gallery = () => {
               <div
                 key={index}
                 className={`col-12 ${
-                  index === 0 ? "col-md-6" : "col-md-3"
+                  largeColIndices.includes(index) ? "col-md-6" : "col-md-3"
                 } p-1 overflow-hidden`}
               >
                 {" "}
@@ -50,8 +61,11 @@ const Gallery = () => {
                   <img
                     loading="lazy"
                     src={img}
-                    alt={img.alt}
+                    alt={`gallery-img-${index}`}
                     className={`gallery-img-${index} w-100 object-fit-cover `}
+                    style={{
+                      height: largeColIndices.includes(index) ? "440px" : "",
+                    }}
                   />
                 </SlideshowLightbox>
               </div>

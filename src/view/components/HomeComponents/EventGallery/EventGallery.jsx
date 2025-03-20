@@ -4,10 +4,9 @@ import "./EventGallery.css";
 import useEventsImgs from "../../../hooks/useEventsImgs";
 
 const EventGallery = () => {
-  const { data: eventData, isLoading, isError ,status} = useEventsImgs();
+  const { data: eventData, isLoading, isError, status } = useEventsImgs();
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
-
 
   const eventImgData = eventData?.imageGroups;
   const scrollToTop = () => {
@@ -25,7 +24,7 @@ const EventGallery = () => {
 
         <div className="col-md-12 col-12 mt-2 text-light ps-0">
           <div className="row g-3">
-            {eventImgData?.slice(0,5)?.map((event, index) => (
+            {eventImgData?.slice(0, 5)?.map((event, index) => (
               <div
                 key={index}
                 className={`col-12 col-md-${
@@ -41,8 +40,15 @@ const EventGallery = () => {
                       className="scale-image img-fluid w-100 object-fit-cover"
                       style={{ height: "308px" }}
                     />
-                    <div className="event-gallery-text-bg position-absolute bottom-0 text-white w-100 text-center py-2">
-                      <div className="event-gallery-font">
+                    <div
+                      className="gradient-overlay position-absolute top-0 left-0 w-100 h-100"
+                      style={{
+                        background:
+                          "linear-gradient(to bottom, rgba(0, 0, 0, 0),85%, rgb(0, 0, 0))",
+                      }}
+                    ></div>
+                    <div className=" position-absolute bottom-0 text-white w-100 text-center py-2">
+                      <div className="heading-font event-gallery-font">
                         {" "}
                         {event?.image_title}
                       </div>

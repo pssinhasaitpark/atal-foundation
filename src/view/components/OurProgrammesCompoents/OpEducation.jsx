@@ -1,5 +1,5 @@
 import React from "react";
-import CardComponent from "../cardComponent";
+import CardComponent from "../CardComponent";
 
 const OpEducation = () => {
   return (
