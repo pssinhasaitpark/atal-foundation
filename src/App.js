@@ -3,15 +3,6 @@ import MainLayout from "./view/Layout/MainLayout";
 import {
   HomePage,
   AboutUsPage,
-  OpEducationPage,
-  OpHealthcarePage,
-  OpLivelihoodPage,
-  OpGirlChildPage,
-  OpPriviledgedPage,
-  OpCivicDrivenPage,
-  OpSocialPage,
-  OpSpecialSupportPage,
-  OpSpecialIntervationPage,
   ContactsPage,
   GalleryPage,
   EventsPage,
@@ -25,6 +16,7 @@ import {
   SingleEventPage,
   PeopleBehindPage,
 } from "./view/pages/index";
+import { CardComponent } from "./view/components";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
 function App() {
@@ -39,7 +31,6 @@ function App() {
   const closePopup = () => {
     setShowPopup(false);
   };
-
   return (
     <>
       {showPopup && <Popup onClose={closePopup} />}
@@ -48,30 +39,6 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
             <Route path="/about" element={<AboutUsPage />} />
-            <Route path="/Education" element={<OpEducationPage />} />
-            <Route path="/Healthcare" element={<OpHealthcarePage />} />
-            <Route path="/Livelihood" element={<OpLivelihoodPage />} />
-            <Route
-              path="/Girl Child & Women Empowerment"
-              element={<OpGirlChildPage />}
-            />
-            <Route
-              path="/Privileged Children"
-              element={<OpPriviledgedPage />}
-            />
-            <Route
-              path="/Civic Driven Change"
-              element={<OpCivicDrivenPage />}
-            />
-            <Route path="/Social Entrepreneurship" element={<OpSocialPage />} />
-            <Route
-              path="/Special Support ourProgramme"
-              element={<OpSpecialSupportPage />}
-            />
-            <Route
-              path="/Special Interventions"
-              element={<OpSpecialIntervationPage />}
-            />
             <Route path="/contacts" element={<ContactsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/events" element={<EventsPage />} />
@@ -85,6 +52,10 @@ function App() {
               element={<SingleFoundationDetailPage />}
             />
             <Route path="/event/:id" element={<SingleEventPage />} />
+            <Route
+              path="/our-programmes/:category"
+              element={<CardComponent />}
+            />
             <Route path="/people-behind" element={<PeopleBehindPage />} />
           </Route>
         </Routes>

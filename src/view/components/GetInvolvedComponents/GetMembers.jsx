@@ -30,6 +30,12 @@ const GetMembersData = [
 ];
 
 const GetMembers = () => {
+  if (GetMembersData === undefined)
+    return (
+      <h4 className="my-5 py-5  text-center getInvolvedline">
+        No Data Available
+      </h4>
+    );
   return (
     <div className="container mt-5 w-75 position-relative">
       <h4 className="text-center getInvolvedline">Members</h4>

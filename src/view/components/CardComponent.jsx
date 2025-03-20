@@ -1,32 +1,38 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import useOurProgram from "../hooks/useOurProgram";
-const CardComponent = ({ categoryname }) => {
+import { useParams } from "react-router";
+const CardComponent = () => {
+  const { category } = useParams();
   const { data, isLoading, isError, status } = useOurProgram();
   let filterData = [];
   if (!isLoading && !isError) {
-    filterData = data.filter((item) => item.category === `${categoryname}`);
+    filterData = data.filter((item) => item.category === `${category}`);
   }
+
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
-  const dynamicData = filterData[0].details;
-  const bannerImage = filterData[0].banner;
+  const dynamicData = filterData[0]?.details;
+  const bannerImage = filterData[0]?.banner;
 
   return (
     <div className="container py-5">
-      <div className="pages-banner-img">
+      <div className="pages-banner-img overflow-hidden">
         <img
           loading="lazy"
           src={bannerImage}
           alt={`${filterData[0].category}-banner`}
-          className="img-fluid w-100 object-fit-cover"
+          className="w-100 h-100 img-fluid object-fill-cover"
         />
       </div>
 
       <nav aria-label="custom-breadcrumb" className="pt-5">
         <ol className="custom-breadcrumb list-unstyled d-flex align-items-end">
           <li className="custom-breadcrumb-item fs-2">
-            <a href={`${filterData[0].category}`} className="heading-font text-decoration-none text-dark">
+            <a
+              href={`${filterData[0].category}`}
+              className="heading-font text-decoration-none text-dark"
+            >
               Our Programmes
             </a>
           </li>

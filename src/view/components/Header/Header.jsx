@@ -9,6 +9,8 @@ const Header = () => {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+  console.log();
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm top-border">
       <div className="container">
@@ -75,7 +77,7 @@ const Header = () => {
                     <li key={opCategory._id}>
                       <Link
                         className="dropdown-item custom-dropdown-item"
-                        to={`/${opCategory.category}`}
+                        to={`/our-programmes/${opCategory.category}`}
                       >
                         {opCategory.category}
                       </Link>
