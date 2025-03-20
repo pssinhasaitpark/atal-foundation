@@ -1,35 +1,13 @@
 import React from "react";
-import {peopleimg1,peopleimg2,peopleimg3,peopleimg4 } from "../../../assets/images/index"
-import "./GetInvolved.css"
-
-const supportSpeaksData = [
-  {
-    name: "Dr. C.L. Yadav",
-    designation: "Advocate",
-    location: "Indore",
-    image: peopleimg4,
-  },
-  {
-    name: "Adv. Avijit Mishra",
-    designation: "Advocate",
-    location: "Sagar",
-    image: peopleimg2,
-  },
-  {
-    name: "Ritesh Rajora",
-    designation: "Sundaram BNP Paribas Asset Management",
-    location: "Bhopal",
-    image: peopleimg3,
-  },
-  {
-    name: "Rohit Yadav",
-    designation: "Assistant Doctor Homoeo Clinic",
-    location: "A-23.24 Homoeo Clinic Sukhliya Chouraha Indore",
-    image: peopleimg1,
-  },
-];
+import "./GetInvolved.css";
+import { useSupportSpeaks } from "../../hooks/index";
 
 const GetSupportSpeaks = () => {
+  const { data, isLoading, status, isError } = useSupportSpeaks();
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
+  const supportSpeaksData = data.supportSpeakers;
+  
   return (
     <div className="container mt-5 w-75 position-relative">
       <h4 className="text-center getInvolvedline">Support Speaks</h4>
@@ -38,7 +16,7 @@ const GetSupportSpeaks = () => {
           <div key={index} className="col-md-6 mb-4">
             <div className="card shadow-sm p-3 d-flex flex-row align-items-center">
               <img
-                src={person.image}
+                src={person.images[0].url}
                 alt={person.name}
                 className="rounded-circle me-3"
                 width="80"
@@ -46,7 +24,7 @@ const GetSupportSpeaks = () => {
               />
               <div>
                 <h5 className="fw-bold">{person.name}</h5>
-                {person.designation && <p className="mb-1">{person.designation}</p>}
+                {person.post && <p className="mb-1">{person.post}</p>}
                 <p className="text-muted">{person.location}</p>
               </div>
             </div>

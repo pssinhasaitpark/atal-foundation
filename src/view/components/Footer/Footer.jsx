@@ -74,8 +74,8 @@ const Footer = () => {
                 key={index}
                 className="col-md-4 col-12 footer-section my-5 my-lg-0"
               >
-                <h5 className={dt.badge.classCSS}>{dt.badge.text}</h5>
-                <h3 className={dt.heading.classCss}>{dt.heading.text}</h3>
+                <h3 className={dt.badge.classCSS}>{dt.badge.text}</h3>{" "}
+                <h2 className={dt.heading.classCss}>{dt.heading.text}</h2>{" "}
               </div>
             ))}
             <div className="col-md-3 col-12 footer-section quick-links-div my-5 my-lg-0">
@@ -102,9 +102,9 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-md-5 col-12 fotter-right-section my-5 my-lg-0 ">
-              <h5 className="mb-4 fs-4 fw-medium">
+              <h2 className="mb-4 fs-4 fw-medium">
                 Sign up for our newsletter
-              </h5>
+              </h2>{" "}
               <form onSubmit={formik.handleSubmit}>
                 <div className="d-flex input-sub-bar">
                   <input
@@ -140,6 +140,7 @@ const Footer = () => {
                         to={link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Visit our ${icon} page`}
                       >
                         {icon === "whatsapp" && (
                           <FaWhatsapp className="footer-logos me-4" />

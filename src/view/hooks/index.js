@@ -10,7 +10,9 @@ import useOurNews from "./useOurNews"
 import useGallery from "./useGallery";
 import useHomeSlide from "./useHomeSlide";
 import useRegistrations from "./useRegistration";
+import useSupportSpeaks from "./useSupportSpeaks";
 export {
+  useSupportSpeaks,
   useContacts,
   useSubscribe,
   useSocialMediaLinks,

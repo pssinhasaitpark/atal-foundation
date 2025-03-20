@@ -24,7 +24,7 @@ const Events = () => {
         <img
           loading="lazy"
           src={bannerimg}
-          className="img-fluid w-100 h-100 object-fit-cover"
+          className="img-fluid w-100 h-100 object-fit-fill"
           alt="Event Banner"
         />
       </div>
