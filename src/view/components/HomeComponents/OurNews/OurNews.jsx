@@ -39,12 +39,14 @@ const OurNews = () => {
               <button
                 className="btn px-3 py-0 fs-2 border-0"
                 onClick={handlePrevClick}
+                aria-label="handlePrevClick"
               >
                 <LuMoveLeft />
               </button>
               <button
                 className="btn px-3 py-0 fs-2 border-0"
                 onClick={handleNextClick}
+                aria-label="handleNextClick"
               >
                 <LuMoveRight />
               </button>

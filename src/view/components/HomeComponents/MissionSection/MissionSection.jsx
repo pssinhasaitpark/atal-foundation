@@ -19,9 +19,9 @@ const MissionSection = () => {
                 <div className="col-md-7">
                     <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
                         <Card.Body className="card-style  p-lg-5">
-                            <h5 className="custom-badge badge rounded-0 border mb-3">
+                            <p className="custom-badge badge mb-3">
                                 Our Mission
-                            </h5>
+                            </p>
                             <h3 className="custom-mission-heading heading-font">
                                 empowering communities, transforming<br />lives, building a better
                                 future.

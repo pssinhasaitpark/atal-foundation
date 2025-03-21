@@ -16,7 +16,7 @@ const CardComponent = () => {
   const bannerImage = filterData[0]?.banner;
 
   return (
-    <div className="container py-5">
+    <div className="App container py-5">
       <div className="pages-banner-img overflow-hidden">
         <img
           loading="lazy"

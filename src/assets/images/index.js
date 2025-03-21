@@ -10,7 +10,7 @@ import Figmaimages3 from "./Figmaimages3.png";
 import Figmaimages4 from "./Figmaimages4.png";
 import Figmaimages5 from "./Figmaimages5.png";
 import Figmaimages6 from "./Figmaimages6.png";
-
+import AtalBook from "./AtalBook.jpg";
 import EventGallery from "./EventGallery.png";
 import VisionSection from "./VisionSection.png";
 import AboutUsImgs1 from "./AboutUsImgs1.png";
@@ -49,17 +49,48 @@ import SpecialInterventionsBanner from "./Banners/SpecialInterventionsBanner.png
 import SpecialSupportBanner from "./Banners/SpecialSupportBanner.png";
 import GalleryBanner from "./Banners/GalleryBanner.png";
 import PopupImage from "./PopupImage.png";
-import peoplebehind from "./peoplebehind.png"
+import peoplebehind from "./peoplebehind.png";
 import peopleimg1 from "./people-behind-img1.png";
 import peopleimg2 from "./people-behind-img2.png";
 import peopleimg3 from "./people-behind-img3.png";
 import peopleimg4 from "./people-behind-img4.png";
 import peopleimg5 from "./people-behind-img5.png";
 import peopleimg6 from "./people-behind-img6.png";
+import atalaudio1 from "./atal-audio1.jpeg";
+import atalaudio2 from "./atal-audio2.jpeg";
+import atalaudio3 from "./atal-audio3.jpeg";
+import atalaudio4 from "./atal-audio4.jpeg";
+import atalaudio5 from "./atal-audio5.jpeg";
+import atalaudio6 from "./atal-audio6.jpeg";
+import atalaudio7 from "./atal-audio7.jpeg";
+import atalBookSec1 from "./atal-book-sec1.jpg";
+import atalBookSec2 from "./atal-book-sec2.jpg";
+import atalBookSec3 from "./atal-book-sec3.jpg";
+import atalBookSec4 from "./atal-book-sec4.jpg";
+import atalBookSec5 from "./atal-book-sec5.jpg";
+import atalBookSec6 from "./atal-book-sec6.jpg";
+import atalBookSec7 from "./atal-book-sec7.jpg";
+import atalBookSec8 from "./atal-book-sec8.jpg";
 export {
+  atalBookSec1,
+  atalBookSec2,
+  atalBookSec3,
+  atalBookSec4,
+  atalBookSec5,
+  atalBookSec6,
+  atalBookSec7,
+  atalBookSec8,
+  atalaudio1,
+  atalaudio2,
+  atalaudio3,
+  atalaudio4,
+  atalaudio5,
+  atalaudio6,
+  atalaudio7,
   ourMissionImg,
   PopupImage,
   AboutUsBanner,
+  AtalBook,
   EventsBanner,
   GalleryBanner,
   CivicDrivenBanner,

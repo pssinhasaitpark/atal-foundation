@@ -15,6 +15,7 @@ import {
   SingleFoundationDetailPage,
   SingleEventPage,
   PeopleBehindPage,
+  BookDetailPage
 } from "./view/pages/index";
 import { CardComponent } from "./view/components";
 import { useState, useEffect } from "react";
@@ -57,6 +58,7 @@ function App() {
               element={<CardComponent />}
             />
             <Route path="/people-behind" element={<PeopleBehindPage />} />
+            <Route path="/sada-atal" element={<BookDetailPage />} />
           </Route>
         </Routes>
       </div>
