@@ -116,7 +116,7 @@ const HomeSlider = () => {
                           loading="lazy"
                           className="img-fluid h-100 w-100 card-img-top"
                           src={image?.url}
-                          alt={image?.alt}
+                          alt={image?.alt ||"atalimg"}
                         />
                       </div>
                     ))}
@@ -131,7 +131,7 @@ const HomeSlider = () => {
                           loading="lazy"
                           className="img-fluid h-100 w-100 card-img-top"
                           src={image?.url}
-                          alt={image?.alt}
+                          alt={image?.alt ||"atalimg"}
                         />
                       </div>
                     ))}

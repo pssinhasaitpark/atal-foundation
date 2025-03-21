@@ -10,33 +10,16 @@ import VisionSection from "./HomeComponents/VisionSection/VisionSection";
 import MissionSection from "./HomeComponents/MissionSection/MissionSection";
 import FoundationFacts from "./HomeComponents/FoundationFacts/FoundationFacts";
 import MoreAboutFoundation from "./HomeComponents/MoreAboutFoundation/MoreAboutFoundation";
-import AboutUsComponent from "./AboutUsComponents/AboutUsComponent";
-import OpEducation from "./OurProgrammesCompoents/OpEducation";
-import OpHealthcare from "./OurProgrammesCompoents/OpHealthcare";
-import OpLivelihood from "./OurProgrammesCompoents/OpLivelihood";
-import OpGirlChild from "./OurProgrammesCompoents/OpGirlChild";
-import OpPriviledged from "./OurProgrammesCompoents/OpPriviledged";
-import OpCivicDriven from "./OurProgrammesCompoents/OpCivicDriven";
-import OpSocial from "./OurProgrammesCompoents/OpSocial";
-import OpSpecialSupport from "./OurProgrammesCompoents/OpSpecialSupport";
-import OpSpecialIntervation from "./OurProgrammesCompoents/OpSpecialIntervation";
 import Contacts from "./Contacts/Contacts";
 import Gallery from "./Gallery/Gallery";
 import Events from "./Events/Events";
-import Message from "./Message/Message"
-import GetMembers from "./GetInvolvedComponents/GetMembers";
-import GetRegistration from "./GetInvolvedComponents/GetRegistration";
-import GetSupportSpeaks from "./GetInvolvedComponents/GetSupportSpeaks";
-import NewsDetail from "./HomeComponents/OurNews/NewsDetail"
-import FoundationDetailPage from "./HomeComponents/MoreAboutFoundation/FoundationDetailPage"
-import SingleEvent from "./Events/SingleEvent";
-import PeopleBehindcomponent from "./PeopleBehind/PeopleBehindcompoent";
 import CardComponent from "./CardComponent";
+import AudioSection from "./HomeComponents/AudioSection/AudioSection";
+import BookSection from "./HomeComponents/BookSection/BookSection";
 export {
+  BookSection,
+  AudioSection,
   CardComponent,
-  FoundationDetailPage,
-  NewsDetail,
-  Message,
   Header,
   Footer,
   HomeSlider,
@@ -49,23 +32,7 @@ export {
   MissionSection,
   FoundationFacts,
   MoreAboutFoundation,
-  AboutUsComponent,
-  OpEducation,
-  OpHealthcare,
-  OpLivelihood,
-  OpGirlChild,
-  OpPriviledged,
-  OpCivicDriven,
-  OpSocial,
-  OpSpecialSupport,
-  OpSpecialIntervation,
   Contacts,
   Gallery,
   Events,
-  GetMembers,
-  GetRegistration,
-  GetSupportSpeaks,
-  SingleEvent,
-  PeopleBehindcomponent,
-
 };

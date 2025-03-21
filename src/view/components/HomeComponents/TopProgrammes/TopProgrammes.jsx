@@ -40,12 +40,15 @@ const TopProgrammes = () => {
             <button
               className="btn px-3 py-0 fs-2 border-0"
               onClick={handlePrevClick}
+              aria-label="handleprevslide"
+
             >
               <LuMoveLeft />
             </button>
             <button
               className="btn px-3 py-0 fs-2 border-0"
               onClick={handleNextClick}
+              aria-label="handlenextslide"
             >
               <LuMoveRight />
             </button>
@@ -71,7 +74,7 @@ const TopProgrammes = () => {
           {data?.map((program, index) => (
             <SwiperSlide key={index} className="top-programme-slider-card">
               <Link
-                to={`/${program.category}`}
+                to={`/our-programmes/${program.category}`}
                 onClick={scrollToTop}
                 className="text-decoration-none"
               >
@@ -80,6 +83,7 @@ const TopProgrammes = () => {
                     loading="lazy"
                     variant="top"
                     src={program.banner}
+                    alt={program.category}
                     className="top-programmes-image rounded-0 object-fit-cover"
                   />
                   <Card.Body className="p-0 mt-3">

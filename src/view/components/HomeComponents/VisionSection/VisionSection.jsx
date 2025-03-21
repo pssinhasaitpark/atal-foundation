@@ -9,9 +9,9 @@ const VisionSection = () => {
         <div className="col-md-6">
           <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
             <Card.Body className="card-style ps-lg-0 p-lg-5">
-              <h5 className="custom-badge badge mb-3">
+              <p className="custom-badge badge mb-3">
                 Our Vision
-              </h5>
+              </p>
               <h3 className="fw-bold fs-1 heading-font">
                 inspired by atal, empowering lives, transforming futures with change.
               </h3>

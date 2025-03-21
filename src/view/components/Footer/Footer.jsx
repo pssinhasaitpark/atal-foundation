@@ -29,7 +29,7 @@ const quickLinks = [
   { title: "Gallery", url: "/gallery" },
   { title: "About", url: "/about" },
   { title: "Message", url: "/message" },
-  { title: "Our Programmes", url: "/Education" },
+  { title: "Our Programmes", url: "/our-programmes/Education" },
   { title: "Events", url: "/events" },
   { title: "Get Involved", url: "/registration" },
   { title: "Contact", url: "/contacts" },
@@ -66,7 +66,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="footer bg-dark text-light">
+      <footer className="footer bg-dark text-light">
         <div className="footer-padding">
           <div className="row w-100">
             {FooterLeftData.map((dt, index) => (
@@ -162,7 +162,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
       <FooterBottom />
     </>
   );

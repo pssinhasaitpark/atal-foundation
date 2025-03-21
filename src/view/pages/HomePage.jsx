@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   HomeSlider,
   TopProgrammes,
@@ -10,45 +10,27 @@ import {
   PhotoGallery2,
   FoundationFacts,
   MoreAboutFoundation,
+  AudioSection,
+  BookSection,
 } from "../components/index";
-import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 
 const HomePage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const isFirstLoad = sessionStorage.getItem("isFirstLoad");
-
-    if (!isFirstLoad) {
-      setTimeout(() => {
-        setIsLoading(false);
-        sessionStorage.setItem("isFirstLoad", "true");
-      }, 1500);
-    } else {
-      setIsLoading(false);
-    }
-  }, []);
-
   return (
     <>
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <>
-          <div className="App">
-            <HomeSlider />
-            <TopProgrammes />
-            <PeopleBehind />
-            <EventGallery />
-            <VisionSection />
-            <OurNews />
-            <MissionSection />
-            <PhotoGallery2 />
-            <FoundationFacts />
-            <MoreAboutFoundation />
-          </div>
-        </>
-      )}
+      <div className="App">
+        <HomeSlider />
+        <TopProgrammes />
+        <BookSection />
+        <PeopleBehind />
+        <EventGallery />
+        <VisionSection />
+        <OurNews />
+        <MissionSection />
+        <PhotoGallery2 />
+        <FoundationFacts />
+        <MoreAboutFoundation />
+        <AudioSection />
+      </div>
     </>
   );
 };
