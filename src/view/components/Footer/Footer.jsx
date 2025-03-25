@@ -128,10 +128,13 @@ const Footer = () => {
                 </div>
               </form>
               <div className="footer-socialmedia-icons">
-                {isErrorLinks ? (
-                  <p>Error: {isErrorLinks}</p>
-                ) : isLoadingLinks ? (
-                  <p>Loading...</p>
+                {isErrorLinks || isLoadingLinks ? (
+                  <div>
+                    <FaWhatsapp className="footer-logos me-4" />
+                    <TiSocialFacebookCircular className="footer-logos me-4" />
+                    <FaInstagram className="footer-logos me-4" />
+                    <AiOutlineYoutube className="footer-logos me-4" />
+                  </div>
                 ) : (
                   Object.entries(socialMediaLinks).map(
                     ([icon, { link }], index) => (
