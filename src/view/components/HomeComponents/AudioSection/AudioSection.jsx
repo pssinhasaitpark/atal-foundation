@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "react-bootstrap";
 import { LuMoveLeft, LuMoveRight } from "../../../../assets/logos/index";
+import { useAudio } from "../../../hooks/index";
 import {
   atalaudio1,
   atalaudio2,
@@ -15,41 +16,41 @@ const audioData = [
   {
     heading: "10 Famous and Best Poems of Atal Bihari Vajpayee - In Voice",
     description: "Atal Bihari Vajpayee - In Voice",
-    audios: [
+    audio_section: [
       {
-        name: "सरकारें आएंगी, जाएंगी, पार्टियां बनेंगी",
-        image: [atalaudio1],
-        url: "https://example.com/audio1.mp3",
+        title: "सरकारें आएंगी, जाएंगी, पार्टियां बनेंगी",
+        images: [atalaudio1],
+        audio: "https://example.com/audio1.mp3",
       },
       {
-        name: "हम शांति को स्थायी बनाना चाहते हैं।",
-        image: [atalaudio2],
-        url: "https://example.com/audio2.mp3",
+        title: "हम शांति को स्थायी बनाना चाहते हैं।",
+        images: [atalaudio2],
+        audio: "https://example.com/audio2.mp3",
       },
       {
-        name: "विकास के लिए शांति आवश्यक है।",
-        image: [atalaudio3],
-        url: "https://example.com/audio3.mp3",
+        title: "विकास के लिए शांति आवश्यक है।",
+        images: [atalaudio3],
+        audio: "https://example.com/audio3.mp3",
       },
       {
-        name: "हिंसा से कुछ भी हासिल नहीं होता।",
-        image: [atalaudio4],
-        url: "https://example.com/audio4.mp3",
+        title: "हिंसा से कुछ भी हासिल नहीं होता।",
+        images: [atalaudio4],
+        audio: "https://example.com/audio4.mp3",
       },
       {
-        name: "आप मित्र बदल सकते हैं, लेकिन पड़ोसी नहीं।",
-        image: [atalaudio5],
-        url: "https://example.com/audio4.mp3",
+        title: "आप मित्र बदल सकते हैं, लेकिन पड़ोसी नहीं।",
+        images: [atalaudio5],
+        audio: "https://example.com/audio4.mp3",
       },
       {
-        name: "हम सभी धर्मों के समान सम्मान में विश्वास रखते हैं।",
-        image: [atalaudio6],
-        url: "https://example.com/audio4.mp3",
+        title: "हम सभी धर्मों के समान सम्मान में विश्वास रखते हैं।",
+        images: [atalaudio6],
+        audio: "https://example.com/audio4.mp3",
       },
       {
-        name: "मैं मानता हूँ कि बंदूक किसी समस्या का समाधान नहीं है।",
-        image: [atalaudio7],
-        url: "https://example.com/audio4.mp3",
+        title: "मैं मानता हूँ कि बंदूक किसी समस्या का समाधान नहीं है।",
+        images: [atalaudio7],
+        audio: "https://example.com/audio4.mp3",
       },
     ],
   },
@@ -66,10 +67,10 @@ const AudioCard = ({ info }) => {
       >
         <div className="col-sm-4 p-0">
           <img
-            src={info.image}
-            className="w-100 object-fit-cover rounded-4"
+            src={info.images}
+            className="audio--sec-img w-100 object-fit-cover rounded-4"
             style={{ height: "100px" }}
-            alt={info.name}
+            alt={info.title}
           />
         </div>
         <div className="col-sm-8 d-flex flex-column justify-content-around">
@@ -84,10 +85,10 @@ const AudioCard = ({ info }) => {
               whiteSpace: "normal",
             }}
           >
-            {info.name}
+            {info.title}
           </p>
-          <audio controls className="w-100 h-50">
-            <source src={info.url} type="audio/mp3" />
+          <audio controls className="audio--sec-audio w-100 h-lg-50">
+            <source src={info.audio} type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -97,6 +98,10 @@ const AudioCard = ({ info }) => {
 };
 const AudioSection = () => {
   const swiperRef = useRef(null);
+  const { data, isLoading, isError, status } = useAudio();
+  if (isLoading) return <div className="spinner"></div>;
+  if (status === "failed") return <div>Error: {isError}</div>;
+  console.log(data);
 
   const handlePrevClick = () => {
     swiperRef.current.swiper.slidePrev();
@@ -154,7 +159,7 @@ const AudioSection = () => {
               },
             }}
           >
-            {audioData[0]?.audios?.map((data, index) => (
+            {audioData[0]?.audio_section?.map((data, index) => (
               <SwiperSlide key={index} className="">
                 <AudioCard info={data} />
               </SwiperSlide>

@@ -7,6 +7,9 @@ const Gallery = () => {
   const { data, isLoading, status, isError } = useGallery();
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
+  if (data == null)
+    return <h4 className="my-5 py-5 text-center">No Data Available</h4>;
+
   const gallerySection = data?.gallery_image;
   const videoSection = data?.gallery_video;
   const generateLargeColIndices = (n) => {
@@ -19,7 +22,7 @@ const Gallery = () => {
     return indices;
   };
 
-  const n = gallerySection.images.length;
+  const n = gallerySection?.images.length;
   const largeColIndices = generateLargeColIndices(n);
 
   return (

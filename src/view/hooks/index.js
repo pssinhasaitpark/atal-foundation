@@ -6,12 +6,16 @@ import useAboutUs from "./useAboutUs";
 import useEventsImgs from "./useEventsImgs";
 import useEventsVids from "./useEventsVids";
 import useMessageUs from "./useMessageUs";
-import useOurNews from "./useOurNews"
+import useOurNews from "./useOurNews";
 import useGallery from "./useGallery";
 import useHomeSlide from "./useHomeSlide";
 import useRegistrations from "./useRegistration";
 import useSupportSpeaks from "./useSupportSpeaks";
+import useAudio from "./useAudio";
+import useBookSection from "./useBookSection";
 export {
+  useBookSection,
+  useAudio,
   useSupportSpeaks,
   useContacts,
   useSubscribe,
@@ -24,5 +28,5 @@ export {
   useEventsVids,
   useGallery,
   useHomeSlide,
-  useRegistrations
+  useRegistrations,
 };

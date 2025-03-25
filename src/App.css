@@ -50,7 +50,7 @@ button:focus {
 .text-warning-color {
   color: #f68633;
 }
-.top-border{
+.top-border {
   border-top: 2px solid #f68633;
 }
 .custom-button {
@@ -136,10 +136,9 @@ button:focus {
   }
 }
 
-
 .spinner {
-  border: 4px solid #f3f3f3; 
-  border-top: 4px solid #f68633; 
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #f68633;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -149,17 +148,20 @@ button:focus {
   animation: spin 1s linear infinite;
 }
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 
 /* Fade Animation */
 .App {
-  -webkit-animation: fadein 2s; 
+  -webkit-animation: fadein 2s;
   -moz-animation: fadein 1s;
-  -ms-animation: fadein 1s; 
-  -o-animation: fadein 1s; 
+  -ms-animation: fadein 1s;
+  -o-animation: fadein 1s;
   animation: fadein 1s;
 }
 @keyframes fadein {
@@ -189,7 +191,7 @@ button:focus {
   }
 }
 
-@-ms-keyframes fadein{
+@-ms-keyframes fadein {
   from {
     opacity: 0;
   }
@@ -220,6 +222,13 @@ button:focus {
 }
 
 /* Media Queries for Responsiveness */
+
+@media (max-width: 500px) {
+  img.audio--sec-img.w-100.object-fit-cover.rounded-4 {
+    height: 100% !important;
+  }
+ 
+}
 @media (width: 810px) and (height: 1080px) {
   .custom-subtitle {
     font-size: calc(0.9rem + 0.1vw);
@@ -328,7 +337,7 @@ button:focus {
   }
   img.atal-logo-header.me-2 {
     height: 85px;
-}
+  }
   a.nav-link {
     font-size: 22px !important;
   }
@@ -343,8 +352,9 @@ button:focus {
     line-height: 50px;
   }
 }
-p,ul {
-   margin-bottom: 5px !important;
+p,
+ul {
+  margin-bottom: 5px !important;
 }
 .Toastify__progress-bar--success {
   background: #f68633 !important;

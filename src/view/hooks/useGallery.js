@@ -10,7 +10,7 @@ import axiosInstance from "../redux/axios/axios";
 const fetchGalleryData = async () => {
   try {
     const response = await axiosInstance.get('/gallery');
-    return response.data.galleries[0];
+    return response.data.galleries[0] || null;
   } catch (error) {
     console.error("API call failed:", error);
     throw error; 

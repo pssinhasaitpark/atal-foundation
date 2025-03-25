@@ -10,7 +10,7 @@ import axiosInstance from "../redux/axios/axios";
 const fetchEventsData = async () => {
   try {
     const response = await axiosInstance.get("/event-videos");    
-    return response.data.eventVideos[0];
+    return response.data.eventVideos[0] || null;
   } catch (error) {
     console.error("API call failed:", error);
     throw error;

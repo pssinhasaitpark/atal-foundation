@@ -3,14 +3,21 @@ import "./HomeSlider.css";
 import { Card } from "react-bootstrap";
 import Slider from "react-slick";
 import { Link } from "react-router";
-import useHomeSlide from "../../../hooks/useHomeSlide";
-
+import {
+  HomeSlider1,
+  HomeSlider2,
+  HomeSlider3,
+  HomeSlider4,
+} from "../../../../assets/images/index";
+const data = {
+  badge: "ATAL FOUNDATION",
+  title: "Building a Stronger <br/> India, Inspired by Atal ji",
+  description:
+    "With two decades of impact in literacy, health, disability, and livelihoods, AtalFoundation now prioritizes Education for systemic change, while otherinitiatives continue as Development Support Programs.",
+  image1: [{ url: HomeSlider1 }, { url: HomeSlider2 }],
+  image2: [{ url: HomeSlider3 }, { url: HomeSlider4 }],
+};
 const HomeSlider = () => {
-  const { data, isLoading, isError,status } = useHomeSlide();
-  
-  if (isLoading) return <div className="spinner"></div>;
-  if (status === "failed") return <div>Error: {isError}</div>;
-
   const memorialInfo = data;
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -80,7 +87,6 @@ const HomeSlider = () => {
   };
 
   return (
-    
     <>
       <div className="py-5" style={{ backgroundColor: "#FBFBFB" }}>
         <div className="container">
@@ -93,7 +99,7 @@ const HomeSlider = () => {
                       {memorialInfo?.badge}
                     </h5>
                     <h3 className="custom-heading heading-font">
-                    {stripHTML(memorialInfo?.title)}
+                      {stripHTML(memorialInfo?.title)}
                     </h3>
                     <p className="custom-subtitle my-3">
                       {memorialInfo?.description}
@@ -110,28 +116,27 @@ const HomeSlider = () => {
               <div className="row">
                 <div className="col-sm-12 col-md-6 p-0">
                   <Slider {...settings1}>
-                    {sliderImages1?.map((image) => (
-                      <div key={image?._id} className="border-0">
+                    {sliderImages1?.map((image, index) => (
+                      <div key={`${image?._id} ${index}`} className="border-0">
                         <img
                           loading="lazy"
                           className="img-fluid h-100 w-100 card-img-top"
                           src={image?.url}
-                          alt={image?.alt ||"atalimg"}
+                          alt={image?.alt || "atalimg"}
                         />
                       </div>
                     ))}
                   </Slider>
                 </div>
-
                 <div className="col-sm-12 col-md-6 p-0">
                   <Slider {...settings2}>
-                    {sliderImages2?.map((image) => (
-                      <div key={image?._id} className="border-0">
+                    {sliderImages2?.map((image, index) => (
+                      <div key={`${image?._id} ${index}`} className="border-0">
                         <img
                           loading="lazy"
                           className="img-fluid h-100 w-100 card-img-top"
                           src={image?.url}
-                          alt={image?.alt ||"atalimg"}
+                          alt={image?.alt || "atalimg"}
                         />
                       </div>
                     ))}

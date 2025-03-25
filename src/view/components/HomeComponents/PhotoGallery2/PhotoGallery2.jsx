@@ -8,7 +8,7 @@ import { SlideshowLightbox } from "lightbox.js-react";
 
 const PhotoGallery2 = () => {
   const swiperRef = useRef(null);
-  const { data, isLoading, isError,status } = useGallery();
+  const { data, isLoading, isError, status } = useGallery();
 
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
@@ -41,8 +41,7 @@ const PhotoGallery2 = () => {
               <button
                 className="btn px-3 py-0 fs-2 border-0"
                 onClick={handlePrevClick}
-              aria-label="handlePrevClick"
-
+                aria-label="handlePrevClick"
               >
                 <LuMoveLeft />
               </button>
@@ -73,21 +72,25 @@ const PhotoGallery2 = () => {
               },
             }}
           >
-            {imagesData?.map((image, index) => (
-              <SwiperSlide key={index} className="photo-gallery-slider-card">
-                <SlideshowLightbox
-                  backgroundColor="black"
-                  modalClose="clickOutside"
-                >
-                  <img
-                    loading="lazy"
-                    src={image}
-                    alt={`gallery_image_${index}`}
-                    className="photo-gallery-img w-100 "
-                  />
-                </SlideshowLightbox>
-              </SwiperSlide>
-            ))}
+            {imagesData && imagesData.length > 0 ? (
+              imagesData.map((image, index) => (
+                <SwiperSlide key={index} className="photo-gallery-slider-card">
+                  <SlideshowLightbox
+                    backgroundColor="black"
+                    modalClose="clickOutside"
+                  >
+                    <img
+                      loading="lazy"
+                      src={image}
+                      alt={`gallery_image_${index}`}
+                      className="photo-gallery-img w-100"
+                    />
+                  </SlideshowLightbox>
+                </SwiperSlide>
+              ))
+            ) : (
+              <h4 className="py-5 mt-5 text-center">No images found</h4>
+            )}
           </Swiper>
         </div>
       </Container>
