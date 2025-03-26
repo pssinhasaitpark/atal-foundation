@@ -5,6 +5,10 @@ const AboutUs = () => {
   const { data, isLoading, status, isError } = useAboutUs();
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
+  if (data === undefined) {
+    return <h4 className="py-5 my-5 text-center">No Data Available</h4>;
+  }
+
   const aboutUsData = data?.sections;
   const aboutUsBanner = data?.banner;
 

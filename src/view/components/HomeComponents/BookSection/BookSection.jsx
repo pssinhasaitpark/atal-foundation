@@ -4,10 +4,9 @@ import { useBookSection } from "../../../hooks/index";
 const BookSection = () => {
   const navigate = useNavigate();
   const { data, isLoading, isError, status } = useBookSection();
-  if (data == null)
-    return <h4 className="py-5 mt-5 text-center">No Books Data Available</h4>;
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
+  if (data == null) return <></>;
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

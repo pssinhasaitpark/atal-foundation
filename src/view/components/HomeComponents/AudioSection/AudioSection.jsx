@@ -101,7 +101,7 @@ const AudioSection = () => {
   const { data, isLoading, isError, status } = useAudio();
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
-  console.log(data);
+  if (data === undefined) return <></>;
 
   const handlePrevClick = () => {
     swiperRef.current.swiper.slidePrev();
@@ -159,7 +159,7 @@ const AudioSection = () => {
               },
             }}
           >
-            {audioData[0]?.audio_section?.map((data, index) => (
+            {data.audio_section?.map((data, index) => (
               <SwiperSlide key={index} className="">
                 <AudioCard info={data} />
               </SwiperSlide>
