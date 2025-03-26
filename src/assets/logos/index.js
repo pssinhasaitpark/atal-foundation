@@ -16,9 +16,12 @@ import { FaInstagram } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { LuMoveLeft } from "react-icons/lu";
 import { LuMoveRight } from "react-icons/lu";
-
+import { IoPause } from "react-icons/io5";
+import { FiPlay } from "react-icons/fi";
 
 export {
+  FiPlay,
+  IoPause,
   LuMoveLeft,
   LuMoveRight,
   FaWhatsapp,

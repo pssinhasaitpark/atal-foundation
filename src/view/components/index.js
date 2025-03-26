@@ -16,7 +16,9 @@ import Events from "./Events/Events";
 import CardComponent from "./CardComponent";
 import AudioSection from "./HomeComponents/AudioSection/AudioSection";
 import BookSection from "./HomeComponents/BookSection/BookSection";
+import AudioPlayer from "./AudioPlayer";
 export {
+  AudioPlayer,
   BookSection,
   AudioSection,
   CardComponent,

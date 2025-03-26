@@ -17,7 +17,7 @@ import {
   PeopleBehindPage,
   BookDetailPage
 } from "./view/pages/index";
-import { CardComponent } from "./view/components";
+import { CardComponent,AudioPlayer } from "./view/components";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
 function App() {
@@ -36,6 +36,7 @@ function App() {
     <>
       {showPopup && <Popup onClose={closePopup} />}
       <div className="App">
+      <AudioPlayer />
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
