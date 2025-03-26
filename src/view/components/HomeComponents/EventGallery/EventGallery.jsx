@@ -6,7 +6,7 @@ import useEventsImgs from "../../../hooks/useEventsImgs";
 const EventGallery = () => {
   const { data: eventData, isLoading, isError, status } = useEventsImgs();
   if (eventData == null)
-    return <h4 className="my-5 py-5 text-center">No Data Available</h4>;
+    return <></>;
 
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;

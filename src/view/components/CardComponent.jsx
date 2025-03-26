@@ -12,17 +12,20 @@ const CardComponent = () => {
 
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
+  if (data === undefined)
+    return <h4 className="py-5 my-5 text-center">No Data Available</h4>;
+
   const dynamicData = filterData[0]?.details;
   const bannerImage = filterData[0]?.banner;
 
   return (
     <div className="App container py-5">
-      <div className="pages-banner-img overflow-hidden">
+      <div className="pages-banner-img ">
         <img
           loading="lazy"
           src={bannerImage}
           alt={`${filterData[0].category}-banner`}
-          className="w-100 h-100 img-fluid object-fill-cover"
+          className="h-100 w-100 object-fit-cover"
         />
       </div>
 

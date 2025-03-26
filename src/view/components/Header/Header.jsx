@@ -9,8 +9,6 @@ const Header = () => {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
-  console.log();
-  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm top-border">
       <div className="container">
@@ -68,10 +66,8 @@ const Header = () => {
                 className="dropdown-menu custom-dropdown-menu"
                 aria-labelledby="navbarDropdownPrograms"
               >
-                {isError ? (
-                  <p>Error: {isError}</p>
-                ) : isLoading ? (
-                  <p>Loading...</p>
+                {isError || isLoading ? (
+                  <li>Loading..</li>
                 ) : (
                   data?.map((opCategory) => (
                     <li key={opCategory._id}>

@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./Events.css";
 import { Link } from "react-router";
 import useEventsImgs from "../../hooks/useEventsImgs";
@@ -11,9 +11,10 @@ const Events = () => {
 
   if (isLoading && isLoadingVid) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: </div>;
-  if (!eventData || !eventVidData) {
-    return <div className="spinner"></div>;
+  if (eventData === undefined || eventVidData === undefined) {
+    return <h4 className="py-5 my-5 text-center">No Data Available</h4>;
   }
+
   const eventImgData = eventData?.imageGroups;
   const eventVideoData = eventVidData;
   const bannerimg = eventData?.banner;

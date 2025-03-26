@@ -87,10 +87,10 @@ const Footer = () => {
                   className="d-grid list-unstyled lh-lg fs-5"
                   style={{ gridTemplateColumns: "1fr 1fr" }}
                 >
-                  {quickLinks.map((link, index) => (
+                  {quickLinks?.map((link, index) => (
                     <li key={index}>
                       <Link
-                        to={link.url}
+                        to={link?.url}
                         className="text-light text-decoration-none"
                         onClick={scrollToTop}
                       >

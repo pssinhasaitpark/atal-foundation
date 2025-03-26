@@ -12,7 +12,7 @@ const OurNews = () => {
   const { data, isLoading, isError, status } = useOurNews();
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
-
+  if (data === undefined) return <></>;
   const newsData = data;
   const handlePrevClick = () => {
     swiperRef.current.swiper.slidePrev();
