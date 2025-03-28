@@ -8,10 +8,9 @@ const Events = () => {
   const { data: eventData, isLoading, status } = useEventsImgs();
   const { data: eventVidData, isLoading: isLoadingVid } = useEventsVids();
   const [visibleImages, setVisibleImages] = useState(5);
-
   if (isLoading && isLoadingVid) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: </div>;
-  if (eventData === undefined || eventVidData === undefined) {
+  if (eventData === null || eventVidData === null) {
     return <h4 className="py-5 my-5 text-center">No Data Available</h4>;
   }
 
@@ -47,7 +46,7 @@ const Events = () => {
 
         <div className="event-imgs">
           <div className="row">
-            {eventImgData?.slice(0, visibleImages).map((img, index) => (
+            {eventImgData?.slice(0, visibleImages)?.map((img, index) => (
               <div
                 key={index}
                 className={`col-12 custom-p-3 ${

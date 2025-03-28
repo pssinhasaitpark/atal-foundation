@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AtalLogo1 } from "../../../assets/images/index";
+import { atallogo } from "../../../assets/images/index";
 import "./Header.css";
 import useOurProgram from "../../hooks/useOurProgram";
 import { Link } from "react-router";
@@ -10,7 +10,10 @@ const Header = () => {
     setIsNavOpen(!isNavOpen);
   };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm top-border">
+    <nav
+      className="navbar navbar-expand-lg navbar-light shadow-sm top-border"
+      style={{ backgroundColor: "#f68633" }}
+    >
       <div className="container">
         <button
           className="navbar-toggler border-0"
@@ -29,7 +32,7 @@ const Header = () => {
           >
             <img
               loading="lazy"
-              src={AtalLogo1}
+              src={atallogo}
               alt="Atal Logo"
               className="atal-logo-header me-2"
               height="90"

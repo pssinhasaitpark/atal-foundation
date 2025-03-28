@@ -1,10 +1,10 @@
 ul.dropdown-menu.custom-dropdown-menu.show {
   border: none;
   border-radius: 0px;
-  top: 65px;
+  top: 63px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #ffffff;
 }
-
 .dropdown-item.active,
 .dropdown-item:active {
   background-color: #f68633 !important;
@@ -13,7 +13,8 @@ a.dropdown-item.custom-dropdown-item {
   padding: 10px;
   padding-left: 15px;
 }
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
   color: #f68633 !important;
 }
 
@@ -22,8 +23,9 @@ a.dropdown-item.custom-dropdown-item {
   font-weight: 400;
 }
 a.nav-link {
-  color: black !important;
+  color: rgb(255, 255, 255) !important;
   font-size: large;
+  
 }
 
 @media (max-width: 767px) {
@@ -79,8 +81,6 @@ a.nav-link {
   .atal-logo-header {
     height: 90px;
   }
-
-
 
   .nav-item {
     margin-left: 0.5rem;

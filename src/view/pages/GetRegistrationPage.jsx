@@ -114,94 +114,99 @@ const GetRegistrationPage = () => {
       >
         {({ touched, errors, setFieldValue }) => (
           <Form className="my-4">
-            <div className="mb-3">
-              <label htmlFor="first_name" className="form-label">
-                First Name
-              </label>
-              <Field name="first_name" type="text" className="form-control" />
-              {touched.first_name && errors.first_name && (
-                <div className="text-danger">{errors.first_name}</div>
-              )}
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="last_name" className="form-label">
-                Last Name
-              </label>
-              <Field name="last_name" type="text" className="form-control" />
-              {touched.last_name && errors.last_name && (
-                <div className="text-danger">{errors.last_name}</div>
-              )}
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <Field name="email" type="email" className="form-control" />
-              {touched.email && errors.email && (
-                <div className="text-danger">{errors.email}</div>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="date_of_birth" className="form-label">
-                Date of Birth
-              </label>
-              <Field
-                name="date_of_birth"
-                type="date"
-                className="form-control"
-              />
-              {touched.date_of_birth && errors.date_of_birth && (
-                <div className="text-danger">{errors.date_of_birth}</div>
-              )}
-            </div>
-            <div className="mb-3 ">
-              <label className="form-label">Gender</label>
-              <div
-                role="group"
-                aria-labelledby="gender-radio-buttons"
-                className="d-flex"
-              >
-                <div className="form-check me-5">
-                  <Field
-                    type="radio"
-                    name="gender"
-                    value="male"
-                    className="form-check-input"
-                    id="genderMale"
-                  />
-                  <label htmlFor="genderMale" className="form-check-label">
-                    Male
-                  </label>
-                </div>
-                <div className="form-check">
-                  <Field
-                    type="radio"
-                    name="gender"
-                    value="female"
-                    className="form-check-input"
-                    id="genderFemale"
-                  />
-                  <label htmlFor="genderFemale" className="form-check-label">
-                    Female
-                  </label>
-                </div>
+            .
+            <div className="d-lg-flex">
+              <div className="mb-3 w-100 me-4">
+                <label htmlFor="first_name" className="form-label">
+                  First Name
+                </label>
+                <Field name="first_name" type="text" className="form-control" />
+                {touched.first_name && errors.first_name && (
+                  <div className="text-danger">{errors.first_name}</div>
+                )}
               </div>
-              {touched.gender && errors.gender && (
-                <div className="text-danger">{errors.gender}</div>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="mobile" className="form-label">
-                Mobile
-              </label>
-              <Field name="mobile" type="text" className="form-control" />
-              {touched.mobile && errors.mobile && (
-                <div className="text-danger">{errors.mobile}</div>
-              )}
-            </div>
 
+              <div className="mb-3 w-100">
+                <label htmlFor="last_name" className="form-label">
+                  Last Name
+                </label>
+                <Field name="last_name" type="text" className="form-control" />
+                {touched.last_name && errors.last_name && (
+                  <div className="text-danger">{errors.last_name}</div>
+                )}
+              </div>
+            </div>
+            <div className="d-lg-flex">
+              <div className="mb-3 w-100 me-4">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <Field name="email" type="email" className="form-control" />
+                {touched.email && errors.email && (
+                  <div className="text-danger">{errors.email}</div>
+                )}
+              </div>
+              <div className="mb-3 w-100">
+                <label htmlFor="mobile" className="form-label">
+                  Mobile
+                </label>
+                <Field name="mobile" type="text" className="form-control" />
+                {touched.mobile && errors.mobile && (
+                  <div className="text-danger">{errors.mobile}</div>
+                )}
+              </div>
+            </div>
+            <div className="d-lg-flex">
+              <div className="mb-3 w-100 me-4">
+                <label htmlFor="date_of_birth" className="form-label">
+                  Date of Birth
+                </label>
+                <Field
+                  name="date_of_birth"
+                  type="date"
+                  className="form-control"
+                />
+                {touched.date_of_birth && errors.date_of_birth && (
+                  <div className="text-danger">{errors.date_of_birth}</div>
+                )}
+              </div>
+              <div className="mb-3 w-100">
+                <label className="form-label">Gender</label>
+                <div
+                  role="group"
+                  aria-labelledby="gender-radio-buttons"
+                  className="d-flex"
+                >
+                  <div className="form-check me-5">
+                    <Field
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      className="form-check-input"
+                      id="genderMale"
+                    />
+                    <label htmlFor="genderMale" className="form-check-label">
+                      Male
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <Field
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      className="form-check-input"
+                      id="genderFemale"
+                    />
+                    <label htmlFor="genderFemale" className="form-check-label">
+                      Female
+                    </label>
+                  </div>
+                </div>
+                {touched.gender && errors.gender && (
+                  <div className="text-danger">{errors.gender}</div>
+                )}
+              </div>
+            </div>
             <div className="mb-3">
               <label htmlFor="address" className="form-label">
                 Address
@@ -211,84 +216,87 @@ const GetRegistrationPage = () => {
                 <div className="text-danger">{errors.address}</div>
               )}
             </div>
-
-            <div className="mb-3">
-              <label htmlFor="state" className="form-label">
-                State
-              </label>
-              <Field
-                as="select"
-                name="state"
-                className="form-control"
-                onChange={(e) => {
-                  setFieldValue("state", e.target.value);
-                  handleStateChange(e);
-                }}
-              >
-                <option value="">Select a state</option>
-                {states.map((state) => (
-                  <option key={state} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </Field>
-              {touched.state && errors.state && (
-                <div className="text-danger">{errors.state}</div>
-              )}
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="city" className="form-label">
-                City
-              </label>
-              <Field as="select" name="city" className="form-control">
-                <option value="">Select a city</option>
-                {selectedState &&
-                  cities[selectedState]?.map((city) => (
-                    <option key={city} value={city}>
-                      {city}
+            <div className="d-lg-flex">
+              <div className="mb-3 w-100 me-4">
+                <label htmlFor="state" className="form-label">
+                  State
+                </label>
+                <Field
+                  as="select"
+                  name="state"
+                  className="form-control"
+                  onChange={(e) => {
+                    setFieldValue("state", e.target.value);
+                    handleStateChange(e);
+                  }}
+                >
+                  <option value="">Select a state</option>
+                  {states.map((state) => (
+                    <option key={state} value={state}>
+                      {state}
                     </option>
                   ))}
-              </Field>
-              {touched.city && errors.city && (
-                <div className="text-danger">{errors.city}</div>
-              )}
+                </Field>
+                {touched.state && errors.state && (
+                  <div className="text-danger">{errors.state}</div>
+                )}
+              </div>
+              <div className="mb-3 w-100">
+                <label htmlFor="city" className="form-label">
+                  City
+                </label>
+                <Field as="select" name="city" className="form-control">
+                  <option value="">Select a city</option>
+                  {selectedState &&
+                    cities[selectedState]?.map((city) => (
+                      <option key={city} value={city}>
+                        {city}
+                      </option>
+                    ))}
+                </Field>
+                {touched.city && errors.city && (
+                  <div className="text-danger">{errors.city}</div>
+                )}
+              </div>
             </div>
-
-            <div className="mb-3">
-              <label htmlFor="category" className="form-label">
-                Category
-              </label>
-              <Field
-                as="select"
-                name="category"
-                className="form-control"
-                onChange={(e) => {
-                  setFieldValue("category", e.target.value);
-                }}
-              >
-                <option value="">Select a category</option>
-                {category.map((cat) => (
-                  <option key={cat} value={cat}>
-                    {cat}
-                  </option>
-                ))}
-              </Field>
-              {touched.category && errors.category && (
-                <div className="text-danger">{errors.category}</div>
-              )}
+            <div className="d-lg-flex">
+              <div className="mb-3 w-100 me-4">
+                <label htmlFor="category" className="form-label">
+                  Category
+                </label>
+                <Field
+                  as="select"
+                  name="category"
+                  className="form-control"
+                  onChange={(e) => {
+                    setFieldValue("category", e.target.value);
+                  }}
+                >
+                  <option value="">Select a category</option>
+                  {category.map((cat) => (
+                    <option key={cat} value={cat}>
+                      {cat}
+                    </option>
+                  ))}
+                </Field>
+                {touched.category && errors.category && (
+                  <div className="text-danger">{errors.category}</div>
+                )}
+              </div>
+              <div className="mb-3 w-100">
+                <label htmlFor="designation" className="form-label">
+                  Designation
+                </label>
+                <Field
+                  name="designation"
+                  type="text"
+                  className="form-control"
+                />
+                {touched.designation && errors.designation && (
+                  <div className="text-danger">{errors.designation}</div>
+                )}
+              </div>
             </div>
-
-            <div className="mb-3">
-              <label htmlFor="designation" className="form-label">
-                Designation
-              </label>
-              <Field name="designation" type="text" className="form-control" />
-              {touched.designation && errors.designation && (
-                <div className="text-danger">{errors.designation}</div>
-              )}
-            </div>
-
             <div className="mb-3">
               <label htmlFor="message" className="form-label">
                 Message
@@ -298,7 +306,7 @@ const GetRegistrationPage = () => {
                 <div className="text-danger">{errors.message}</div>
               )}
             </div>
-
+            <div className="d-lg-flex">
             <div className="mb-3">
               <label htmlFor="images" className="form-label">
                 Profile Image(s)
@@ -327,7 +335,7 @@ const GetRegistrationPage = () => {
                 <div className="text-danger">{errors.images}</div>
               )}
             </div>
-
+            </div>
             <button type="submit" className="btn btn-primary d-flex mx-auto">
               Submit
             </button>

@@ -32,7 +32,7 @@ const AudioPlayer = () => {
   }, []);
 
   return (
-    <div className="audio-player d-flex justify-content-center align-items-center position-fixed end-0 bottom-0 m-4 z-3 bg-dark p-2 rounded bg-opacity-50">
+    <div className="audio-player d-flex justify-content-center align-items-center position-fixed end-0 bottom-0 m-4 mb-5 z-3 bg-dark p-2 rounded bg-opacity-50">
       <audio ref={audioRef} src={audio} />
       <div className="controls">
         <button
