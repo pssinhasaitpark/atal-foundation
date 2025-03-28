@@ -71,7 +71,9 @@ import atalBookSec5 from "./atal-book-sec5.jpg";
 import atalBookSec6 from "./atal-book-sec6.jpg";
 import atalBookSec7 from "./atal-book-sec7.jpg";
 import atalBookSec8 from "./atal-book-sec8.jpg";
+import atallogo from "./atalLogo.svg"
 export {
+  atallogo,
   atalBookSec1,
   atalBookSec2,
   atalBookSec3,
