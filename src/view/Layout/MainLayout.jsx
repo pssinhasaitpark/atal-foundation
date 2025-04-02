@@ -1,13 +1,11 @@
 import React from "react";
-import { Header, Footer } from "../components/index";
+import { Header2, Footer } from "../components/index";
 import { Outlet } from "react-router";
 const MainLayout = () => {
   return (
     <>
-      <Header />
-
+      <Header2 />
       <Outlet />
-
       <Footer />
     </>
   );

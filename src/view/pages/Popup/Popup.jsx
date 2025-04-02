@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Popup.css";
-import { PopupImage } from "../../../assets/images/index";
+import { popupImg } from "../../../assets/images/index";
 import { IoMdClose } from "../../../assets/logos/index";
 
 const Popup = ({ onClose }) => {
@@ -24,7 +24,7 @@ const Popup = ({ onClose }) => {
         </button>
         <div className='mt-4 mt-lg-0 w-100 h-100'>
           <img
-            src={PopupImage}
+            src={popupImg}
             alt="PopupImage"
             className='rounded-4 w-100 h-100'
           />

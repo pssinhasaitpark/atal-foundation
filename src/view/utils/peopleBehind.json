@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Mala Vajpayee Tiwari",
+      "detail": "Niece of Bharat Ratna Atal Bihari Vajpayee Ji.",
+      "image": "src/assets/images/PopupImage.png"
+    },
+    {
+      "id": 2,
+      "name": "Santosh Shukla",
+      "detail": "President and CEO of World Book of Records, a UK-based organization, & advocate at the Supreme Court of India.",
+      "image": "src/assets/images/PopupImage.png"
+    },
+    {
+      "id": 3,
+      "name": "Mrs. Ruchi Mishra",
+      "detail": "Deeply involved in promoting social, cultural, educational, environmental, national integration, and universal peace through various activities. ",
+      "image": "src/assets/images/PopupImage.png"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Prachi Shukla",
+      "detail": "Dr. Prachi Shukla is a visionary entrepreneur and committed social activist, dedicated to driving societal change through business and social initiatives. She empowers marginalized communities by blending entrepreneurship with social welfare, focusing on education, healthcare, and livelihood development. Her work continues to inspire and uplift those in need, making a lasting impact on both the business and social sectors. ",
+      "image": "src/assets/images/PopupImage.png"
+    },
+    {
+      "id": 5,
+      "name": "Abhishek Tiwari",
+      "detail": "Deeply involved in promoting social, cultural, educational, environmental, national integration, and universal peace through various activities. ",
+      "image": "src/assets/images/PopupImage.png"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Prabhakar Mishra",
+      "detail": "Deeply involved in promoting social, cultural, educational, environmental, national integration, and universal peace through various activities. ",
+      "image":"src/assets/images/PopupImage.png"
+    }
+  ]

@@ -15,9 +15,10 @@ import {
   SingleFoundationDetailPage,
   SingleEventPage,
   PeopleBehindPage,
-  BookDetailPage
+  BookDetailPage,
+  SinglePeopleBehind,
 } from "./view/pages/index";
-import { CardComponent,AudioPlayer } from "./view/components";
+import { CardComponent, AudioPlayer ,PageNotFound} from "./view/components";
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router";
 function App() {
@@ -36,7 +37,7 @@ function App() {
     <>
       {showPopup && <Popup onClose={closePopup} />}
       <div className="App">
-      <AudioPlayer />
+        <AudioPlayer />
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
@@ -60,6 +61,8 @@ function App() {
             />
             <Route path="/people-behind" element={<PeopleBehindPage />} />
             <Route path="/sada-atal" element={<BookDetailPage />} />
+            <Route path="/people-behind/peopleBehind/:id" element={<SinglePeopleBehind />} />
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </div>

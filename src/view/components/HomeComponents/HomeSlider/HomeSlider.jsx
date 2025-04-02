@@ -12,8 +12,7 @@ import {
 const data = {
   badge: "ATAL FOUNDATION",
   title: "Building a Stronger <br/> India, Inspired by Atal ji",
-  description:
-    "With two decades of impact in literacy, health, disability, and livelihoods, AtalFoundation now prioritizes Education for systemic change, while otherinitiatives continue as Development Support Programs.",
+  description:"The Atal Foundation was established with a profound commitment to serve humanity and the nation through socio-cultural initiatives, inspired by the esteemed philosophy of Bharat Ratna, the Hon'ble Prime Minister of India, Shri Atal Bihari Vajpayee. Guided by his visionary thinking, the Foundation's core ethos is to ignite the spirit of service, motivation, and inspiration in individuals, fostering a deep sense of humanity and national pride.",
   image1: [{ url: HomeSlider1 }, { url: HomeSlider2 }],
   image2: [{ url: HomeSlider3 }, { url: HomeSlider4 }],
 };
@@ -93,7 +92,7 @@ const HomeSlider = () => {
           <div className="row p-3">
             <div className="col-sm-12 col-md-6 p-0">
               <div className="pt-lg-5">
-                <Card className="custom-card bg-transparent border-0 ps-lg-0 p-lg-5 justify-content-center align-items-center">
+                <Card className="custom-card bg-transparent border-0 ps-lg-0 justify-content-center align-items-center">
                   <Card.Body className="card-style w-100 ">
                     <h5 className="custom-badge badge text-uppercase mb-3">
                       {memorialInfo?.badge}
