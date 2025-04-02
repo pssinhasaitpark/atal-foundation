@@ -71,8 +71,24 @@ import atalBookSec5 from "./atal-book-sec5.jpg";
 import atalBookSec6 from "./atal-book-sec6.jpg";
 import atalBookSec7 from "./atal-book-sec7.jpg";
 import atalBookSec8 from "./atal-book-sec8.jpg";
-import atallogo from "./atalLogo.svg"
+import atallogo from "./atalLogo.svg";
+import popupImg from "./popupImg.jpg";
+import bookImg from "./bookImg.jpg";
+import pb1 from "./peopleBehind/pb1.png";
+import pb2 from "./peopleBehind/pb2.jpg";
+import pb3 from "./peopleBehind/pb3.png";
+import pb4 from "./peopleBehind/pb4.png";
+import pb5 from "./peopleBehind/pb5.png";
+import pb6 from "./peopleBehind/pb6.jpg";
 export {
+  pb1,
+  pb2,
+  pb3,
+  pb4,
+  pb5,
+  pb6,
+  bookImg,
+  popupImg,
   atallogo,
   atalBookSec1,
   atalBookSec2,

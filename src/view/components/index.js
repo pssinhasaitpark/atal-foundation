@@ -1,4 +1,5 @@
 import Header from "./Header/Header";
+import Header2 from "./Header/Header2";
 import Footer from "./Footer/Footer";
 import HomeSlider from "./HomeComponents/HomeSlider/HomeSlider";
 import TopProgrammes from "./HomeComponents/TopProgrammes/TopProgrammes";
@@ -17,12 +18,15 @@ import CardComponent from "./CardComponent";
 import AudioSection from "./HomeComponents/AudioSection/AudioSection";
 import BookSection from "./HomeComponents/BookSection/BookSection";
 import AudioPlayer from "./AudioPlayer";
+import PageNotFound from "./PageNotFound"
 export {
+  PageNotFound,
   AudioPlayer,
   BookSection,
   AudioSection,
   CardComponent,
   Header,
+  Header2,
   Footer,
   HomeSlider,
   TopProgrammes,

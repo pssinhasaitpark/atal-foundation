@@ -1,6 +1,7 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { pb1, pb2, pb3, pb4, pb5, pb6 } from "../../assets/images/index";
-import { Link } from "react-router";
+
 const peopleBehind = [
   {
     id: 1,
@@ -44,44 +45,29 @@ const peopleBehind = [
     image: pb3,
   },
 ];
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-const PeopleBehindPage = () => {
+
+const SinglePeopleBehind = () => {
+  const { id } = useParams();
+  // eslint-disable-next-line
+  const item = peopleBehind.find((item) => item.id == id);
+
   return (
-    <div className="App container my-4">
-      <h3 className="text-center mb-4">People Behind</h3>
-      <div className="row">
-        {peopleBehind.map((person) => (
-          <div key={person.id} className="col-md-6 mb-4">
-            <Link
-              to={`/people-behind/peopleBehind/${person.id}`}
-              className="text-decoration-none"
-              onClick={() => {
-                scrollToTop();
-              }}
-            >
-              <div className="card shadow-sm p-3 d-flex flex-row align-items-center">
-                <img
-                  src={person.image}
-                  alt={person.name}
-                  className="rounded-circle me-3"
-                  width="80"
-                  height="80"
-                />
-                <div>
-                  <h5 className="fw-bold">{person.name}</h5>
-                  {person.designation && (
-                    <p className="mb-1">{person.designation}</p>
-                  )}
-                  <p className="text-muted">{person.location}</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
+    <div className="App container my-5 w-75">
+      <h2 className="heading-font text-center">{item.name}</h2>
+      <img
+        src={item.image}
+        alt={item.name}
+        className="w-100 my-4 object-fit-contain"
+        style={{ height: "500px" }}
+      />
+      <div
+        className="fw-light fs-6 lh-lg"
+        dangerouslySetInnerHTML={{
+          __html: item.detail,
+        }}
+      />
     </div>
   );
 };
-export default PeopleBehindPage;
+
+export default SinglePeopleBehind;

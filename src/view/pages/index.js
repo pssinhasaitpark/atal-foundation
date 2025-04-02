@@ -13,7 +13,9 @@ import SingleFoundationDetailPage from "./SingleFoundationDetailPage";
 import SingleEventPage from "./SingleEventPage"
 import PeopleBehindPage from "./PeopleBehindPage";
 import BookDetailPage from "./BookDetailPage";
+import SinglePeopleBehind from "./SinglePeopleBehind";
 export {
+  SinglePeopleBehind,
   Popup,
   HomePage,
   AboutUsPage,
