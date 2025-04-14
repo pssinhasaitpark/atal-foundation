@@ -14,8 +14,9 @@ const Gallery = () => {
   const videoSection = data?.gallery_video;
   const generateLargeColIndices = (n) => {
     const indices = [];
+    
     for (let i = 0; i <= n; i++) {
-      if ([0, 5, 6, 11].includes(i % 12)) {
+      if ([0, 5, 6, 11,12].includes(i % 12)) {
         indices.push(i);
       }
     }
@@ -24,13 +25,14 @@ const Gallery = () => {
 
   const n = gallerySection?.images.length;
   const largeColIndices = generateLargeColIndices(n);
+console.log(largeColIndices);
 
   return (
     <div className="container my-lg-5 my-2">
       <div className="pages-banner-img">
         <img
           loading="lazy"
-          src={GalleryBanner}
+          src={`${process.env.REACT_APP_BASE_IMG_URL +GalleryBanner}`}
           className="img-fluid w-100 h-100 object-fit-fill"
           alt="Gallery Banner"
         />
@@ -63,11 +65,12 @@ const Gallery = () => {
                 >
                   <img
                     loading="lazy"
-                    src={img}
+                    src={`${process.env.REACT_APP_BASE_IMG_URL + img}`}
+
                     alt={`gallery-img-${index}`}
                     className={`gallery-img-${index} w-100 object-fit-cover `}
                     style={{
-                      height: largeColIndices.includes(index) ? "440px" : "",
+                      minHeight: largeColIndices.includes(index) ? "440px" : "",
                     }}
                   />
                 </SlideshowLightbox>
@@ -102,7 +105,7 @@ const Gallery = () => {
                   controls
                   preload="metadata"
                 >
-                  <source src={video} type="video/webm" />
+                  <source        src={`${process.env.REACT_APP_BASE_IMG_URL + video}`} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
               </div>

@@ -75,7 +75,9 @@ const OurNews = () => {
                   <div className="col-sm-5" style={{ height: "300px" }}>
                     <img
                       loading="lazy"
-                      src={news.images}
+                      src={`${
+                        process.env.REACT_APP_BASE_IMG_URL + news?.images
+                      }`}
                       alt={`${news?.headline}${index}`}
                       className="w-100 h-100 object-fit-cover"
                     />

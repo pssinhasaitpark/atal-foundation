@@ -67,7 +67,9 @@ const AudioCard = ({ info }) => {
       >
         <div className="col-sm-4 p-0">
           <img
-            src={info.images}
+            src={`${
+              process.env.REACT_APP_BASE_IMG_URL + info.images
+            }`}
             className="audio--sec-img w-100 object-fit-cover rounded-4"
             style={{ height: "100px" }}
             alt={info.title}
@@ -88,7 +90,9 @@ const AudioCard = ({ info }) => {
             {info.title}
           </p>
           <audio controls className="audio--sec-audio w-100 h-lg-50">
-            <source src={info.audio} type="audio/mp3" />
+            <source   src={`${
+              process.env.REACT_APP_BASE_IMG_URL + info.audio
+            }`} type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
         </div>

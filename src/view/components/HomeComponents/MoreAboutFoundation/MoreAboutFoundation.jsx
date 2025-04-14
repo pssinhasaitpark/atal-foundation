@@ -9,21 +9,21 @@ export const foundationInfo = [
     image: MoreAboutFoundationImage1,
     title: "Our role:",
     description:
-      "At Atal Foundation, we act as catalysts for social change, focusing on Education & Skill Development",
+      "At Atal Foundation, our role goes beyond support — we are catalysts for change.",
   },
   {
     id: 2,
     image: MoreAboutFoundationImage2,
     title: "How we work:",
     description:
-      "At Atal Foundation, we follow a structured and impact-driven approach to create lasting social change",
+      "At Atal Foundation, we follow a people-first, ground-up approach.",
   },
   {
     id: 3,
     image: MoreAboutFoundationImage3,
     title: "Our vision:",
     description:
-      "Inspired by the vision of Atal Ji, Atal Foundation was established to drive meaningful social transformation.",
+      "To build an inclusive, empowered, and progressive India, where every individual.",
   },
 ];
 const MoreAboutFoundation = () => {

@@ -82,7 +82,7 @@ const TopProgrammes = () => {
                   <Card.Img
                     loading="lazy"
                     variant="top"
-                    src={program.banner}
+                    src={`${process.env.REACT_APP_BASE_IMG_URL+program.banner}`}
                     alt={program.category}
                     className="top-programmes-image rounded-0 object-fit-cover"
                   />

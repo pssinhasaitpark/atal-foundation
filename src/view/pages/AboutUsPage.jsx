@@ -17,7 +17,9 @@ const AboutUs = () => {
       <div className="pages-banner-img">
         <img
           loading="lazy"
-          src={aboutUsBanner}
+          src={`${
+            process.env.REACT_APP_BASE_IMG_URL + aboutUsBanner
+          }`} 
           alt=""
           className="img-fluid w-100 h-100 object-fit-cover"
         />
@@ -47,7 +49,9 @@ const AboutUs = () => {
             <div className="col-sm-4">
               <img
                 loading="lazy"
-                src={data.image}
+                src={`${
+                  process.env.REACT_APP_BASE_IMG_URL + data.image
+                }`} 
                 alt={`${data.title}`}
                 className="img-fluid w-100 h-100 object-fit-cover "
               />

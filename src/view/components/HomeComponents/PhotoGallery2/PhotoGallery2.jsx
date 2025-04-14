@@ -33,8 +33,7 @@ const PhotoGallery2 = () => {
                 Photo Gallery
               </h2>
               <p className="heading-font custom-our-mission-sub">
-                At Atal Foundation, our events serve as platforms for <br />
-                awareness, empowerment, and community engagement.
+              The Atal Foundation's events are vibrant reflections of unity, learning, and collective action<br/> We capture powerful moments of awareness, empowerment, and community engagement through our Photo Gallery.
               </p>
             </div>
             <span>
@@ -81,7 +80,9 @@ const PhotoGallery2 = () => {
                   >
                     <img
                       loading="lazy"
-                      src={image}
+                      src={`${
+                        process.env.REACT_APP_BASE_IMG_URL + image
+                      }`}
                       alt={`gallery_image_${index}`}
                       className="photo-gallery-img w-100"
                     />

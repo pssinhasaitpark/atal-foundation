@@ -7,7 +7,7 @@ const PeopleBehind = () => {
   const navigate = useNavigate();
 
   const topProgrammes = {
-    title: "atal foundation india-inspired by atal,committed to progress",
+    title: "People Behind Atal Foundation India",
     subtitle:
       "with two decades of impact in literacy, health, disability, and livelihoods, atalfoundation now prioritizes education for systemic change, while other initiatives continue as development support programs.",
     badge: "People Behind",
@@ -68,30 +68,30 @@ const PeopleBehind = () => {
       <div className="row">
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center flex-column">
           <div className="container">
-          <div className="row ">
-            {peopleBehind.map((member) => (
-              <div key={member.id} className="col-4 col-md-6 col-lg-4">
-                <Link
-                  to={`people-behind/peopleBehind/${member.id}`}
-                  onClick={scrollToTop}
-                >
-                  <div className="position-relative h-100 w-100">
-                    <img
-                      loading="lazy"
-                      src={member.image}
-                      alt={member.name}
-                      className="img-fluid w-100 h-100 object-fit-cover"
-                    />
-                    <div className="justify-content-center d-flex position-absolute bottom-0 w-100">
-                      <p className="text-center mb-0 small bg-light py-1 px-4 text-dark">
-                        {member.name}
-                      </p>
+            <div className="row ">
+              {peopleBehind.map((member) => (
+                <div key={member.id} className="col-4 col-md-6 col-lg-4">
+                  <Link
+                    to={`people-behind/peopleBehind/${member.id}`}
+                    onClick={scrollToTop}
+                  >
+                    <div className="position-relative h-100 w-100">
+                      <img
+                        loading="lazy"
+                        src={member.image}
+                        alt={member.name}
+                        className="img-fluid w-100 h-100 object-fit-cover"
+                      />
+                      <div className="justify-content-center d-flex position-absolute bottom-0 w-100">
+                        <p className="text-center mb-0 small bg-light py-lg-1 py-0 px-lg-4 px-0 text-dark">
+                          {member.name}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -103,33 +103,30 @@ const PeopleBehind = () => {
               <h3 className="fs-1 fw-bold mb-3 heading-font">
                 {topProgrammes.title}
               </h3>
-              <div className="mb-2">
-                <div className="d-flex align-items-start">
-                  <span className="text-success me-1">✅</span>
-                  <p className="custom-subtitle  mb-2">
-                    education for all - ensuring quality education and skill
-                    development for holistic growth.
-                  </p>
-                </div>
-              </div>
-              <div className="mb-2">
-                <div className="d-flex align-items-start">
-                  <span className="text-success me-1">✅</span>
-                  <p className="custom-subtitle  mb-2">
-                    health & well-being - providing healthcare access,
-                    nutrition, and mental health support.
-                  </p>
-                </div>
-              </div>
-              <div className="mb-4">
-                <div className="d-flex align-items-start">
-                  <span className="text-success me-1">✅</span>
-                  <p className="custom-subtitle  mb-2">
-                    livelihood & empowerment - creating sustainable employment
-                    and entrepreneurship
-                  </p>
-                </div>
-              </div>
+              <ul>
+                <li className="custom-subtitle  mb-2">
+                  At the heart of Atal Foundation India is a dedicated team of
+                  visionaries, changemakers, and compassionate leaders—all
+                  inspired by the legacy of Shri Atal Bihari Vajpayee ji.
+                </li>
+                <li className="custom-subtitle  mb-2">
+                  Our team is a vibrant mix of social workers, educators, youth
+                  leaders, policy advocates, and volunteers, united by a shared
+                  mission: to serve the nation, uplift communities, and drive
+                  positive change at every level of society.
+                </li>
+                <li className="custom-subtitle  mb-2">
+                  Each member brings passion, purpose, and experience, working
+                  selflessly to turn vision into action. It is through their
+                  relentless efforts that the Foundation continues to reach new
+                  milestones in empowerment, awareness, and service.
+                </li>
+                <li className="custom-subtitle  mb-2">
+                  Together, we are not just leading initiatives—we are building
+                  a stronger India.
+                </li>
+              </ul>
+
               <button
                 className="custom-button"
                 onClick={() => {

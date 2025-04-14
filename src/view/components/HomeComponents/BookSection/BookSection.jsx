@@ -20,7 +20,7 @@ const BookSection = () => {
           <div className="border shadow rounded-5" style={{ height: "30rem" }}>
             <img
               loading="lazy"
-              src={data?.cover_image}
+              src={`${process.env.REACT_APP_BASE_IMG_URL+data?.cover_image}`}
               alt={data?.book_title}
               className="img-fluid w-100 h-100 object-fit-cover rounded-5"
             />

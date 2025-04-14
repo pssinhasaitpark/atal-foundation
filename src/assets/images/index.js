@@ -80,7 +80,15 @@ import pb3 from "./peopleBehind/pb3.png";
 import pb4 from "./peopleBehind/pb4.png";
 import pb5 from "./peopleBehind/pb5.png";
 import pb6 from "./peopleBehind/pb6.jpg";
+import cerficateImg1 from "./certificatesImg1.png"
+import cerficateImg2 from "./certificatesImg2.png"
+import cerficateImg3 from "./certificatesImg3.png"
+import cerficateImg4 from "./certificatesImg4.png"
 export {
+  cerficateImg3,
+  cerficateImg4,
+  cerficateImg2,
+  cerficateImg1,
   pb1,
   pb2,
   pb3,

@@ -20,7 +20,9 @@ const BookDetailPage = () => {
       <div>
         <h2 className="heading-font text-center">{data?.book_title}</h2>
         <img
-          src={data?.cover_image}
+         src={`${process.env.REACT_APP_BASE_IMG_URL + data?.cover_image}`}
+      
+         
           alt={data?.book_title}
           className="w-100 my-4 object-fit-contain"
           style={{ height: "500px" }}
@@ -61,7 +63,8 @@ const BookDetailPage = () => {
               >
                 <img
                   loading="lazy"
-                  src={image}
+                  src={`${process.env.REACT_APP_BASE_IMG_URL + image}`}
+      
                   alt={`book_img-${index}`}
                   className="photo-gallery-img w-100 "
                 />

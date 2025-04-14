@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Events.css";
 import { Link } from "react-router";
 import useEventsImgs from "../../hooks/useEventsImgs";
@@ -16,6 +16,7 @@ const Events = () => {
 
   const eventImgData = eventData?.imageGroups;
   const eventVideoData = eventVidData;
+  
   const bannerimg = eventData?.banner;
   const loadMoreImages = () => {
     setTimeout(() => {
@@ -28,7 +29,9 @@ const Events = () => {
       <div className="pages-banner-img">
         <img
           loading="lazy"
-          src={bannerimg}
+          src={`${
+            process.env.REACT_APP_BASE_IMG_URL + bannerimg
+          }`} 
           className="img-fluid w-100 h-100 object-fit-fill"
           alt="Event Banner"
         />
@@ -62,7 +65,7 @@ const Events = () => {
                   <div className="position-relative overflow-hidden h-100">
                     <img
                       loading="lazy"
-                      src={img.images[0]}
+                     src={`${process.env.REACT_APP_BASE_IMG_URL+img.images[0]}`} 
                       alt={img.alt}
                       className={`scale-image img-fluid event-img-${index} w-100 object-fit-cover ${
                         img.className || ""
@@ -121,7 +124,9 @@ const Events = () => {
                   preload="metadata"
                   className="border"
                 >
-                  <source type="video/webm" src={vid} />
+                  <source type="video/webm"    src={`${
+              process.env.REACT_APP_BASE_IMG_URL + vid
+            }`}  />
                 </video>
               </div>
             ))}

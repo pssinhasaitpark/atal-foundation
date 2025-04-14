@@ -30,7 +30,8 @@ const GetSupportSpeaksPage = () => {
       <div key={index} className="col-md-6 mb-4">
         <div className="card shadow-sm p-3 d-flex flex-row align-items-center">
           <img
-            src={person.images[0]?.url}
+                 src={`${process.env.REACT_APP_BASE_IMG_URL + person.images[0]?.url}`}
+      
             alt={person.name}
             className="rounded-circle me-3"
             width="80"

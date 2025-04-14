@@ -23,7 +23,8 @@ const CardComponent = () => {
       <div className="pages-banner-img ">
         <img
           loading="lazy"
-          src={bannerImage}
+          src={`${process.env.REACT_APP_BASE_IMG_URL + bannerImage}`}
+      
           alt={`${filterData[0].category}-banner`}
           className="h-100 w-100 object-fit-cover"
         />
@@ -56,7 +57,8 @@ const CardComponent = () => {
             <div className="col-md-4 d-flex">
               <img
                 loading="lazy"
-                src={data.images[0].url}
+                src={`${process.env.REACT_APP_BASE_IMG_URL + data.images[0].url}`}
+      
                 alt={data.title}
                 className="img-fluid w-100 object-fit-cover"
               />

@@ -19,7 +19,7 @@ const SingleEventPage = () => {
         {event.image_title}
       </h2>
       <img
-        src={event.images[0]}
+        src={`${process.env.REACT_APP_BASE_IMG_URL + event.images[0]}`}
         alt={event.alt}
         className="img-fluid w-100 object-fit-cover my-5"
         style={{ height: "450px" }}
