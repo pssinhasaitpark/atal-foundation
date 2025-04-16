@@ -3,56 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "react-bootstrap";
 import { LuMoveLeft, LuMoveRight } from "../../../../assets/logos/index";
 import { useAudio } from "../../../hooks/index";
-import {
-  atalaudio1,
-  atalaudio2,
-  atalaudio3,
-  atalaudio4,
-  atalaudio5,
-  atalaudio6,
-  atalaudio7,
-} from "../../../../assets/images/index";
+
 const audioData = [
   {
     heading: "10 Famous and Best Poems of Atal Bihari Vajpayee - In Voice",
     description: "Atal Bihari Vajpayee - In Voice",
-    audio_section: [
-      {
-        title: "सरकारें आएंगी, जाएंगी, पार्टियां बनेंगी",
-        images: [atalaudio1],
-        audio: "https://example.com/audio1.mp3",
-      },
-      {
-        title: "हम शांति को स्थायी बनाना चाहते हैं।",
-        images: [atalaudio2],
-        audio: "https://example.com/audio2.mp3",
-      },
-      {
-        title: "विकास के लिए शांति आवश्यक है।",
-        images: [atalaudio3],
-        audio: "https://example.com/audio3.mp3",
-      },
-      {
-        title: "हिंसा से कुछ भी हासिल नहीं होता।",
-        images: [atalaudio4],
-        audio: "https://example.com/audio4.mp3",
-      },
-      {
-        title: "आप मित्र बदल सकते हैं, लेकिन पड़ोसी नहीं।",
-        images: [atalaudio5],
-        audio: "https://example.com/audio4.mp3",
-      },
-      {
-        title: "हम सभी धर्मों के समान सम्मान में विश्वास रखते हैं।",
-        images: [atalaudio6],
-        audio: "https://example.com/audio4.mp3",
-      },
-      {
-        title: "मैं मानता हूँ कि बंदूक किसी समस्या का समाधान नहीं है।",
-        images: [atalaudio7],
-        audio: "https://example.com/audio4.mp3",
-      },
-    ],
   },
 ];
 const AudioCard = ({ info }) => {
@@ -67,7 +22,7 @@ const AudioCard = ({ info }) => {
       >
         <div className="col-sm-4 p-0">
           <img
-            src={info.images}
+            src={`${process.env.REACT_APP_BASE_IMG_URL + info.images}`}
             className="audio--sec-img w-100 object-fit-cover rounded-4"
             style={{ height: "100px" }}
             alt={info.title}
@@ -88,7 +43,10 @@ const AudioCard = ({ info }) => {
             {info.title}
           </p>
           <audio controls className="audio--sec-audio w-100 h-lg-50">
-            <source src={info.audio} type="audio/mp3" />
+            <source
+              src={`${process.env.REACT_APP_BASE_IMG_URL + info.audio}`}
+              type="audio/mp3"
+            />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -113,7 +71,7 @@ const AudioSection = () => {
 
   return (
     <div>
-      <Container className="py-lg-4 py-3">
+      <Container className="py-lg-4 py-4">
         <div>
           <div className="d-flex justify-content-between align-items-center mb-3">
             <div>

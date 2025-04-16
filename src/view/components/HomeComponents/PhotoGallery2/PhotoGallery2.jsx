@@ -1,15 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "react-bootstrap";
 import { LuMoveLeft, LuMoveRight } from "../../../../assets/logos/index";
 import "./PhotoGallery2.css";
 import useGallery from "../../../hooks/useGallery";
-import { SlideshowLightbox } from "lightbox.js-react";
-
+import LightBox from "../../LightBox";
 const PhotoGallery2 = () => {
   const swiperRef = useRef(null);
   const { data, isLoading, isError, status } = useGallery();
-
+  const [open, setOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
 
@@ -24,17 +24,19 @@ const PhotoGallery2 = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#FBFBFB" }}>
-      <Container className="py-lg-4 py-3">
-        <div>
+    <div>
+      <Container className="py-lg-4 py-4">
+ 
           <div className="d-flex justify-content-between align-items-center mb-3">
             <div>
               <h2 className="top-programmes-title photo-gallery-title align-items-center heading-font">
                 Photo Gallery
               </h2>
               <p className="heading-font custom-our-mission-sub">
-                At Atal Foundation, our events serve as platforms for <br />
-                awareness, empowerment, and community engagement.
+                The Atal Foundation's events are vibrant reflections of unity,
+                learning, and collective action
+                <br /> We capture powerful moments of awareness, empowerment,
+                and community engagement through our Photo Gallery.
               </p>
             </div>
             <span>
@@ -59,7 +61,7 @@ const PhotoGallery2 = () => {
             ref={swiperRef}
             spaceBetween={10}
             modules={[]}
-            className="mySwiper mb-4"
+            className="mySwiper "
             breakpoints={{
               400: {
                 slidesPerView: 1,
@@ -73,27 +75,33 @@ const PhotoGallery2 = () => {
             }}
           >
             {imagesData && imagesData.length > 0 ? (
-              imagesData.map((image, index) => (
+              imagesData?.map((image, index) => (
                 <SwiperSlide key={index} className="photo-gallery-slider-card">
-                  <SlideshowLightbox
-                    backgroundColor="black"
-                    modalClose="clickOutside"
-                  >
-                    <img
-                      loading="lazy"
-                      src={image}
-                      alt={`gallery_image_${index}`}
-                      className="photo-gallery-img w-100"
-                    />
-                  </SlideshowLightbox>
+                  <img
+                    loading="lazy"
+                    onClick={() => {
+                      setPhotoIndex(index);
+                      setOpen(true);
+                    }}
+                    src={`${process.env.REACT_APP_BASE_IMG_URL + image}`}
+                    alt={`gallery_image_${index}`}
+                    className="photo-gallery-img w-100"
+                  />
                 </SwiperSlide>
               ))
             ) : (
               <h4 className="py-5 mt-5 text-center">No images found</h4>
             )}
           </Swiper>
-        </div>
+      
       </Container>
+      <LightBox
+        open={open}
+        onClose={() => setOpen(false)}
+        photoIndex={photoIndex}
+        images={imagesData}
+        source={process.env.REACT_APP_BASE_IMG_URL}
+      />
     </div>
   );
 };

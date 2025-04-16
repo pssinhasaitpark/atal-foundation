@@ -18,7 +18,8 @@ import CardComponent from "./CardComponent";
 import AudioSection from "./HomeComponents/AudioSection/AudioSection";
 import BookSection from "./HomeComponents/BookSection/BookSection";
 import AudioPlayer from "./AudioPlayer";
-import PageNotFound from "./PageNotFound"
+import PageNotFound from "./PageNotFound";
+import Certificates from "./HomeComponents/Certificates/Certificates";
 export {
   PageNotFound,
   AudioPlayer,
@@ -41,4 +42,5 @@ export {
   Contacts,
   Gallery,
   Events,
+  Certificates,
 };

@@ -19,7 +19,8 @@ const SingleNewsPage = () => {
     <div className="App news-detail-container container my-5 w-75">
       <h2 className="heading-font text-center">{newsItem.headline}</h2>
       <img
-        src={newsItem.images}
+       src={`${process.env.REACT_APP_BASE_IMG_URL + newsItem.images}`}
+    
         alt={newsItem.headline}
         className="w-100 my-4 object-fit-contain"
         style={{ height: "500px" }}

@@ -5,8 +5,7 @@ import useEventsImgs from "../../../hooks/useEventsImgs";
 
 const EventGallery = () => {
   const { data: eventData, isLoading, isError, status } = useEventsImgs();
-  if (eventData == null)
-    return <></>;
+  if (eventData == null) return <></>;
 
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
@@ -17,12 +16,13 @@ const EventGallery = () => {
   };
 
   return (
-    <div className="mb-5 event-gallery-bg">
-      <div className="container row mx-auto py-5">
+    <div className=" py-lg-4 py-4 event-gallery-bg">
+      <div className="container row mx-auto">
         <h2 className="event-title text-light heading-font">Events</h2>
         <p className="fs-5 heading-font text-light">
-          At Atal Foundation, our events serve as platforms for <br />{" "}
-          awareness, empowerment, and community engagement.
+          Our events unite communities through awareness, health drives, youth
+          workshops, and <br /> skill programs — each one a step toward
+          meaningful change.
         </p>
 
         <div className="col-md-12 col-12 mt-2 text-light ps-0">
@@ -38,7 +38,9 @@ const EventGallery = () => {
                   <div className="position-relative h-100 shadow-lg rounded-0 overflow-hidden">
                     <img
                       loading="lazy"
-                      src={event?.images[0]}
+                      src={`${
+                        process.env.REACT_APP_BASE_IMG_URL + event?.images[0]
+                      }`}
                       alt={event?.alt}
                       className="scale-image img-fluid w-100 object-fit-cover"
                       style={{ height: "308px" }}

@@ -1,8 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import { Card } from "react-bootstrap";
 import useOurProgram from "../hooks/useOurProgram";
 import { useParams } from "react-router";
+import LightBox from "./LightBox"
 const CardComponent = () => {
+  const [open, setOpen] = useState(false);
+  // eslint-disable-next-line
+  const [photoIndex, setPhotoIndex] = useState(0);
   const { category } = useParams();
   const { data, isLoading, isError, status } = useOurProgram();
   let filterData = [];
@@ -16,6 +20,7 @@ const CardComponent = () => {
     return <h4 className="py-5 my-5 text-center">No Data Available</h4>;
 
   const dynamicData = filterData[0]?.details;
+ const dynamicDataImg = dynamicData.map((img, index) => img.images[0].url);
   const bannerImage = filterData[0]?.banner;
 
   return (
@@ -23,7 +28,8 @@ const CardComponent = () => {
       <div className="pages-banner-img ">
         <img
           loading="lazy"
-          src={bannerImage}
+          
+          src={`${process.env.REACT_APP_BASE_IMG_URL + bannerImage}`}
           alt={`${filterData[0].category}-banner`}
           className="h-100 w-100 object-fit-cover"
         />
@@ -56,14 +62,20 @@ const CardComponent = () => {
             <div className="col-md-4 d-flex">
               <img
                 loading="lazy"
-                src={data.images[0].url}
+                onClick={() => {
+                  setOpen(true);
+                  setPhotoIndex(index);
+                }}
+                src={`${
+                  process.env.REACT_APP_BASE_IMG_URL + data.images[0].url
+                }`}
                 alt={data.title}
                 className="img-fluid w-100 object-fit-cover"
               />
             </div>
             <div className="col-md-8 d-flex flex-column justify-content-center">
               <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
-                <Card.Body className="card-style p-0 ps-5">
+                <Card.Body className="card-style p-0 ps-lg-5">
                   <h3 className="fw-bold fs-1 heading-font ">{data.title}</h3>
                   <div
                     className="fw-light fs-6 lh-lg"
@@ -77,6 +89,13 @@ const CardComponent = () => {
           </div>
         ))}
       </div>
+      <LightBox
+        open={open}
+        onClose={() => setOpen(false)}
+        photoIndex={photoIndex}
+        images={dynamicDataImg ||bannerImage}
+        source={process.env.REACT_APP_BASE_IMG_URL}
+      />
     </div>
   );
 };

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { GalleryBanner } from "../../../assets/images";
 import "./Gallery.css";
 import useGallery from "../../hooks/useGallery";
-import { SlideshowLightbox } from "lightbox.js-react";
+import LightBox from "../LightBox";
+
 const Gallery = () => {
+  const [open, setOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(12);
   const { data, isLoading, status, isError } = useGallery();
+
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
   if (data == null)
@@ -12,18 +17,24 @@ const Gallery = () => {
 
   const gallerySection = data?.gallery_image;
   const videoSection = data?.gallery_video;
+
   const generateLargeColIndices = (n) => {
     const indices = [];
     for (let i = 0; i <= n; i++) {
-      if ([0, 5, 6, 11].includes(i % 12)) {
+      if ([0, 5, 6, 11, 12].includes(i % 12)) {
         indices.push(i);
       }
     }
     return indices;
   };
 
-  const n = gallerySection?.images.length;
-  const largeColIndices = generateLargeColIndices(n);
+  const allImages = gallerySection?.images || [];
+  const visibleImages = allImages.slice(0, visibleCount);
+  const largeColIndices = generateLargeColIndices(visibleCount);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
 
   return (
     <div className="container my-lg-5 my-2">
@@ -48,32 +59,37 @@ const Gallery = () => {
 
         <div className="gallery-imgs">
           <div className="row">
-            {gallerySection?.images?.map((img, index) => (
+            {visibleImages.map((img, index) => (
               <div
                 key={index}
+                onClick={() => {
+                  setPhotoIndex(index);
+                  setOpen(true);
+                }}
                 className={`col-12 ${
                   largeColIndices.includes(index) ? "col-md-6" : "col-md-3"
                 } p-1 overflow-hidden`}
               >
-                {" "}
-                <SlideshowLightbox
-                  className="h-100"
-                  backgroundColor="black"
-                  modalClose="clickOutside"
-                >
-                  <img
-                    loading="lazy"
-                    src={img}
-                    alt={`gallery-img-${index}`}
-                    className={`gallery-img-${index} w-100 object-fit-cover `}
-                    style={{
-                      height: largeColIndices.includes(index) ? "440px" : "",
-                    }}
-                  />
-                </SlideshowLightbox>
+                <img
+                  loading="lazy"
+                  src={`${process.env.REACT_APP_BASE_IMG_URL + img}`}
+                  alt={`gallery-img-${index}`}
+                  className={`gallery-img-${index} w-100 object-fit-cover `}
+                  style={{
+                    minHeight: largeColIndices.includes(index) ? "440px" : "",
+                  }}
+                />
               </div>
             ))}
           </div>
+
+          {visibleCount < allImages.length && (
+            <div className="text-center mt-4">
+              <button onClick={handleLoadMore} className="btn btn-primary">
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -102,7 +118,10 @@ const Gallery = () => {
                   controls
                   preload="metadata"
                 >
-                  <source src={video} type="video/webm" />
+                  <source
+                    src={`${process.env.REACT_APP_BASE_IMG_URL + video}`}
+                    type="video/webm"
+                  />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -110,6 +129,14 @@ const Gallery = () => {
           </div>
         </div>
       </div>
+
+      <LightBox
+        open={open}
+        onClose={() => setOpen(false)}
+        photoIndex={photoIndex}
+        images={visibleImages}
+        source={process.env.REACT_APP_BASE_IMG_URL}
+      />
     </div>
   );
 };

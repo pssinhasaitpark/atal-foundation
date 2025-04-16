@@ -12,6 +12,7 @@ import {
   MoreAboutFoundation,
   AudioSection,
   BookSection,
+  Certificates
 } from "../components/index";
 
 const HomePage = () => {
@@ -26,6 +27,7 @@ const HomePage = () => {
         <VisionSection />
         <OurNews />
         <MissionSection />
+        <Certificates/>
         <PhotoGallery2 />
         <FoundationFacts />
         <MoreAboutFoundation />
