@@ -24,30 +24,29 @@ const GetSupportSpeaksPage = () => {
     <div className="App container mt-5 w-75 position-relative">
       <h4 className="text-center getInvolvedline">Support Speaks</h4>
       <div className="row">
-  {supportSpeaksData?.map((person, index) => {
-
-    return (
-      <div key={index} className="col-md-6 mb-4">
-        <div className="card shadow-sm p-3 d-flex flex-row align-items-center">
-          <img
-                 src={`${process.env.REACT_APP_BASE_IMG_URL + person.images[0]?.url}`}
-      
-            alt={person.name}
-            className="rounded-circle me-3"
-            width="80"
-            height="80"
-          />
-          <div>
-            <h5 className="fw-bold">{person.name}</h5>
-            {person.post && <p className="mb-1">{person.post}</p>}
-            <p className="text-muted">{person.location}</p>
-          </div>
-        </div>
+        {supportSpeaksData?.map((person, index) => {
+          return (
+            <div key={index} className="col-md-6 mb-4">
+              <div className="card shadow-sm p-3 d-flex flex-row align-items-center">
+                <img
+                  src={`${
+                    process.env.REACT_APP_BASE_IMG_URL + person.images[0]?.url
+                  }`}
+                  alt={person.name}
+                  className="rounded-circle me-3"
+                  width="80"
+                  height="80"
+                />
+                <div>
+                  <h5 className="fw-bold">{person.name}</h5>
+                  {person.post && <p className="mb-1">{person.post}</p>}
+                  <p className="text-muted">{person.location}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    );
-  })}
-</div>
-
     </div>
   );
 };

@@ -1,11 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import { MoreAboutFoundationImage1, MoreAboutFoundationImage2, MoreAboutFoundationImage3 } from "../../../../assets/images/index";
 import { LuMoveRight } from "../../../../assets/logos/index";
 import { Link } from "react-router-dom";
 import "./MoreAboutFoundation.css";
+import LightBox from "../../LightBox";
 export const foundationInfo = [
   {
-    id: 1, // Add a unique identifier for each item
+    id: 1,
     image: MoreAboutFoundationImage1,
     title: "Our role:",
     description:
@@ -27,13 +28,14 @@ export const foundationInfo = [
   },
 ];
 const MoreAboutFoundation = () => {
+    const [open, setOpen] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
+  const foundationInfoImg = foundationInfo.map((img, index) => img.image);
 
   return (
-    <div className="container py-lg-5">
+    <div className="container py-lg-4 py-4">
       <h2 className="top-programmes-title heading-font">More About Foundation</h2>
       <div className="row mt-4">
         {foundationInfo?.map((info, index) => (
@@ -43,6 +45,7 @@ const MoreAboutFoundation = () => {
               <img
                 loading="lazy"
                 src={info?.image}
+                onClick={() => setOpen(true)}
                 className="card-img-top-maf object-fit-cover"
                 alt={info?.title}
               />
@@ -64,6 +67,12 @@ const MoreAboutFoundation = () => {
           </div>
         ))}
       </div>
+      <LightBox
+        open={open}
+        onClose={() => setOpen(false)}
+        images={foundationInfoImg}
+
+      />
     </div>
   );
 };

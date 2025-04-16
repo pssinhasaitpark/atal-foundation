@@ -1,0 +1,14 @@
+.atal-bookimg-div {
+  height: 30rem;
+}
+@media (max-width: 767px) {
+  .atal-bookimg-div {
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .atal-bookimg-div {
+    height: auto;
+  }
+}

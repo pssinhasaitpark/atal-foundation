@@ -3,7 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import useMessagesUs from "../hooks/useMessageUs";
 import { ToastContainer, toast } from "react-toastify";
-
+import "./pages.css";
 const MessagePage = () => {
   const { mutate, isLoading } = useMessagesUs();
   const validationSchema = Yup.object({
@@ -20,7 +20,7 @@ const MessagePage = () => {
 
   return (
     <div className="App container my-5">
-      <div className=" mx-auto">
+      <div className="mx-auto">
         <h1 className="text-center">Message Us</h1>
         <Formik
           initialValues={{
@@ -42,7 +42,7 @@ const MessagePage = () => {
           }}
         >
           {({ isSubmitting }) => (
-            <Form>
+            <Form className="atal-msg-form mx-auto">
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                   Name:

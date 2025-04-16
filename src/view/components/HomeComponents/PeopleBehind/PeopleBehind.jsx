@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { pb1, pb2, pb3, pb4, pb5, pb6 } from "../../../../assets/images/index";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router";
+import "./PeopleBehind.css"
 const PeopleBehind = () => {
   const navigate = useNavigate();
 
@@ -64,7 +65,7 @@ const PeopleBehind = () => {
     navigate("/people-behind");
   };
   return (
-    <div className="container py-lg-5">
+    <div className="container py-lg-4 py-4">
       <div className="row">
         <div className="col-lg-6 col-md-6 d-flex justify-content-center align-items-center flex-column">
           <div className="container">
@@ -83,7 +84,7 @@ const PeopleBehind = () => {
                         className="img-fluid w-100 h-100 object-fit-cover"
                       />
                       <div className="justify-content-center d-flex position-absolute bottom-0 w-100">
-                        <p className="text-center mb-0 small bg-light py-lg-1 py-0 px-lg-4 px-0 text-dark">
+                        <p className="atal-pb-name text-center mb-0 small bg-light py-lg-1 py-0 px-lg-4 px-0 text-dark">
                           {member.name}
                         </p>
                       </div>

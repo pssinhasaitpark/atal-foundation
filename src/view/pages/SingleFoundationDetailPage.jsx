@@ -32,7 +32,7 @@ const SingleFoundationDetailPage = () => {
   }
 
   return (
-    <div className="App foundation-detail-container container my-5 w-75">
+    <div className="App foundation-detail-container container my-5 ">
       <h2 className="heading-font text-center">{foundation.title}</h2>
       <img
         src={foundation.image}

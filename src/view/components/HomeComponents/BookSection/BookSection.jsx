@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useBookSection } from "../../../hooks/index";
+import "./BookSection.css";
+import LightBox from "../../LightBox";
 const BookSection = () => {
   const navigate = useNavigate();
   const { data, isLoading, isError, status } = useBookSection();
+  const [open, setOpen] = useState(false);
+  // eslint-disable-next-line
+  const [photoIndex, setPhotoIndex] = useState(0);
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
   if (data == null) return <></>;
@@ -14,13 +19,16 @@ const BookSection = () => {
     navigate("/sada-atal");
   };
   return (
-    <div className="container border-bottom rounded-5 py-lg-5 py-4">
+    <div className="container border-bottom rounded-5 py-lg-4 py-4">
       <div className="row align-items-center">
         <div className="col-md-5">
-          <div className="border shadow rounded-5" style={{ height: "30rem" }}>
+          <div className="atal-bookimg-div border shadow rounded-5">
             <img
+              onClick={() => {
+                setOpen(true);
+              }}
               loading="lazy"
-              src={`${process.env.REACT_APP_BASE_IMG_URL+data?.cover_image}`}
+              src={`${process.env.REACT_APP_BASE_IMG_URL + data?.cover_image}`}
               alt={data?.book_title}
               className="img-fluid w-100 h-100 object-fit-cover rounded-5"
             />
@@ -56,6 +64,13 @@ const BookSection = () => {
           </div>
         </div>
       </div>
+      <LightBox
+        open={open}
+        onClose={() => setOpen(false)}
+        photoIndex={photoIndex}
+        images={Array(data?.cover_image)}
+        source={process.env.REACT_APP_BASE_IMG_URL}
+      />
     </div>
   );
 };

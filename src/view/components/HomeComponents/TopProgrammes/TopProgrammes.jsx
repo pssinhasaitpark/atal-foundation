@@ -30,7 +30,7 @@ const TopProgrammes = () => {
     return doc.body.textContent || "";
   };
   return (
-    <Container className="pt-lg-5 py-lg-4 py-4 border-bottom">
+    <Container className="py-lg-4 py-4 border-bottom">
       <div className="">
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h2 className="top-programmes-title align-items-center heading-font">

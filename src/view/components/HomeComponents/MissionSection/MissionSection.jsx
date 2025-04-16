@@ -1,15 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
 import { ourMissionImg } from "../../../../assets/images/index";
 import { Card } from "react-bootstrap";
 import "./MissionSection.css";
+import LightBox from "../../LightBox";
 const MissionSection = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="container py-lg-5 py-4">
+    <div className="container py-lg-4 py-4">
       <div className="row align-items-center">
         <div className="col-md-5">
           <div className="">
             <img
               loading="lazy"
+              onClick={() => {
+                setOpen(true);
+              }}
               src={ourMissionImg}
               alt=""
               className="img-fluid w-100"
@@ -46,6 +51,11 @@ const MissionSection = () => {
           </Card>
         </div>
       </div>
+      <LightBox
+        open={open}
+        onClose={() => setOpen(false)}
+        images={Array(ourMissionImg)}
+      />
     </div>
   );
 };

@@ -16,8 +16,8 @@ const EventGallery = () => {
   };
 
   return (
-    <div className="mb-5 event-gallery-bg">
-      <div className="container row mx-auto py-5">
+    <div className=" py-lg-4 py-4 event-gallery-bg">
+      <div className="container row mx-auto">
         <h2 className="event-title text-light heading-font">Events</h2>
         <p className="fs-5 heading-font text-light">
           Our events unite communities through awareness, health drives, youth

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { VisionSection as VisionSecImg } from "../../../../assets/images/index";
 import { Card } from "react-bootstrap";
+import LightBox from "../../LightBox";
 const VisionSection = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="container py-lg-5 py-4">
+    <div className="container py-lg-4 py-4">
       <div className="row align-items-center">
-        {/* Left Text Section */}
+     
         <div className="col-md-6">
           <Card className="custom-card bg-transparent border-0 justify-content-center align-items-center">
             <Card.Body className="card-style ps-lg-0 p-lg-5">
@@ -35,18 +37,26 @@ const VisionSection = () => {
             </Card.Body>
           </Card>
         </div>
-        {/* Right Images Section */}
+
         <div className="col-md-6">
           <div className="">
             <img
               loading="lazy"
               src={VisionSecImg}
+              onClick={() => {
+                setOpen(true);
+              }}
               alt=""
               className="img-fluid w-100"
             />
           </div>
         </div>
       </div>
+      <LightBox
+        open={open}
+        onClose={() => setOpen(false)}
+        images={Array(VisionSecImg)}
+      />
     </div>
   );
 };

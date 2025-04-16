@@ -112,7 +112,7 @@ const HomeSlider = () => {
               </div>
             </div>
             <div className="col-sm-12 col-md-6">
-              <div className="row">
+              <div className="row row-cols-2">
                 <div className="col-sm-12 col-md-6 p-0">
                   <Slider {...settings1}>
                     {sliderImages1?.map((image, index) => (

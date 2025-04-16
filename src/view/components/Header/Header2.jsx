@@ -63,7 +63,7 @@ const Header = () => {
                   exact
                   to="/"
                   onClick={closeOffcanvas}
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Home
                 </NavLink>
@@ -73,7 +73,7 @@ const Header = () => {
                   className="nav-link"
                   to="/about"
                   onClick={closeOffcanvas}
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   About
                 </NavLink>
@@ -103,7 +103,7 @@ const Header = () => {
                           className="dropdown-item custom-dropdown-item"
                           to={`/our-programmes/${opCategory.category}`}
                           onClick={closeOffcanvas}
-                          activeClassName="active"
+                          activeclassname="active"
                         >
                           {opCategory.category}
                         </NavLink>
@@ -134,7 +134,7 @@ const Header = () => {
                       className="dropdown-item custom-dropdown-item"
                       to="/registration"
                       onClick={closeOffcanvas}
-                      activeClassName="active"
+                      activeclassname="active"
                     >
                       Registration
                     </NavLink>
@@ -144,7 +144,7 @@ const Header = () => {
                       className="dropdown-item custom-dropdown-item"
                       to="/members"
                       onClick={closeOffcanvas}
-                      activeClassName="active"
+                      activeclassname="active"
                     >
                       Members
                     </NavLink>
@@ -154,7 +154,7 @@ const Header = () => {
                       className="dropdown-item custom-dropdown-item"
                       to="/supportspeaks"
                       onClick={closeOffcanvas}
-                      activeClassName="active"
+                      activeclassname="active"
                     >
                       Support Speaks
                     </NavLink>
@@ -166,7 +166,7 @@ const Header = () => {
                   className="nav-link"
                   to="/gallery"
                   onClick={closeOffcanvas}
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Gallery
                 </NavLink>
@@ -176,7 +176,7 @@ const Header = () => {
                   className="nav-link"
                   to="/message"
                   onClick={closeOffcanvas}
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Message
                 </NavLink>
@@ -186,7 +186,7 @@ const Header = () => {
                   className="nav-link"
                   to="/events"
                   onClick={closeOffcanvas}
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Events
                 </NavLink>
@@ -196,7 +196,7 @@ const Header = () => {
                   className="nav-link"
                   to="/contacts"
                   onClick={closeOffcanvas}
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Contacts
                 </NavLink>
