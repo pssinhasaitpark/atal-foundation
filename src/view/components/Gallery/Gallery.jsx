@@ -134,7 +134,7 @@ const Gallery = () => {
         open={open}
         onClose={() => setOpen(false)}
         photoIndex={photoIndex}
-        images={visibleImages}
+        images={allImages}
         source={process.env.REACT_APP_BASE_IMG_URL}
       />
     </div>

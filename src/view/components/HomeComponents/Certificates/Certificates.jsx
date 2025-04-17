@@ -15,7 +15,7 @@ const Certificates = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
   return (
     <div className="container py-lg-4 py-4">
-      <div>
+      <div className="mb-3">
         <h2 className="top-programmes-title photo-gallery-title align-items-center heading-font">
           Certificates
         </h2>

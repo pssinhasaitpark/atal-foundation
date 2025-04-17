@@ -9,11 +9,10 @@ const LightBox = ({ open, onClose, photoIndex, images, source }) => {
   if (!images || images.length === 0) return null;
 
   const slides = images?.map((img, index) => ({
-    
     src: source ? `${source}${img}` : img,
     alt: `Image ${index + 1}`,
   }));
-
+  
   return (
     <Lightbox
       open={open}
@@ -33,6 +32,8 @@ const LightBox = ({ open, onClose, photoIndex, images, source }) => {
         zoomInMultiplier: 2,
       }}
       controller={{ closeOnBackdropClick: true }}
+      carousel={{ finite: true }}
+
     />
   );
 };

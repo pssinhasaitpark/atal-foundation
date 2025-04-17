@@ -1,5 +1,4 @@
 import AtalLogo from "./AtalLogo.png";
-import AtalLogo1 from "./AtalLogo1.png";
 import HomeSlider1 from "./HomeSlider1.png";
 import HomeSlider2 from "./HomeSlider2.png";
 import HomeSlider3 from "./HomeSlider3.png";
@@ -48,7 +47,6 @@ export {
   ourMissionImg,
   GalleryBanner,
   AtalLogo,
-  AtalLogo1,
   HomeSlider1,
   HomeSlider2,
   HomeSlider3,
