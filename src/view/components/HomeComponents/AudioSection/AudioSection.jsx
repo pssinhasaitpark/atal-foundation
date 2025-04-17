@@ -3,14 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "react-bootstrap";
 import { LuMoveLeft, LuMoveRight } from "../../../../assets/logos/index";
 import { useAudio } from "../../../hooks/index";
-
-const audioData = [
-  {
-    heading: "10 Famous and Best Poems of Atal Bihari Vajpayee - In Voice",
-    description: "Atal Bihari Vajpayee - In Voice",
-  },
-];
-const AudioCard = ({ info }) => {
+const AudioCard = ({ info, setOpen }) => {
   return (
     <>
       <div
@@ -57,6 +50,7 @@ const AudioCard = ({ info }) => {
 const AudioSection = () => {
   const swiperRef = useRef(null);
   const { data, isLoading, isError, status } = useAudio();
+
   if (isLoading) return <div className="spinner"></div>;
   if (status === "failed") return <div>Error: {isError}</div>;
   if (data === undefined) return <></>;
@@ -76,10 +70,10 @@ const AudioSection = () => {
           <div className="d-flex justify-content-between align-items-center mb-3">
             <div>
               <h2 className="top-programmes-title audio-gallery-title align-items-center heading-font">
-                {audioData[0].heading}
+                {data.heading}
               </h2>
               <p className="heading-font custom-our-mission-sub">
-                {audioData[0].description}
+                {data.description}
               </p>
             </div>
             <span>
@@ -118,7 +112,7 @@ const AudioSection = () => {
             }}
           >
             {data.audio_section?.map((data, index) => (
-              <SwiperSlide key={index} className="">
+              <SwiperSlide key={index}>
                 <AudioCard info={data} />
               </SwiperSlide>
             ))}

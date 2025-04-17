@@ -8,6 +8,7 @@ import { LuMoveLeft, LuMoveRight } from "../../../../assets/logos/index";
 import LightBox from "../../LightBox";
 const OurNews = () => {
   const [open, setOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
   const swiperRef = useRef(null);
   const { data, isLoading, isError, status } = useOurNews();
   if (isLoading) return <div className="spinner"></div>;
@@ -76,7 +77,10 @@ const OurNews = () => {
                         <img
                           loading="lazy"
                           src={`${process.env.REACT_APP_BASE_IMG_URL}${news?.images}`}
-                          onClick={() => setOpen(true)}
+                          onClick={() => {
+                            setPhotoIndex(index);
+                            setOpen(true);
+                          }}
                           alt={`${news?.headline}${index}`}
                           className="w-100 h-100 object-fit-cover"
                         />
@@ -112,6 +116,7 @@ const OurNews = () => {
       <LightBox
         open={open}
         onClose={() => setOpen(false)}
+        photoIndex={photoIndex}
         images={newsDataImgs}
         source={process.env.REACT_APP_BASE_IMG_URL}
       />

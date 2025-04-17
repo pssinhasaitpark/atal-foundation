@@ -12,7 +12,7 @@ import {
 } from "../../../assets/images/index";
 import "./Contacts.css";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup,Tooltip } from "react-leaflet";
 import L from "leaflet";
 
 const mapIconLogo = new L.Icon({
@@ -132,7 +132,7 @@ const Contacts = () => {
         <ContactCard
           image={contact2}
           title="PHONE NUMBER"
-          content="91+942-531-6323"
+          content="+91 942-531-6323"
           type="phone"
         />
         <ContactCard
@@ -163,6 +163,7 @@ const Contacts = () => {
                   <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                   <Marker position={position} icon={mapIconLogo}>
                     <Popup>Our Location</Popup>
+                    <Tooltip direction="bottom" offset={[0, 0]} opacity={0.8} permanent>Atal Foundation</Tooltip>
                   </Marker>
                 </MapContainer>
               </Col>
